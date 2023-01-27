@@ -19,7 +19,7 @@ public class Servidor : ScriptableObject
         WWWForm formulario = new WWWForm();
         Servicio s = new Servicio();
         for(int i = 0; i < servicios.Length; i++){
-            if(servicios[i].Equals(nombre)){
+            if(servicios[i].nombre.Equals(nombre)){
                 s = servicios[i];
             }
         }
@@ -35,9 +35,10 @@ public class Servidor : ScriptableObject
         if(www.result != UnityWebRequest.Result.Success){
             respuesta = new Respuesta();
         }else{
-            Debug.Log(server+"/"+s.URL);
+            Debug.Log(www.downloadHandler.text);
             respuesta = JsonUtility.FromJson<Respuesta>(www.downloadHandler.text);
         }
+        ocupado = false;
 
     }
 }
