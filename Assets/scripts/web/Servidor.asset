@@ -24,7 +24,7 @@ MonoBehaviour:
     parametros:
     - nombre_usuario
     - password
-  - nombre: Registrar Usuario
+  - nombre: reg_usuario
     URL: reg_usuario.php
     parametros:
     - nombre_usuario
