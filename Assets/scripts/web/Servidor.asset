@@ -31,6 +31,7 @@ MonoBehaviour:
     - nombre_completo
     - email
     - password
+    - tipo_usuario
   ocupado: 0
   respuesta:
     codigo: 404
