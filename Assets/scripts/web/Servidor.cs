@@ -25,7 +25,9 @@ public class Servidor : ScriptableObject
         }
         for(int i = 0; i < s.parametros.Length; i++){
             formulario.AddField(s.parametros[i], datos[i]);
+            Debug.Log(s.parametros[i]);
         }
+
         //En los PHP deben remplazar el GET por POST
         //Aqui se contruye la URL con los parametros
         UnityWebRequest www = UnityWebRequest.Post(server+"/"+s.URL, formulario);
