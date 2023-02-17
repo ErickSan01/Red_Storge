@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MouseMovement2D : MonoBehaviour
+public class Player_Script : MonoBehaviour
 {
     //La variable moveSpeed determina la velocidad del movimiento.
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
+    public Vector3 targetPosition;
 
     //En el método Start(), obtenemos una referencia al componente Rigidbody2D del objeto en el que se agrega este script.
     private void Start()
@@ -17,7 +18,7 @@ public class MouseMovement2D : MonoBehaviour
     //En el método Update(), verificamos si el botón izquierdo del mouse está siendo presionado (con Input.GetMouseButton(0))
     private void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             //Si se está presionando el botón izquierdo del mouse, obtenemos la posición del mouse en el mundo (mousePos) 
             //utilizando Camera.main.ScreenToWorldPoint().
@@ -28,6 +29,15 @@ public class MouseMovement2D : MonoBehaviour
             //Asignamos la velocidad del objeto utilizando rb.velocity, 
             //que se calcula como la dirección multiplicada por la velocidad (moveSpeed).
             rb.velocity = direction * moveSpeed;
+            //Debug.Log("");
+
         }
+        /*
+        else{
+            if(transform.position == Camera.main.ScreenToWorldPoint(Input.mousePosition)){
+                rb.velocity = Vector2.zero;
+            }
+        }
+        */
     }
 }
