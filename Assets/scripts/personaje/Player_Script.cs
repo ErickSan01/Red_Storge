@@ -5,8 +5,30 @@ using UnityEngine;
 public class Player_Script : MonoBehaviour
 {
     public float moveSpeed = 5f; // speed at which the character moves
+    
+    public float maxHeight = -3.18f; // altura máxima permitida
+    public  Rigidbody2D rb; // referencia al Rigidbody del personaje
 
     private Vector3 targetPosition; // position the character is moving towards
+
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        rb.constraints = RigidbodyConstraints2D.FreezePositionY; // congela la posición en el eje Y
+    }
+
+    void FixedUpdate()
+    {
+        if (transform.position.y > maxHeight)
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezePositionY; // congela la posición en el eje Y
+        }
+        else
+        {
+            rb.constraints = RigidbodyConstraints2D.None; // permite el movimiento en el eje Y
+        }
+    }
 
     // Update is called once per frame
     void Update()
@@ -17,7 +39,7 @@ public class Player_Script : MonoBehaviour
             // get the world position of the mouse click
             Vector3 clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             clickPosition.z = 0; // set the z coordinate to 0 to ensure the character stays on the 2D plane
-
+            clickPosition.y = maxHeight;
             // set the target position to the click position
             targetPosition = clickPosition;
         }
