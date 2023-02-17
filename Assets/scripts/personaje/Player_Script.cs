@@ -4,40 +4,35 @@ using UnityEngine;
 
 public class Player_Script : MonoBehaviour
 {
-    //La variable moveSpeed determina la velocidad del movimiento.
-    public float moveSpeed = 5f;
-    private Rigidbody2D rb;
-    public Vector3 targetPosition;
+    public float moveSpeed = 5f; // speed at which the character moves
 
-    //En el método Start(), obtenemos una referencia al componente Rigidbody2D del objeto en el que se agrega este script.
-    private void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
+    private Vector3 targetPosition; // position the character is moving towards
 
-    //En el método Update(), verificamos si el botón izquierdo del mouse está siendo presionado (con Input.GetMouseButton(0))
-    private void Update()
+    // Update is called once per frame
+    void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        // check for left mouse button click
+        if (Input.GetMouseButtonDown(0))
         {
-            //Si se está presionando el botón izquierdo del mouse, obtenemos la posición del mouse en el mundo (mousePos) 
-            //utilizando Camera.main.ScreenToWorldPoint().
-            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            //Calculamos la dirección en la que se mueve el objeto restando la posición del mouse (mousePos) a la posición 
-            //actual del objeto (transform.position) y normalizando el resultado para tener una dirección de longitud 1.            
-            Vector2 direction = (mousePos - transform.position).normalized;
-            //Asignamos la velocidad del objeto utilizando rb.velocity, 
-            //que se calcula como la dirección multiplicada por la velocidad (moveSpeed).
-            rb.velocity = direction * moveSpeed;
-            //Debug.Log("");
+            // get the world position of the mouse click
+            Vector3 clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            clickPosition.z = 0; // set the z coordinate to 0 to ensure the character stays on the 2D plane
 
+            // set the target position to the click position
+            targetPosition = clickPosition;
         }
-        /*
-        else{
-            if(transform.position == Camera.main.ScreenToWorldPoint(Input.mousePosition)){
-                rb.velocity = Vector2.zero;
-            }
+
+        // calculate the direction and distance to the target position
+        Vector3 direction = targetPosition - transform.position;
+        float distance = direction.magnitude;
+
+        // check if the character has reached the target position
+        if (distance > 0.1f)
+        {
+            // move the character towards the target position
+            Debug.Log(direction.normalized);
+            transform.Translate(direction.normalized * moveSpeed * Time.deltaTime);
         }
-        */
     }
+
 }
