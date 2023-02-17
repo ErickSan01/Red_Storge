@@ -10,12 +10,16 @@ public class Player_Script : MonoBehaviour
     public  Rigidbody2D rb; // referencia al Rigidbody del personaje
 
     private Vector3 targetPosition; // position the character is moving towards
+    private Animator anim;
+
+    public bool walk = false;
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.FreezePositionY; // congela la posición en el eje Y
+        anim = GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -51,10 +55,32 @@ public class Player_Script : MonoBehaviour
         // check if the character has reached the target position
         if (distance > 0.1f)
         {
+            walk = true;
+            anim.SetBool("walk",walk);
             // move the character towards the target position
             Debug.Log(direction.normalized);
             transform.Translate(direction.normalized * moveSpeed * Time.deltaTime);
+        }else{
+            walk = false;
+            anim.SetBool("walk",walk);
         }
+
+        flip(direction.x);
+    }
+
+    private void flip(float xValue){
+        Vector3 theScale = transform.localScale;
+        if (xValue< 0)
+        {
+            theScale.x = Mathf.Abs(theScale.x)*-1;
+        }else
+        {
+            if (xValue> 0)
+            {
+                theScale.x = Mathf.Abs(theScale.x);
+            }
+        }
+        transform.localScale = theScale;
     }
 
 }
