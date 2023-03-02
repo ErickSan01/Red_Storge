@@ -33,7 +33,6 @@ public class Popup : MonoBehaviour
         //Inicializar Canvas
         transform.SetParent(canvas);
         transform.localScale = Vector3.one;
-        transform.localPosition = Vector3.zero;
         GetComponent<RectTransform>().offsetMin = Vector2.zero;
         GetComponent<RectTransform>().offsetMax = Vector2.zero;
 
