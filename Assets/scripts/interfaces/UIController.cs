@@ -6,6 +6,7 @@ public class UIController : MonoBehaviour
 {
     //Para acceder desde donde sea
     public static UIController Instance;
+    public Transform MainCanvas;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,7 @@ public class UIController : MonoBehaviour
     }
     //Instacionar POPup
     public Popup CreatePopUp() {
-        GameObject popUpGO = Instantiate(Resources.Load("UI/img_popup") as GameObject);
+        GameObject popUpGO = Instantiate(Resources.Load("UI/Popup") as GameObject);
         return popUpGO.GetComponent<Popup>();
     }
 }

@@ -1,60 +1,69 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Player_Script : MonoBehaviour
 {
-    public float moveSpeed = 5f; // speed at which the character moves
-    
-    public float maxHeight = -3.18f; // altura máxima permitida
-    public  Rigidbody2D rb; // referencia al Rigidbody del personaje
+    public float moveSpeed = 5f; // Velocidad a la que se mueve el personaje
 
-    private Vector3 targetPosition; // position the character is moving towards
+    private Vector3 targetPosition; // Direccion en la que el personaje se está moviendo
+    private bool isMoving = false; // boolean para saber si el personaje se está moviendo
+
+    public float maxHeight = -2.96f; // Altitud máxima donde el personaje se puede mover
+
     private Animator anim;
 
     public bool walk = false;
 
-
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        rb.constraints = RigidbodyConstraints2D.FreezePositionY; // congela la posición en el eje Y
-        anim = GetComponent<Animator>();
-    }
-
-    void FixedUpdate()
-    {
-        if (transform.position.y > maxHeight)
-        {
-            rb.constraints = RigidbodyConstraints2D.FreezePositionY; // congela la posición en el eje Y
-        }
-        else
-        {
-            rb.constraints = RigidbodyConstraints2D.None; // permite el movimiento en el eje Y
-        }
-    }
-
     // Update is called once per frame
     void Update()
     {
-        // check for left mouse button click
+        // Checa si se hace click izquerdo en el mouse
         if (Input.GetMouseButtonDown(0))
         {
-            // get the world position of the mouse click
+            // Obtener la posición de donde se hizo click
             Vector3 clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            clickPosition.z = 0; // set the z coordinate to 0 to ensure the character stays on the 2D plane
-            clickPosition.y = maxHeight;
-            // set the target position to the click position
+            clickPosition.z = 0; // Bloquea la coordenada z para que el personaje no cambie de plano
+            clickPosition.y = maxHeight; // Bloquear la coordenada y para que el personaje no suba más de lo permitido
+
+            // Asigna el destino a la posición donde se hizo click
             targetPosition = clickPosition;
+            isMoving = true; // El personaje se empieza a mover
         }
 
-        // calculate the direction and distance to the target position
+        // Calcula la distancia y la dirección de el destino
         Vector3 direction = targetPosition - transform.position;
         float distance = direction.magnitude;
 
-        // check if the character has reached the target position
-        if (distance > 0.1f)
+        if (isMoving)
         {
+            // Checa si el personaje llegó al destino
+            if (distance < 0.1f)
+            {
+                isMoving = false; // El personaje se deja de mover
+            }
+            else
+            {
+                // Se checan colisiones con otros objetos
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.1f);
+                foreach (Collider2D collider in colliders)
+                {
+                    if (collider.gameObject != gameObject)
+                    {
+                        isMoving = false; // El personaje se deja de mover si se detecta alguna colisión
+
+                        Action action1 = () =>{ Camera.main.backgroundColor = UnityEngine.Random.ColorHSV();};
+
+                        Popup popup = UIController.Instance.CreatePopUp();
+
+                        popup.Init(UIController.Instance.MainCanvas, "Hola", "Btn1", "Btn2", "Btn3", action1);
+                    }
+                }
+
+                // El personaje se mueve hacia el destino
+                transform.Translate(direction.normalized * moveSpeed * Time.deltaTime);
+            }
             walk = true;
             anim.SetBool("walk",walk);
             // move the character towards the target position
@@ -82,5 +91,11 @@ public class Player_Script : MonoBehaviour
         }
         transform.localScale = theScale;
     }
+
+    private void Start() {
+        transform.position = new Vector3(-8.68f,-2.96f,0f);
+        anim = GetComponent<Animator>();
+    }
+
 
 }
