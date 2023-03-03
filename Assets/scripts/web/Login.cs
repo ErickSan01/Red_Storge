@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System;
 
 
 public class Login : MonoBehaviour
@@ -39,15 +41,22 @@ public class Login : MonoBehaviour
 
             if (www.result != UnityWebRequest.Result.Success)
             {
+                Console.WriteLine("error conecting");
                 Debug.Log(www.error);
             }
             else
             {
                 Debug.Log(www.downloadHandler.text);
+                LoadScene("colision");
             }
         }
         
         imLoading.SetActive(false);
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 
 }
