@@ -24,7 +24,7 @@ public class Popup : MonoBehaviour
         
     }
 
-    public void Init(Transform canvas, string popupMessage, string btn1text, string btn2text, string btn3text, System.Action action1){
+    public void Init(Transform canvas, string popupMessage, string btn1text, string btn2text, string btn3text, System.Action action1, Player_Script jugador){
         //asignar textos a los botones
         _popupText.text = popupMessage;
         _buttonText1.text = btn1text;
@@ -39,6 +39,8 @@ public class Popup : MonoBehaviour
         //agregar acción a botones
         //Boton de cerrar, cerrará la ventana. 
         _buttonCerrar.onClick.AddListener(() =>{
+            jugador.GetComponent<Renderer>().enabled = true;
+            jugador.inPopUp = false;
             GameObject.Destroy(this.gameObject);
         });
         //La acción que pasamos por parametro es asignada al boton. 

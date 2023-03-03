@@ -16,7 +16,7 @@ public class Player_Script : MonoBehaviour
 
     public bool walk = false;
 
-    private bool inPopUp = false;
+    public bool inPopUp = false;
 
     // Update is called once per frame
     void Update()
@@ -35,12 +35,14 @@ public class Player_Script : MonoBehaviour
                 isMoving = true; // El personaje se empieza a mover
             }
 
-            // Calcula la distancia y la dirección de el destino
-            Vector3 direction = targetPosition - transform.position;
-            float distance = direction.magnitude;
+            Vector3 direction = Vector3.zero;
+
 
             if (isMoving)
             {
+            // Calcula la distancia y la dirección de el destino
+            direction = targetPosition - transform.position;
+            float distance = direction.magnitude;
                 // Checa si el personaje llegó al destino
                 if (distance < 0.1f)
                 {
@@ -58,18 +60,21 @@ public class Player_Script : MonoBehaviour
 
                             Action action1 = () =>{ Camera.main.backgroundColor = UnityEngine.Random.ColorHSV();};
 
+                            GetComponent<Renderer>().enabled = false;
+
                             Popup popup = UIController.Instance.CreatePopUp();
 
-                            popup.Init(UIController.Instance.MainCanvas, "Pregunta X", "Opcion A", "Opcion B", "Opcion C", action1);
+                            popup.Init(UIController.Instance.MainCanvas, "Pregunta X", "Opcion A", "Opcion B", "Opcion C", action1, this);
                             inPopUp = true;
                             walk = false;
                             anim.SetBool("walk",walk);
-                            break;
                         }
                     }
 
                     // El personaje se mueve hacia el destino
-                    transform.Translate(direction.normalized * moveSpeed * Time.deltaTime);
+                    if(isMoving){
+                        transform.Translate(direction.normalized * moveSpeed * Time.deltaTime);
+                    }
                 }
                 walk = true;
                 anim.SetBool("walk",walk);
@@ -101,7 +106,7 @@ public class Player_Script : MonoBehaviour
     }
 
     private void Start() {
-        transform.position = new Vector3(-8.68f,-2.96f,0f);
+        transform.position = new Vector3(-8.68f,-2.96f,1f);
         anim = GetComponent<Animator>();
     }
 
