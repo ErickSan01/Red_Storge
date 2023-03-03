@@ -35,13 +35,12 @@ public class Login : MonoBehaviour
         form.AddField("nombre_usuario", inpUsuario.text);
         form.AddField("password", inpPass.text);
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/redStorge/login.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/redstorge/login.php", form))
         {
             yield return www.SendWebRequest();
 
             if (www.result != UnityWebRequest.Result.Success)
             {
-                Console.WriteLine("error conecting");
                 Debug.Log(www.error);
             }
             else
