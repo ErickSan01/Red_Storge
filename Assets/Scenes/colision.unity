@@ -500,6 +500,7 @@ GameObject:
   - component: {fileID: 1251362732}
   - component: {fileID: 1251362735}
   - component: {fileID: 1251362736}
+  - component: {fileID: 1251362737}
   m_Layer: 0
   m_Name: Pergamino
   m_TagString: Pergamino
@@ -612,6 +613,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 7
+--- !u!114 &1251362737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251362731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f07128ab783f2ac4da784a60625df18c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numeroPregunta: 1
+  textoPregunta: Pregunta 1
+  opcion1: Opcion A
+  opcion2: Opcion B
+  opcion3: Opcion C
 --- !u!1 &1306332376
 GameObject:
   m_ObjectHideFlags: 0

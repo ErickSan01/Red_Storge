@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29433bf84842291498eb03b6f85c4380, type: 3}
   m_Name: Servidor
   m_EditorClassIdentifier: 
-  server: http://localhost/redstorge
+  server: http://18.219.84.148
   servicios:
   - nombre: login
     URL: login.php
@@ -32,7 +32,7 @@ MonoBehaviour:
     - email
     - password
     - tipo_usuario
-  ocupado: 0
+  ocupado: 1
   respuesta:
     codigo: 404
     mensaje: error

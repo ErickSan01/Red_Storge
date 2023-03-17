@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 
 public class Player_Script : MonoBehaviour
@@ -97,14 +98,14 @@ public class Player_Script : MonoBehaviour
      private void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.tag == "Pergamino"){
             isMoving = false; // El personaje se deja de mover si se detecta alguna colisión
-        
-            Action action1 = () =>{ Camera.main.backgroundColor = UnityEngine.Random.ColorHSV();};
-        
-            GetComponent<Renderer>().enabled = false;
 
-            Popup popup = UIController.Instance.CreatePopUp();
+            Action boton1 = () => { Debug.Log("Ejecutando accion boton 1"); };
+            Action boton2 = () => { Debug.Log("Ejecutando accion boton 2"); };
+            Action boton3 = () => { Debug.Log("Ejecutando accion boton 3"); };
 
-            popup.Init(UIController.Instance.MainCanvas, "Pregunta X", "Opcion A", "Opcion B", "Opcion C", action1, this);
+            Pergamino.Instance.crearPergamino(boton1, boton2, boton3, this);
+
+
             inPopUp = true;
             walk = false;
             anim.SetBool("walk",walk);

@@ -24,7 +24,7 @@ public class Popup : MonoBehaviour
         
     }
 
-    public void Init(Transform canvas, string popupMessage, string btn1text, string btn2text, string btn3text, System.Action action1, Player_Script jugador){
+    public void Init(Transform canvas, string popupMessage, string btn1text, string btn2text, string btn3text, System.Action action1, System.Action action2, System.Action action3, Player_Script jugador){
         //asignar textos a los botones
         _popupText.text = popupMessage;
         _buttonText1.text = btn1text;
@@ -46,6 +46,14 @@ public class Popup : MonoBehaviour
         //La acción que pasamos por parametro es asignada al boton. 
         _button1.onClick.AddListener(() =>{
             action1();
+        });
+
+        _button2.onClick.AddListener(() => {
+            action2();
+        });
+
+        _button3.onClick.AddListener(() => {
+            action3();
         });
     }
 }
