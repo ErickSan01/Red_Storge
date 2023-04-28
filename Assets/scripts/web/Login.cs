@@ -30,7 +30,6 @@ public class Login : MonoBehaviour
         //yield return new WaitForSeconds(0.5f);     
         //yield return new WaitUntil(()=> !servidor.ocupado);
 
-
         WWWForm form = new WWWForm();
         form.AddField("nombre_usuario", inpUsuario.text);
         form.AddField("password", inpPass.text);

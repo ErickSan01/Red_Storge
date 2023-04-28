@@ -205,7 +205,7 @@ public class LoginSystem : MonoBehaviour
                     userEmail = dataChunks[2];
 
                     StateNameController.nombre_usuario = userName;
-
+                    StateNameController.pregunta = 1;
                     LoadScene("colision");
                 }
                 else

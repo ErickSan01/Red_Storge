@@ -30,11 +30,16 @@ public class Popup : MonoBehaviour
         _buttonText1.text = btn1text;
         _buttonText2.text = btn2text;
         _buttonText3.text = btn3text;
+
         //Inicializar Canvas
         transform.SetParent(canvas);
         transform.localScale = Vector3.one;
-        GetComponent<RectTransform>().offsetMin = Vector2.zero;
-        GetComponent<RectTransform>().offsetMax = Vector2.zero;
+        RectTransform rectTransform = GetComponent<RectTransform>();
+        rectTransform.anchorMin = Vector2.zero;
+        rectTransform.anchorMax = Vector2.one;
+        rectTransform.pivot = new Vector2(0.5f, 0.5f);
+        rectTransform.offsetMin = Vector2.zero;
+        rectTransform.offsetMax = Vector2.zero;
 
         //agregar acción a botones
         //Boton de cerrar, cerrará la ventana. 
@@ -56,4 +61,38 @@ public class Popup : MonoBehaviour
             action3();
         });
     }
+
+
+    // public void Init(Transform canvas, string popupMessage, string btn1text, string btn2text, string btn3text, System.Action action1, System.Action action2, System.Action action3, Player_Script jugador){
+    //     //asignar textos a los botones
+    //     _popupText.text = popupMessage;
+    //     _buttonText1.text = btn1text;
+    //     _buttonText2.text = btn2text;
+    //     _buttonText3.text = btn3text;
+    //     //Inicializar Canvas
+    //     transform.SetParent(canvas);
+    //     transform.localScale = Vector3.one;
+    //     GetComponent<RectTransform>().offsetMin = Vector2.zero;
+    //     GetComponent<RectTransform>().offsetMax = Vector2.zero;
+
+    //     //agregar acción a botones
+    //     //Boton de cerrar, cerrará la ventana. 
+    //     _buttonCerrar.onClick.AddListener(() =>{
+    //         jugador.GetComponent<Renderer>().enabled = true;
+    //         jugador.inPopUp = false;
+    //         GameObject.Destroy(this.gameObject);
+    //     });
+    //     //La acción que pasamos por parametro es asignada al boton. 
+    //     _button1.onClick.AddListener(() =>{
+    //         action1();
+    //     });
+
+    //     _button2.onClick.AddListener(() => {
+    //         action2();
+    //     });
+
+    //     _button3.onClick.AddListener(() => {
+    //         action3();
+    //     });
+    // }
 }

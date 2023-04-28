@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
+
 
 public class Player_Script : MonoBehaviour
 {
@@ -98,17 +100,18 @@ public class Player_Script : MonoBehaviour
      private void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.tag == "Pergamino"){
             isMoving = false; // El personaje se deja de mover si se detecta alguna colisión
-
+            
+            SceneManager.LoadScene("PopupFullscreen");
             Action boton1 = () => { Debug.Log("Ejecutando accion boton 1"); };
             Action boton2 = () => { Debug.Log("Ejecutando accion boton 2"); };
             Action boton3 = () => { Debug.Log("Ejecutando accion boton 3"); };
 
             Pergamino.Instance.crearPergamino(boton1, boton2, boton3, this);
 
-
             inPopUp = true;
             walk = false;
             anim.SetBool("walk",walk);
+            StateNameController.pregunta = StateNameController.pregunta + 1;
         }
     }
 
