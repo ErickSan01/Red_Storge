@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class Register : MonoBehaviour
@@ -20,7 +21,7 @@ public class Register : MonoBehaviour
     }
 
     IEnumerator Registrar()
-    {
+    {   
         imLoading.SetActive(true);
         string[] datos = new string[5];
         datos[0] = inpUsername.text;
