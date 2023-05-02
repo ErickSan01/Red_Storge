@@ -122,12 +122,12 @@ public class SQLiteDB : MonoBehaviour
                             respuesta[1] = reader[0]+"";
                             respuesta[2] = reader[0]+"";
                             respuesta[3] = reader[0]+"";
-                            /*
+                            */
                             respuesta[0] = reader["ID_OPCION"]+"";
                             respuesta[1] = reader["ID_RESPUESTA"]+"";
                             respuesta[2] = reader["INCISO"]+"";
                             respuesta[3] = reader["DESCRIPCION"]+"";
-                            */
+                            
                             respuestas[inciso] = respuesta;
                             Debug.Log("ID_Pregunta: " + reader["ID_PREGUNTA"] + " Descripcion : " + reader["DESCRIPCION"]);
                         }
