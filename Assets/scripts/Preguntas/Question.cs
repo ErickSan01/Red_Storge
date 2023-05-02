@@ -19,5 +19,20 @@ public class Question : ScriptableObject
 
     [SerializeField] Answer[]_answers = null;
     public Answer[]    Answers { get { return _answers; } }
+
+    public List<int> GetCorrectAnswers ()
+    {
+        List<int> CorrectAnswers = new List<int>();
+        for (int i = 0; i < Answers.Length; i++)
+        {
+            if (Answers[i].IsCorrect)
+            {
+                CorrectAnswers.Add(i);
+            }
+        }
+        return CorrectAnswers;
+    }
     
 }
+
+
