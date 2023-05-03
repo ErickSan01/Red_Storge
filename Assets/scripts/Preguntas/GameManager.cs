@@ -1,6 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]    GameEvents          events                  = null;
     private             List<AnswerData>    PickedAnswers           = new List<AnswerData>();
     private             List<int>           FinishedQuestions       = new List<int>();
+
     private int currentQuestion = 0;
     void Start(){
         LoadQuestions();
@@ -77,5 +82,66 @@ public class GameManager : MonoBehaviour
             _questions[i] = (Question)objs[i];
         }
     }
+    bool CheckAnswers()
+    {
+        if (!CompareAnswers())
+        {
+            return false;
+        }
+        return true;
+    }
 
+    bool CompareAnswers()
+    {
+        if (PickedAnswers.Count > 0)
+        {
+            //Las respuestas correctas de la pregunta actual
+            List<int> c = Questions[currentQuestion].GetCorrectAnswers();
+            //Las respuestas seleccionadas
+            List<int> p = PickedAnswers.Select(x => x.AnswerIndex).ToList();
+
+            //Operación de interesección de los vectores
+            var f = c.Except(p).ToList();
+            var s = p.Except(c).ToList();
+
+            return !f.Any() && !s.Any();
+        }
+        return false;
+    }
+
+    public void Accept(){
+        //UpdateTimer(false);
+        bool isCorrect = CheckAnswers();
+        FinishedQuestions.Add(currentQuestion);
+
+    //     UpdateScore((isCorrect) ? Questions[currentQuestion].AddScore : -Questions[currentQuestion].AddScore);
+
+    //     if (IsFinished)
+    //     {
+    //         SetHighscore();
+    //     }
+
+    //     var type 
+    //         = (IsFinished) 
+    //         ? UIManager.ResolutionScreenType.Finish 
+    //         : (isCorrect) ? UIManager.ResolutionScreenType.Correct 
+    //         : UIManager.ResolutionScreenType.Incorrect;
+
+    //     if (events.DisplayResolutionScreen != null)
+    //     {
+    //         events.DisplayResolutionScreen(type, Questions[currentQuestion].AddScore);
+    //     }
+
+    //     AudioManager.Instance.PlaySound((isCorrect) ? "CorrectSFX" : "IncorrectSFX");
+
+    //     if (type != UIManager.ResolutionScreenType.Finish)
+    //     {
+    //         if (IE_WaitTillNextRound != null)
+    //         {
+    //             StopCoroutine(IE_WaitTillNextRound);
+    //         }
+    //         IE_WaitTillNextRound = WaitTillNextRound();
+    //         StartCoroutine(IE_WaitTillNextRound);
+    //     }
+     }
 }

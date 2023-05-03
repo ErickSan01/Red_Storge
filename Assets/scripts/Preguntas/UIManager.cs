@@ -10,6 +10,15 @@ public struct UIManagerParameters{
     [Header("Answers Options")]
     [SerializeField] float margins;
     public float Margins {get{return margins;}}  
+
+    [Header("Resolution Screen Options")]
+    [SerializeField] Color correctBGColor;
+    public Color CorrectBGColor { get { return correctBGColor; } }
+    [SerializeField] Color incorrectBGColor;
+    public Color IncorrectBGColor { get { return incorrectBGColor; } }
+    [SerializeField] Color finalBGColor;
+    public Color FinalBGColor { get { return finalBGColor; } }
+    
 }
 
 [Serializable()]
@@ -23,19 +32,31 @@ public struct UIElements
 
     [SerializeField] CanvasGroup mainCanvasGroup;
     public CanvasGroup MainCanvasGroup { get { return mainCanvasGroup; } }
+
+    [SerializeField] RectTransform finishUIElements;
+    public RectTransform FinishUIElements { get { return finishUIElements; } }
+
+    [SerializeField] Image resolutionBG;
+    public Image ResolutionBG { get { return resolutionBG; } }
+
+    [SerializeField] TextMeshProUGUI resolutionStateInfoText;
+    public TextMeshProUGUI ResolutionStateInfoText { get { return resolutionStateInfoText; } }
+
 }
 
 public class UIManager : MonoBehaviour
 {
-    public enum ResolutionScreenType {Correcto, Incorrecto}
+    public enum ResolutionScreenType {Correcto, Incorrecto, Finish}
     [SerializeField]    UIManagerParameters parameters;
     [Header("References")]
     [SerializeField]    GameEvents  events;
+    [SerializeField]    UIElements             uIElements                   = new UIElements();
 
     [Header("UI Elements (Prefabs)")]
     [SerializeField]    AnswerData answerPrefab;
 
-    [SerializeField]    UIElements uIElements;
+
+
     private             List<AnswerData>       currentAnswers               = new List<AnswerData>();
     void OnEnable()
     {
@@ -83,6 +104,28 @@ public class UIManager : MonoBehaviour
     }
     }
 
+// void UpdateResUI(ResolutionScreenType type, int score)
+//     {
+
+//         switch (type)
+//         {
+//             case ResolutionScreenType.Correct:
+//                 uIElements.ResolutionBG.color = parameters.CorrectBGColor;
+//                 uIElements.ResolutionStateInfoText.text = "CORRECT!";
+
+//                 break;
+//             case ResolutionScreenType.Incorrect:
+//                 uIElements.ResolutionBG.color = parameters.IncorrectBGColor;
+//                 uIElements.ResolutionStateInfoText.text = "WRONG!";
+
+//                 break;
+//             case ResolutionScreenType.Finish:
+//                 uIElements.ResolutionBG.color = parameters.FinalBGColor;
+
+//                 uIElements.FinishUIElements.gameObject.SetActive(true);
+//                 break;
+//         }
+//     }
 
     
     

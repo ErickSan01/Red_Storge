@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2409dfb05a31e84098631d88e88c560, type: 3}
   m_Name: pregunta1
   m_EditorClassIdentifier: 
-  _info: dnfnfdvidjvidjvidncvdn
+  _info: ffggvjvhyjkghj
   _answers:
   - _info: 1
     _isCorrect: 1
@@ -20,3 +20,5 @@ MonoBehaviour:
     _isCorrect: 0
   - _info: rffrvrvrv
     _isCorrect: 0
+  - _info: c
+    _isCorrect: 1
