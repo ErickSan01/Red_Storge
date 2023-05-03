@@ -95,9 +95,12 @@ public class GameManager : MonoBehaviour
     {
         if (PickedAnswers.Count > 0)
         {
+            //Las respuestas correctas de la pregunta actual
             List<int> c = Questions[currentQuestion].GetCorrectAnswers();
+            //Las respuestas seleccionadas
             List<int> p = PickedAnswers.Select(x => x.AnswerIndex).ToList();
 
+            //Operación de interesección de los vectores
             var f = c.Except(p).ToList();
             var s = p.Except(c).ToList();
 
@@ -106,5 +109,39 @@ public class GameManager : MonoBehaviour
         return false;
     }
 
+    public void Accept(){
+        //UpdateTimer(false);
+        bool isCorrect = CheckAnswers();
+        FinishedQuestions.Add(currentQuestion);
 
+    //     UpdateScore((isCorrect) ? Questions[currentQuestion].AddScore : -Questions[currentQuestion].AddScore);
+
+    //     if (IsFinished)
+    //     {
+    //         SetHighscore();
+    //     }
+
+    //     var type 
+    //         = (IsFinished) 
+    //         ? UIManager.ResolutionScreenType.Finish 
+    //         : (isCorrect) ? UIManager.ResolutionScreenType.Correct 
+    //         : UIManager.ResolutionScreenType.Incorrect;
+
+    //     if (events.DisplayResolutionScreen != null)
+    //     {
+    //         events.DisplayResolutionScreen(type, Questions[currentQuestion].AddScore);
+    //     }
+
+    //     AudioManager.Instance.PlaySound((isCorrect) ? "CorrectSFX" : "IncorrectSFX");
+
+    //     if (type != UIManager.ResolutionScreenType.Finish)
+    //     {
+    //         if (IE_WaitTillNextRound != null)
+    //         {
+    //             StopCoroutine(IE_WaitTillNextRound);
+    //         }
+    //         IE_WaitTillNextRound = WaitTillNextRound();
+    //         StartCoroutine(IE_WaitTillNextRound);
+    //     }
+     }
 }
