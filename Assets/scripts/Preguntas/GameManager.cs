@@ -8,13 +8,33 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-   private Question[] _questions = null;
-    public Question[]Questions { get { return _questions; } }
+    private             Question[]          _questions              = null;
+    public              Question[]          Questions               { get { return _questions; } }
+
     [SerializeField]    GameEvents          events                  = null;
+
+    [SerializeField]    Animator            timerAnimtor            = null;
+    [SerializeField]    TextMeshProUGUI     timerText               = null;
+    [SerializeField]    Color               timerHalfWayOutColor    = Color.yellow;
+    [SerializeField]    Color               timerAlmostOutColor     = Color.red;
+    private             Color               timerDefaultColor       = Color.white;
+
     private             List<AnswerData>    PickedAnswers           = new List<AnswerData>();
     private             List<int>           FinishedQuestions       = new List<int>();
+    private             int                 currentQuestion         = 0;
 
-    private int currentQuestion = 0;
+    private             int                 timerStateParaHash      = 0;
+
+    private             IEnumerator         IE_WaitTillNextRound    = null;
+    private             IEnumerator         IE_StartTimer           = null;
+
+    private             bool                IsFinished
+    {
+        get
+        {
+            return (FinishedQuestions.Count < Questions.Length) ? false : true;
+        }
+    }
     void Start(){
         LoadQuestions();
         foreach (var question in Questions)
@@ -110,38 +130,106 @@ public class GameManager : MonoBehaviour
     }
 
     public void Accept(){
-        //UpdateTimer(false);
+        UpdateTimer(false);
         bool isCorrect = CheckAnswers();
         FinishedQuestions.Add(currentQuestion);
 
-    //     UpdateScore((isCorrect) ? Questions[currentQuestion].AddScore : -Questions[currentQuestion].AddScore);
+        UpdateScore((isCorrect) ? Questions[currentQuestion].AddScore : -Questions[currentQuestion].AddScore);
 
-    //     if (IsFinished)
-    //     {
-    //         SetHighscore();
-    //     }
+        if (IsFinished)
+        {
+            SetHighscore();
+        }
 
-    //     var type 
-    //         = (IsFinished) 
-    //         ? UIManager.ResolutionScreenType.Finish 
-    //         : (isCorrect) ? UIManager.ResolutionScreenType.Correct 
-    //         : UIManager.ResolutionScreenType.Incorrect;
+        var type 
+            = (IsFinished) 
+            ? UIManager.ResolutionScreenType.Finish 
+            : (isCorrect) ? UIManager.ResolutionScreenType.Correcto
+            : UIManager.ResolutionScreenType.Incorrecto;
 
-    //     if (events.DisplayResolutionScreen != null)
-    //     {
-    //         events.DisplayResolutionScreen(type, Questions[currentQuestion].AddScore);
-    //     }
+        if (events.DisplayResolutionScreen != null)
+        {
+            events.DisplayResolutionScreen(type, Questions[currentQuestion].AddScore);
+        }
 
-    //     AudioManager.Instance.PlaySound((isCorrect) ? "CorrectSFX" : "IncorrectSFX");
+        //AudioManager.Instance.PlaySound((isCorrect) ? "CorrectSFX" : "IncorrectSFX");
 
-    //     if (type != UIManager.ResolutionScreenType.Finish)
-    //     {
-    //         if (IE_WaitTillNextRound != null)
-    //         {
-    //             StopCoroutine(IE_WaitTillNextRound);
-    //         }
-    //         IE_WaitTillNextRound = WaitTillNextRound();
-    //         StartCoroutine(IE_WaitTillNextRound);
-    //     }
+        if (type != UIManager.ResolutionScreenType.Finish)
+        {
+            if (IE_WaitTillNextRound != null)
+            {
+                StopCoroutine(IE_WaitTillNextRound);
+            }
+            IE_WaitTillNextRound = WaitTillNextRound();
+            StartCoroutine(IE_WaitTillNextRound);
+        }
      }
+     void UpdateTimer(bool state)
+    {
+        switch (state)
+        {
+            case true:
+                IE_StartTimer = StartTimer();
+                StartCoroutine(IE_StartTimer);
+
+                timerAnimtor.SetInteger(timerStateParaHash, 2);
+                break;
+            case false:
+                if (IE_StartTimer != null)
+                {
+                    StopCoroutine(IE_StartTimer);
+                }
+
+                timerAnimtor.SetInteger(timerStateParaHash, 1);
+                break;
+        }
+    }
+    IEnumerator StartTimer()
+    {
+        var totalTime = Questions[currentQuestion].Timer;
+        var timeLeft = totalTime;
+
+        timerText.color = timerDefaultColor;
+        while (timeLeft > 0)
+        {
+            timeLeft--;
+
+            //AudioManager.Instance.PlaySound("CountdownSFX");
+
+            if (timeLeft < totalTime / 2 && timeLeft > totalTime / 4)
+            {
+                timerText.color = timerHalfWayOutColor;
+            }
+            if (timeLeft < totalTime / 4)
+            {
+                timerText.color = timerAlmostOutColor;
+            }
+
+            timerText.text = timeLeft.ToString();
+            yield return new WaitForSeconds(1.0f);
+        }
+        Accept();
+    }
+    IEnumerator WaitTillNextRound()
+    {
+        yield return new WaitForSeconds(GameUtility.ResolutionDelayTime);
+        Display();
+    }
+    private void UpdateScore(int add)
+    {
+        events.CurrentFinalScore += add;
+
+        if (events.ScoreUpdated != null)
+        {
+            events.ScoreUpdated();
+        }
+    }
+    private void SetHighscore()
+    {
+        var highscore = PlayerPrefs.GetInt(GameUtility.SavePrefKey);
+        if (highscore < events.CurrentFinalScore)
+        {
+            PlayerPrefs.SetInt(GameUtility.SavePrefKey, events.CurrentFinalScore);
+        }
+    }
 }

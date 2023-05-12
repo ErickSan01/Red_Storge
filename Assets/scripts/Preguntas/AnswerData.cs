@@ -6,14 +6,14 @@ public class AnswerData : MonoBehaviour
 {
     [Header("UI Elements")]
     [SerializeField] TextMeshProUGUI infoTextObject = null;
-    [SerializeField] Image  toggle = null;
+    [SerializeField] Image toggle = null;
 
     [Header("Textures")]
     [SerializeField] Sprite uncheckedToggle = null;
     [SerializeField] Sprite checkedToggle = null;
     private             bool            Checked             = false;
     [Header("References")]
-    [SerializeField]    GameEvents      events              = null;
+    [SerializeField] GameEvents events = null;
 
 
     private int _answerIndex = -1;
