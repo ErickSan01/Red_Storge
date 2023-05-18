@@ -8,8 +8,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    private             Question[]          _questions              = null;
-    public              Question[]          Questions               { get { return _questions; } }
+    private  Question[]  _questions  = null;
+    public Question[] Questions  { get { return _questions; } }
 
     [SerializeField]    GameEvents          events                  = null;
 
@@ -21,7 +21,8 @@ public class GameManager : MonoBehaviour
 
     private             List<AnswerData>    PickedAnswers           = new List<AnswerData>();
     private             List<int>           FinishedQuestions       = new List<int>();
-    private             int                 currentQuestion         = 0;
+    private int  currentQuestion = 0;
+    
 
     private             int                 timerStateParaHash      = 0;
 
@@ -37,6 +38,8 @@ public class GameManager : MonoBehaviour
     }
     void Start(){
         LoadQuestions();
+        var seed = UnityEngine.Random.Range(int.MinValue, int.MaxValue);
+        UnityEngine.Random.InitState(seed);
         foreach (var question in Questions)
         {
             Debug.Log(question.Info);
@@ -47,7 +50,9 @@ public class GameManager : MonoBehaviour
     //Actualizar cual de las respuestas es la que fue tomada, y que cambie el toggle.
     public void UpdateAnswers(AnswerData newAnswer)
     {
-        foreach (var answer in PickedAnswers)
+        if (Questions[currentQuestion].GetAnswerType == Question.AnswerType.Single)
+        {
+            foreach (var answer in PickedAnswers)
             {
                 if (answer != newAnswer)
                 {
@@ -56,6 +61,19 @@ public class GameManager : MonoBehaviour
             }
             PickedAnswers.Clear();
             PickedAnswers.Add(newAnswer);
+        }
+        else
+        {
+            bool alreadyPicked = PickedAnswers.Exists(x => x == newAnswer);
+            if (alreadyPicked)
+            {
+                PickedAnswers.Remove(newAnswer);
+            }
+            else
+            {
+                PickedAnswers.Add(newAnswer);
+            }
+        }
     }
     public void EraseAnswers()
     {

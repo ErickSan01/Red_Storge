@@ -26,15 +26,11 @@ public struct UIElements
 {
     [SerializeField] RectTransform answersContentArea;
     public RectTransform AnswersContentArea { get { return answersContentArea; } }
-
     [SerializeField] TextMeshProUGUI questionInfoTextObject;
     public TextMeshProUGUI QuestionInfoTextObject { get { return questionInfoTextObject; } }
-
     [SerializeField] TextMeshProUGUI scoreText;
     public TextMeshProUGUI ScoreText { get { return scoreText; } }
-
     [Space]
-
     [SerializeField] Animator resolutionScreenAnimator;
     public Animator ResolutionScreenAnimator { get { return resolutionScreenAnimator; } }
 
@@ -58,23 +54,26 @@ public struct UIElements
     [SerializeField] RectTransform finishUIElements;
     public RectTransform FinishUIElements { get { return finishUIElements; } }
 
+
+
 }
 
 public class UIManager : MonoBehaviour
 {
     public enum ResolutionScreenType {Correcto, Incorrecto, Finish}
-    [SerializeField]    UIManagerParameters parameters;
     [Header("References")]
     [SerializeField] GameEvents events;
-    [SerializeField] UIElements uIElements = new UIElements();
+   
 
     [Header("UI Elements (Prefabs)")]
-    [SerializeField]    AnswerData answerPrefab;
+     [SerializeField] UIElements uIElements = new UIElements();
+    [SerializeField]  AnswerData answerPrefab;
+    [Space]
+    [SerializeField]    UIManagerParameters    parameters = new UIManagerParameters();
+    private    IEnumerator  IE_DisplayTimedResolution    = null;
 
-    private             IEnumerator            IE_DisplayTimedResolution    = null;
-
-    private             List<AnswerData>       currentAnswers               = new List<AnswerData>();
-    private             int                    resStateParaHash             = 0;
+    private   List<AnswerData>  currentAnswers    = new List<AnswerData>();
+    private   int   resStateParaHash   = 0;
     void OnEnable()
     {
         events.UpdateQuestionUI         += UpdateQuestionUI;
@@ -88,6 +87,14 @@ public class UIManager : MonoBehaviour
         events.DisplayResolutionScreen  -= DisplayResolution;
         
     }
+
+void Start()
+    {
+        //UpdateScoreUI();
+        resStateParaHash = Animator.StringToHash("ScreenState");
+    }
+
+
     void UpdateQuestionUI(Question question)
     {
         uIElements.QuestionInfoTextObject.text = question.Info;
