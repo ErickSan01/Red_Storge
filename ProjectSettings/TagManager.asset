@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pergamino
   - DragParent
+  - Changelvl
   layers:
   - Default
   - TransparentFX
@@ -13,8 +14,8 @@ TagManager:
   - Block
   - Water
   - UI
-  - 
-  - 
+  - Player
+  - Objetos
   - 
   - 
   - 
@@ -42,4 +43,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: cielo
+    uniqueID: 1992405993
+    locked: 0
+  - name: fondo1
+    uniqueID: 2016487139
+    locked: 0
+  - name: fondo2
+    uniqueID: 2798909661
+    locked: 0
+  - name: fondo3
+    uniqueID: 825106195
+    locked: 0
+  - name: fondo4
+    uniqueID: 2176761839
+    locked: 0
+  - name: jugador
+    uniqueID: 3037651305
     locked: 0
