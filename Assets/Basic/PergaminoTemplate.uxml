@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Basic/PergaminoEstilos.uss?fileID=7433441132597879392&amp;guid=60a7f1aaa03db19429dd94a79b4e5c77&amp;type=3#PergaminoEstilos" />
+    <ui:VisualElement name="contenedor" class="contenedor">
+        <ui:VisualElement name="seccion_pregunta" class="seccion_pregunta">
+            <ui:VisualElement name="pregunta" class="pregunta">
+                <ui:Label text="Label" display-tooltip-when-elided="true" name="pregunta_texto" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="seccion_respuestas" class="seccion_respuestas" />
+        <ui:VisualElement name="seccion_btones" class="seccion_botones">
+            <ui:Button text="Contestar" display-tooltip-when-elided="true" name="contestar" enable-rich-text="false" class="boton_pergamino" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
