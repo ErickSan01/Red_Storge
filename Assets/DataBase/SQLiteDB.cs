@@ -3,7 +3,7 @@ using Mono.Data.Sqlite;
 using System.Data;
 using System.IO;
 using System;
-
+using System.Collections.Generic;
 public class SQLiteDB : MonoBehaviour
 {
     public static SQLiteDB instance;
@@ -14,21 +14,19 @@ public class SQLiteDB : MonoBehaviour
     }
     void Start()
     {
+        
         CreateTables();
-        Debug.Log("Hola");
-
-        //Query("INSERT INTO fase (nombre) VALUES ('Jonny');");
-        //Query("INSERT INTO pregunta (planteamiento,id_modulo,Id_fase) VALUES ('pregunta ejemplo 2',1,1);");
-        //Query("INSERT INTO opcion (id_pregunta, inciso, descripcion) VALUES (1,'B', 'OPCION B');");
-        string[] pregunta = SelectFromPregunta("1");
-        Debug.Log("Pregunta: "+pregunta[1]);
-        string[][] respuestas = SelectOpcion("1");
-        //string[] respuesta = respuestas[0];
-        //Debug.Log("Respuesta: "+respuesta[2]);
+        Debug.Log("Hola desde la BD");
+        //Query("INSERT INTO modulo (nombre) VALUES ('Modulo 1');");
+        //Query("Drop table pregunta;");
+        //Query("Drop table opcion;");
+        //Query("INSERT INTO pregunta (planteamiento,id_modulo,Id_fase) VALUES ('pregunta ejemplo BD',1,1);");
+        //Query("INSERT INTO opcion (id_pregunta, inciso, correcta, descripcion) VALUES (1,'a',true,'opcion A ejemplo BD')");
+        //Query("INSERT INTO opcion (id_pregunta, inciso, correcta, descripcion) VALUES (1,'b',false,'opcion B ejemplo BD')");
+        //Query("INSERT INTO opcion (id_pregunta, inciso, correcta, descripcion) VALUES (1,'c',false,'opcion C ejemplo BD')");
 
 
-        //Query("SELECT * FROM fase;");
-        //string[,] results = SelectFromFase("SELECT * FROM fase;");
+
     }
 
     private void CreateTables()
@@ -50,7 +48,7 @@ public class SQLiteDB : MonoBehaviour
         }
     }
 
-    public void Query(string q)
+    private void Query(string q)
     {
         using (var connection = new SqliteConnection(dbName))
         {
@@ -68,75 +66,102 @@ public class SQLiteDB : MonoBehaviour
     }
 
 
-    public string[] SelectFromPregunta(String idPregunta)
+    //Seleccionar de tabla todos los registros. 
+    public List<string[]> SeleccionarTabla(string nombreTabla)
     {
-        String q = "SELECT * FROM pregunta WHERE ID_PREGUNTA ="+idPregunta+";";
-        string[] pregunta = new string[4];
+        string query = "SELECT * FROM " + nombreTabla;
+        List<string[]> registros = new List<string[]>();
         using (var connection = new SqliteConnection(dbName))
         {
-            connection.Open();
-            using (var command = connection.CreateCommand())
-            {
-                command.CommandText = q;
-                using (IDataReader reader = command.ExecuteReader())
+           connection.Open();
+           using (var command = new SqliteCommand(query, connection))
+           {
+              using (var reader = command.ExecuteReader())
+              {
+                int columnCount = reader.FieldCount;
+
+                while (reader.Read())
                 {
-                    while (reader.Read())
+                    string[] registro = new string[columnCount];
+
+                    for (int i = 0; i < columnCount; i++)
                     {
-                        if(idPregunta.Equals(reader["ID_PREGUNTA"]+"")){
-                            pregunta[0] = reader["ID_PREGUNTA"]+"";
-                            pregunta[1] = reader["PLANTEAMIENTO"].ToString()+"";
-                            pregunta[2] = reader["ID_MODULO"].ToString()+"";
-                            pregunta[3] = reader["ID_FASE"].ToString()+"";
-                            //Debug.Log("ID_Pregunta: " + reader["ID_PREGUNTA"] + " Descripcion : " + reader["PLANTEAMIENTO"]);
-                        }
-                        //Debug.Log("ID_Pregunta: " + reader["ID_PREGUNTA"] + " Descripcion : " + reader["PLANTEAMIENTO"]);
-                        
-                        //Debug.Log("ID_FASE: " + reader["ID_FASE"] + " Nombre : " + reader["NOMBRE"]);
+                        registro[i] = reader[i].ToString();
+                    }
+
+                    registros.Add(registro);
+                }
+            }
+        }
+    }
+    return registros;
+    }
+
+    //Seleccionar un registro especifico
+    public string[] SeleccionarRegistro(string nombreTabla, string nombreColumna, string valor)
+    {
+    string query = $"SELECT * FROM {nombreTabla} WHERE {nombreColumna} = @valor";
+    string[] registro = null;
+
+    using (var connection = new SqliteConnection(dbName))
+    {
+        connection.Open();
+        using (var command = new SqliteCommand(query, connection))
+        {
+            command.Parameters.AddWithValue("@valor", valor);
+
+            using (var reader = command.ExecuteReader())
+            {
+                int columnCount = reader.FieldCount;
+
+                if (reader.Read())
+                {
+                    registro = new string[columnCount];
+
+                    for (int i = 0; i < columnCount; i++)
+                    {
+                        registro[i] = reader[i].ToString();
                     }
                 }
             }
-            connection.Close();
-            return pregunta;
         }
     }
 
-    public string[][] SelectOpcion(String idPregunta){
-        String q = "SELECT * FROM opcion WHERE ID_PREGUNTA ="+idPregunta+";";
-        string[][] respuestas = new string[7][];
-        int inciso = 0;
-        using (var connection = new SqliteConnection(dbName))
+        return registro;
+    }
+
+    //Todos los registros coincidentes
+    public List<string[]> SeleccionarRegistros(string nombreTabla, string nombreColumna, string valor)
+    {
+    string query = $"SELECT * FROM {nombreTabla} WHERE {nombreColumna} = @valor";
+    List<string[]> registros = new List<string[]>();
+
+    using (var connection = new SqliteConnection(dbName))
+    {
+        connection.Open();
+
+        using (var command = new SqliteCommand(query, connection))
         {
-            connection.Open();
-            using (var command = connection.CreateCommand())
+            command.Parameters.AddWithValue("@valor", valor);
+
+            using (var reader = command.ExecuteReader())
             {
-                command.CommandText = q;
-                using (IDataReader reader = command.ExecuteReader())
+                int columnCount = reader.FieldCount;
+
+                while (reader.Read())
                 {
-                    while (reader.Read())
+                    string[] registro = new string[columnCount];
+
+                    for (int i = 0; i < columnCount; i++)
                     {
-                        
-                        if(idPregunta.Equals(reader["ID_PREGUNTA"]+"")){
-                            string[] respuesta = new string[5];
-                            /*
-                            respuesta[0] = reader[0]+"";
-                            respuesta[1] = reader[0]+"";
-                            respuesta[2] = reader[0]+"";
-                            respuesta[3] = reader[0]+"";
-                            */
-                            respuesta[0] = reader["ID_OPCION"]+"";
-                            respuesta[1] = reader["ID_RESPUESTA"]+"";
-                            respuesta[2] = reader["INCISO"]+"";
-                            respuesta[3] = reader["DESCRIPCION"]+"";
-                            
-                            respuestas[inciso] = respuesta;
-                            Debug.Log("ID_Pregunta: " + reader["ID_PREGUNTA"] + " Descripcion : " + reader["DESCRIPCION"]);
-                        }
+                        registro[i] = reader[i].ToString();
                     }
+
+                    registros.Add(registro);
                 }
             }
-
         }
-        return respuestas;
-
+    }
+    return registros;
     }
 }

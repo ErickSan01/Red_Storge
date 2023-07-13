@@ -13,22 +13,25 @@ public class InterfacePergamino : MonoBehaviour
     Button contestar;
     Toggle lastSelectedToggle;
     Label preguntaTexto;
+    private SQLiteDB sqliteDBInstance;
 
 
     void OnEnable()
     {
         PergaminoTemplate = GetComponent<UIDocument>();
         VisualElement root = PergaminoTemplate.rootVisualElement;
+        //Asiganmos el boton para contestar
         contestar = root.Q<Button>("contestar");
         seccion_respuestas = root.Q<VisualElement>("seccion_respuestas"); 
         preguntaTexto = root.Q<Label>("pregunta_texto");
         preguntaTexto.text = "Pregunta prueba";
+        
         // Crear el ScrollView vertical
         scrollView = new ScrollView();
         scrollView.name = "scrollView";
         scrollView.AddToClassList("full_size");
         seccion_respuestas.Add(scrollView);
-
+        // Espacio de las opciones
         respuestas = new VisualElement();
         respuestas.name = "respuestas";
         respuestas.AddToClassList("full_size");
@@ -38,16 +41,31 @@ public class InterfacePergamino : MonoBehaviour
 
     void Start()
     {
-        // Realizar el caso de prueba
-        AgregarVisualElement("respuesta12", "opcion A");
-        AgregarVisualElement("respuesta13", "opcion b");
-        AgregarVisualElement("respuesta14", "opcion c");
-        AgregarVisualElement("respuesta15", "opcion d");
-        AgregarVisualElement("respuesta16", "opcion e");
+        GameObject sqliteDBObject = GameObject.Find("SQLiteDB");
+        sqliteDBInstance = sqliteDBObject.GetComponent<SQLiteDB>();
+        string[] resultados = sqliteDBInstance.SeleccionarRegistro("fase", "id_fase", "5");
+        preguntaTexto.text = resultados[1];
+        AgregarOpciones("opcion", "id_pregunta", "1");
+
+        
 
         // Configurar el botón "contestar"
         contestar.SetEnabled(false);
         contestar.clicked += ContestarClicked;
+    }
+
+    void AgregarOpciones(string nombreTabla, string nombreColumna, string valor)
+    {
+        //List<string[]> opciones = sqliteDBInstance.SeleccionarRegistro("opcion", "id_pregunta", "1");
+        List<string[]> opciones = sqliteDBInstance.SeleccionarRegistros( nombreTabla, nombreColumna, valor);
+        for (int i = 0; i < opciones.Count; i++)
+        {
+         string[] opcion = opciones[i];
+         string inciso = opcion[2];
+         string descripcion = opcion[4];
+         AgregarVisualElement(inciso, descripcion);
+
+        }
     }
 
     void AgregarVisualElement(string nombre, string texto)
@@ -111,7 +129,6 @@ public class InterfacePergamino : MonoBehaviour
             Debug.Log("Respuesta seleccionada: " + textoToggle);
         }
     }
-
     void Update()
     {
         
