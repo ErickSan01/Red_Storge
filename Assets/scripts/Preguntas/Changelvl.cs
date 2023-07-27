@@ -5,37 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class Changelvl : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public string nombreDelNivel; // Nombre del nivel al que deseas moverte
 
-    [SerializeField] private int lvlMap;
-    [SerializeField] private int nextLvlMap;
-    public GameObject instance;
-    void Start()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            if (instance.CompareTag("Changelvl"))
-            {
-                DataManager.instance.LVLMap(lvlMap);
-            }
-            else if (instance.CompareTag("Changelvl"))
-            {
-                DataManager.instance.LVLMap(nextLvlMap);
-                SceneManager.LoadScene(nextLvlMap);
-            }
-
-            print("Game Saved");
+            // Cargar el siguiente nivel
+            SceneManager.LoadScene(nombreDelNivel);
         }
     }
 }
