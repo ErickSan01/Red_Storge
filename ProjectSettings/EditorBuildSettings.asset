@@ -9,15 +9,6 @@ EditorBuildSettings:
     path: "Assets/Scenes/UI auteticacion/InicioSesi\xF3n.unity"
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/colision.unity
-    guid: be4632c5af920c14fab5e604dfd96d47
-  - enabled: 1
-    path: Assets/Scenes/PopupFullscreen.unity
-    guid: 8b9c7fd93faa0ab4389833d4367ad016
-  - enabled: 1
-    path: Assets/Scenes/PreguntaBase.unity
-    guid: d4642027951208f4c8dc0d7ade5ce956
-  - enabled: 1
     path: Assets/Scenes/nivel1.unity
     guid: 7992554e734f27649b0e89f0ddae5021
   - enabled: 1
@@ -26,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/nivel3.unity
     guid: b51cde93717b21c43bef46182f2f3555
+  - enabled: 1
+    path: Assets/Scenes/PreguntaBase.unity
+    guid: d4642027951208f4c8dc0d7ade5ce956
+  - enabled: 1
+    path: Assets/Scenes/colision.unity
+    guid: be4632c5af920c14fab5e604dfd96d47
+  - enabled: 1
+    path: Assets/Scenes/PopupFullscreen.unity
+    guid: 8b9c7fd93faa0ab4389833d4367ad016
   m_configObjects: {}
