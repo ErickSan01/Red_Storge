@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Basic/MenuPausa/MenuPausaEstilos.uss?fileID=7433441132597879392&amp;guid=ac16bb2636600f84b893df39e37e18e5&amp;type=3#MenuPausaEstilos" />
+    <ui:VisualElement name="PauseMenu" class="contenedorMenu" style="display: none;">
+        <ui:Label text="Red Storge" display-tooltip-when-elided="true" style="color: rgb(222, 0, 67); font-size: 64px; -unity-text-align: lower-left; top: 20px; bottom: 0; left: 35%;" />
+        <ui:Button text="Continuar" display-tooltip-when-elided="true" enable-rich-text="false" name="continueButton" class="botonesMenu" style="color: rgb(255, 255, 255); font-size: 32px; align-items: auto; left: 20%; top: 25px; display: flex;" />
+        <ui:Button text="Opciones" display-tooltip-when-elided="true" enable-rich-text="false" class="botonesMenu" style="color: rgb(255, 255, 255); font-size: 32px; align-items: auto; left: 20%; top: 25px;" />
+        <ui:Button text="Salir" display-tooltip-when-elided="true" enable-rich-text="false" class="botonesMenu" style="color: rgb(255, 255, 255); font-size: 32px; align-items: auto; left: 20%; top: 25px;" />
+    </ui:VisualElement>
+</ui:UXML>
