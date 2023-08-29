@@ -16,6 +16,7 @@ public class DragAndDrop : MonoBehaviour
     void Start()
     {
         ObjectOriginalPosition = objectToDrag.transform.position;
+        Debug.Log(ObjectOriginalPosition);
     }
 
     public void DragObject()
@@ -39,6 +40,7 @@ public class DragAndDrop : MonoBehaviour
         else
         {
             objectToDrag.transform.position = ObjectOriginalPosition;
+            Debug.Log(ObjectOriginalPosition);
         }
     }
 }
