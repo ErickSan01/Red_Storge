@@ -5,6 +5,8 @@ public class PauseManagerUIToolkit : MonoBehaviour
 {
     public UIDocument uiDocument; // Referencia al UIDocument en la escena.
     public UIDocument uiDocument2;
+    public AudioSource audioSource;
+    public Player_Script player;
     private VisualElement rootElement;
     private VisualElement pauseMenu;
     private Button pauseButton;
@@ -31,11 +33,15 @@ public class PauseManagerUIToolkit : MonoBehaviour
         {
             pauseMenu.style.display = DisplayStyle.Flex;
             pauseButton.style.display = DisplayStyle.None;
+            audioSource.Pause();
+            player.walk = false;
         }
         else
         {
             pauseMenu.style.display = DisplayStyle.None;
             pauseButton.style.display = DisplayStyle.Flex;
+            audioSource.Play();
+            player.walk = true;
         }
     }
 }
