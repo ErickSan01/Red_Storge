@@ -17,11 +17,20 @@ public class Player_Script : MonoBehaviour
 
     private Animator anim;
 
+    private AudioSource audioSource;
+
     public bool walk = false;
 
     public bool inPopUp = false;
 
     public bool ignorarColisiones = false;
+
+    public AudioClip footstepSound;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -74,6 +83,7 @@ public class Player_Script : MonoBehaviour
             }
 
             flip(direction.x);
+            HandleFootstepSound();
         }
     }
 
@@ -92,11 +102,22 @@ public class Player_Script : MonoBehaviour
         transform.localScale = theScale;
     }
 
+    void HandleFootstepSound()
+    {
+        if (isMoving && !audioSource.isPlaying)
+        {
+            audioSource.PlayOneShot(footstepSound);
+        }
+        else if (!isMoving)
+        {
+            audioSource.Stop();
+        }
+    }
+
     private void Start() {
         transform.position = new Vector3(-8.68f,-2.96f,1f);
         anim = GetComponent<Animator>();
     }
- 
 
 
 }
