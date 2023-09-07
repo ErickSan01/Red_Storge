@@ -153,6 +153,7 @@ MonoBehaviour:
   walk: 0
   inPopUp: 0
   ignorarColisiones: 0
+  footstepSound: {fileID: 8300000, guid: c767fb2cea41c694989c44dfa5b16e5a, type: 3}
 --- !u!95 &3421106467849615402
 Animator:
   serializedVersion: 5
