@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Basic/MenuPausa/MenuConfigEstilos.uss?fileID=7433441132597879392&amp;guid=8350bfa27b4d9bf41b29be16ec775391&amp;type=3#MenuConfigEstilos" />
+    <ui:VisualElement name="ConfigMenu" class="contenedorMenu" style="display: none; width: 100%; height: 100%; background-color: rgb(44, 146, 179); align-items: center;">
+        <ui:Label text="Red Storge" display-tooltip-when-elided="true" style="color: rgb(222, 0, 67); font-size: 64px; -unity-text-align: lower-center; top: 10%; bottom: 0; left: 0; white-space: normal;" />
+        <ui:SliderInt picking-mode="Ignore" label="Volumen" value="100" high-value="100" name="Volumen" low-value="1" style="top: 30%; width: 600px; flex-direction: column; align-items: center; height: 60px; color: rgb(243, 88, 88); -unity-text-align: middle-center; font-size: 32px;" />
+        <ui:Button text="Salir" display-tooltip-when-elided="true" enable-rich-text="false" name="salirButtom" class="botonesMenu" style="color: rgb(255, 255, 255); font-size: 32px; align-items: auto; left: 0; top: 40%; background-color: rgb(167, 75, 199); width: 600px; height: 50px;" />
+    </ui:VisualElement>
+</ui:UXML>

@@ -3,7 +3,7 @@
     <ui:VisualElement name="PauseMenu" class="contenedorMenu" style="display: none;">
         <ui:Label text="Red Storge" display-tooltip-when-elided="true" style="color: rgb(222, 0, 67); font-size: 64px; -unity-text-align: lower-left; top: 20px; bottom: 0; left: 35%;" />
         <ui:Button text="Continuar" display-tooltip-when-elided="true" enable-rich-text="false" name="continueButton" class="botonesMenu" style="color: rgb(255, 255, 255); font-size: 32px; align-items: auto; left: 20%; top: 25px; display: flex;" />
-        <ui:Button text="Opciones" display-tooltip-when-elided="true" enable-rich-text="false" class="botonesMenu" style="color: rgb(255, 255, 255); font-size: 32px; align-items: auto; left: 20%; top: 25px;" />
+        <ui:Button text="Opciones" display-tooltip-when-elided="true" enable-rich-text="false" name="opcionesButton" class="botonesMenu" style="color: rgb(255, 255, 255); font-size: 32px; align-items: auto; left: 20%; top: 25px;" />
         <ui:Button text="Salir" display-tooltip-when-elided="true" enable-rich-text="false" class="botonesMenu" style="color: rgb(255, 255, 255); font-size: 32px; align-items: auto; left: 20%; top: 25px;" />
     </ui:VisualElement>
 </ui:UXML>
