@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PopupFullscreen.unity
     guid: 8b9c7fd93faa0ab4389833d4367ad016
+  - enabled: 1
+    path: Assets/Scenes/MenuPreguntas.unity
+    guid: 53c4a787f34f7f349a1929129235d0bc
+  - enabled: 1
+    path: Assets/Scenes/ToolkitPrueba.unity
+    guid: 5cd9faddc246af94e9ecbe17420a8c43
   m_configObjects: {}

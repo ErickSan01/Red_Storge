@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Basic/MainMenu/EstiloMenu.uss?fileID=7433441132597879392&amp;guid=6ef75f7cd72017e478c0626d628c4e7f&amp;type=3#EstiloMenu" />
+    <ui:VisualElement name="contenedor" class="contenedor">
+        <ui:VisualElement name="niveles" class="contenido_menu">
+            <ui:Button text="Pregunta 1" display-tooltip-when-elided="true" name="btn_nivel1" class="boton_menu" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

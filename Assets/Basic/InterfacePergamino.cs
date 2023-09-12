@@ -41,13 +41,13 @@ public class InterfacePergamino : MonoBehaviour
 
     void Start()
     {
+
         GameObject sqliteDBObject = GameObject.Find("SQLiteDB");
         sqliteDBInstance = sqliteDBObject.GetComponent<SQLiteDB>();
         string[] resultados = sqliteDBInstance.SeleccionarRegistro("fase", "id_fase", "5");
-        preguntaTexto.text = resultados[1];
+        //preguntaTexto.text = resultados[1];
+        preguntaTexto.text = MenuPreguntas.textoParaSegundaEscena;
         AgregarOpciones("opcion", "id_pregunta", "1");
-
-        
 
         // Configurar el botón "contestar"
         contestar.SetEnabled(false);
