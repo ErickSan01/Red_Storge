@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class Changelvl : MonoBehaviour
 {
     public string nombreDelNivel; // Nombre del nivel al que deseas moverte
-    public string textoDinamico;
     public static string textoParaSegundaEscena;
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -14,7 +13,7 @@ public class Changelvl : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             // Cargar el siguiente nivel
-            textoParaSegundaEscena = textoDinamico;
+            textoParaSegundaEscena = "Texto que quieres pasar a la segunda escena";
             SceneManager.LoadScene(nombreDelNivel);
         }
     }
