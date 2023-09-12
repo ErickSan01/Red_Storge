@@ -4,6 +4,9 @@ using System.Data;
 using System.IO;
 using System;
 using System.Collections.Generic;
+
+using System.Collections;
+
 public class SQLiteDB : MonoBehaviour
 {
     public static SQLiteDB instance;
@@ -14,7 +17,7 @@ public class SQLiteDB : MonoBehaviour
     }
     void Start()
     {
-        
+
         CreateTables();
         Debug.Log("Hola desde la BD");
         //Query("INSERT INTO modulo (nombre) VALUES ('Modulo 1');");
@@ -24,6 +27,11 @@ public class SQLiteDB : MonoBehaviour
         //Query("INSERT INTO opcion (id_pregunta, inciso, correcta, descripcion) VALUES (1,'a',true,'opcion A ejemplo BD')");
         //Query("INSERT INTO opcion (id_pregunta, inciso, correcta, descripcion) VALUES (1,'b',false,'opcion B ejemplo BD')");
         //Query("INSERT INTO opcion (id_pregunta, inciso, correcta, descripcion) VALUES (1,'c',false,'opcion C ejemplo BD')");
+        string[][] matris = ParseFile("D:/Servicio/Red_Storge/Assets/DataBase/archivo.txt");
+        string[] pregunta = matris[0];
+        registrarPreguntaEnBD(pregunta);
+
+
 
 
 
@@ -163,5 +171,65 @@ public class SQLiteDB : MonoBehaviour
         }
     }
     return registros;
+    }
+
+    public string[][] ParseFile(string filePath)
+    {
+        List<string[]> matrix = new List<string[]>();
+
+        try
+        {
+            string[] lines = File.ReadAllLines(filePath);
+
+            foreach (string line in lines)
+            {
+                string[] parts = line.Trim('(', ')').Split(new string[] { "//" }, StringSplitOptions.RemoveEmptyEntries);
+                matrix.Add(parts);
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error al leer el archivo: " + ex.Message);
+        }
+        return matrix.ToArray();
+    }
+
+     public string[] decifrarCodigoPregunta(string codigo){
+        string[] datos = new string[2];
+        datos[0] = codigo[1].ToString();
+         switch (codigo[5])
+        {
+            case 'P':
+                datos[1] = "1";
+                break;
+            case 'R':
+                datos[1] = "2";
+                break;
+            case 'S':
+                datos[1] = "3";
+                break;
+            default:
+                break;
+        }
+        return datos;
+
+
+    }
+    public void registrarPreguntaEnBD(string [] pregunta){
+        string codigo = pregunta[0];
+        string plantemaiento = pregunta[1];
+        string[] datos = decifrarCodigoPregunta(codigo);
+        string modulo = datos[0];
+        string fase = datos[1];
+        string mc = pregunta[2];
+        string consulta= "INSERT INTO pregunta (PLANTEAMIENTO, ID_MODULO, ID_FASE, ID_MATERIAL_CONSULTA) VALUES ("+
+        "'"+plantemaiento+"'"+","+
+        modulo+","+
+        fase+","+
+        mc+")";
+        Debug.Log(consulta);
+        Query(consulta); 
+
+
     }
 }
