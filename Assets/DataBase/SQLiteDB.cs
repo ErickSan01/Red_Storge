@@ -46,7 +46,7 @@ public class SQLiteDB : MonoBehaviour
             using (var command = connection.CreateCommand())
             {
                 string sqlcreation="";
-                string rutaArchivo = "D:/Servicio/Red_Storge/Assets/DataBase/sqlUnity.sql"; 
+                string rutaArchivo = "Assets/DataBase/sqlUnity.sql"; 
                 string[] lineas = File.ReadAllLines(rutaArchivo);
                 sqlcreation = string.Join("", lineas);
                 command.CommandText = sqlcreation;
