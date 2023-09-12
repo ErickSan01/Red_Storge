@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Basic/MainMenu/EstiloMenu.uss?fileID=7433441132597879392&amp;guid=6ef75f7cd72017e478c0626d628c4e7f&amp;type=3#EstiloMenu" />
+    <ui:VisualElement name="contenedor" class="contenedor" style="align-items: center; justify-content: center;">
+        <ui:VisualElement name="contenido_menu" class="contenido_menu">
+            <ui:VisualElement name="seccion_titulo" class="seccion_titulo">
+                <ui:Label text="RED STOTGE" display-tooltip-when-elided="true" name="titulo" enable-rich-text="false" style="width: auto; font-size: 170px; color: rgb(173, 42, 94); -unity-font-style: bold;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="seccion_botones" class="seccion_botones" style="background-color: rgba(0, 255, 236, 0);">
+                <ui:Button text="Jugar" display-tooltip-when-elided="true" name="Jugar" enable-rich-text="false" class="boton_menu" />
+                <ui:Button text="Información" display-tooltip-when-elided="true" name="Informacion" class="boton_menu" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
