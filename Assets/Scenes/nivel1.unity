@@ -528,6 +528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nombreDelNivel: ToolkitPrueba
+  textoDinamico: 1
 --- !u!1001 &495209856
 PrefabInstance:
   m_ObjectHideFlags: 0
