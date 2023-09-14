@@ -27,9 +27,9 @@ public class SQLiteDB : MonoBehaviour
         //Query("INSERT INTO opcion (id_pregunta, inciso, correcta, descripcion) VALUES (1,'a',true,'opcion A ejemplo BD')");
         //Query("INSERT INTO opcion (id_pregunta, inciso, correcta, descripcion) VALUES (1,'b',false,'opcion B ejemplo BD')");
         //Query("INSERT INTO opcion (id_pregunta, inciso, correcta, descripcion) VALUES (1,'c',false,'opcion C ejemplo BD')");
-        string[][] matris = ParseFile("D:/Servicio/Red_Storge/Assets/DataBase/archivo.txt");
-        string[] pregunta = matris[0];
-        registrarPreguntaEnBD(pregunta);
+        //string[][] matris = ParseFile("D:/Servicio/Red_Storge/Assets/DataBase/archivo.txt");
+        //string[] pregunta = matris[0];
+        //registrarPreguntaEnBD(pregunta);
 
 
 
