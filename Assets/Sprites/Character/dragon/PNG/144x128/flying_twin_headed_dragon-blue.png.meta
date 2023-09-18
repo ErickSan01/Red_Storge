@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,7 +103,259 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: flying_twin_headed_dragon-blue_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 396
+        width: 142
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db4ffaa7cef03b842b395c220b2faeb4
+      internalID: 1838123863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flying_twin_headed_dragon-blue_1
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 397
+        width: 138
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0723093e57700324aaaf0fb9693a71b3
+      internalID: 1388167737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flying_twin_headed_dragon-blue_2
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 398
+        width: 125
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87ffc1dcff772154683303de3dcf1652
+      internalID: 341838026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flying_twin_headed_dragon-blue_3
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 289
+        width: 118
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62d9385ab0e15a641a447cfb2b5a46f2
+      internalID: 1655122738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flying_twin_headed_dragon-blue_4
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 289
+        width: 117
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c134e8686a99fc54296432882fe37ecc
+      internalID: 1474053730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flying_twin_headed_dragon-blue_5
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 287
+        width: 117
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4208ea905515314d93f0eafca542825
+      internalID: -1687419225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flying_twin_headed_dragon-blue_6
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 152
+        width: 138
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c55052f0abbc6e4982917f9ea1ca512
+      internalID: -993019781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flying_twin_headed_dragon-blue_7
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 159
+        width: 130
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fdb21d091c7c984cb849e66e93bc085
+      internalID: 1130629852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flying_twin_headed_dragon-blue_8
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 149
+        width: 98
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40d49e2e3a6dc78429a1e9ff03b20f4e
+      internalID: 1826112725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flying_twin_headed_dragon-blue_9
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 31
+        width: 117
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02995f596d27fbd419444e2361c1b122
+      internalID: -584933835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flying_twin_headed_dragon-blue_10
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 33
+        width: 117
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 090bce4fabe4ec343b7bf78c6ccfbe65
+      internalID: 273072475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flying_twin_headed_dragon-blue_11
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 33
+        width: 118
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50f534a6c48164f4e8db258e0a79e4f8
+      internalID: -1118886181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +366,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      flying_twin_headed_dragon-blue_2: 341838026
+      flying_twin_headed_dragon-blue_8: 1826112725
+      flying_twin_headed_dragon-blue_1: 1388167737
+      flying_twin_headed_dragon-blue_11: -1118886181
+      flying_twin_headed_dragon-blue_5: -1687419225
+      flying_twin_headed_dragon-blue_10: 273072475
+      flying_twin_headed_dragon-blue_6: -993019781
+      flying_twin_headed_dragon-blue_7: 1130629852
+      flying_twin_headed_dragon-blue_4: 1474053730
+      flying_twin_headed_dragon-blue_0: 1838123863
+      flying_twin_headed_dragon-blue_3: 1655122738
+      flying_twin_headed_dragon-blue_9: -584933835
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
