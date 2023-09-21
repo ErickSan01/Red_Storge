@@ -1,0 +1,32 @@
+.contenedor_principal {
+    background-color: rgb(81, 88, 147);
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-image: url('project://database/Assets/Sprites/Background/screen_cap_2.png?fileID=21300000&guid=e17dd3a53d2803645809ad2405d85f3b&type=3#screen_cap_2');
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.boton {
+    width: 60%;
+    height: 200px;
+    font-size: 50px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: rgb(153, 37, 214);
+    border-left-width: 8px;
+    border-right-width: 8px;
+    border-top-width: 8px;
+    border-bottom-width: 8px;
+    border-left-color: rgba(0, 0, 0, 0.29);
+    border-right-color: rgba(0, 0, 0, 0.29);
+    border-top-color: rgba(0, 0, 0, 0.29);
+    border-bottom-color: rgba(0, 0, 0, 0.29);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

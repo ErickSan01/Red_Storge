@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Basic/Mapa/MapaEstilos.uss?fileID=7433441132597879392&amp;guid=b6a7d17425194164c8c827ccb24f5ee0&amp;type=3#MapaEstilos" />
+    <ui:VisualElement name="contenido_principal" class="contenedor_principal">
+        <ui:VisualElement name="seccion_botones" style="width: 40%; height: 100%; background-color: rgba(63, 106, 214, 0.69); align-items: center; margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
+            <ui:Button text="Modulo 1&#10;" display-tooltip-when-elided="true" name="btn_modulo1" class="boton" />
+            <ui:Button text="Modulo 2&#10;" display-tooltip-when-elided="true" name="btn_modulo2" class="boton" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
