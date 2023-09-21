@@ -1,6 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/Basic/PergaminoEstilos.uss?fileID=7433441132597879392&amp;guid=60a7f1aaa03db19429dd94a79b4e5c77&amp;type=3#PergaminoEstilos" />
-    <ui:VisualElement name="contenedor" class="contenedor">
+    <Style src="project://database/Assets/Basic/PergaminoEstilos%201.uss?fileID=7433441132597879392&amp;guid=509a53a65955bf446961c98fb40fb009&amp;type=3#PergaminoEstilos 1" />
+    <ui:VisualElement name="contenedor" class="contenedor" style="background-image: url(&apos;project://database/Assets/Sprites/Background/Cartoon_Forest_BG_01.png?fileID=21300000&amp;guid=e9d2513792ebb1b4794adbf9ae1da2bd&amp;type=3#Cartoon_Forest_BG_01&apos;); -unity-background-image-tint-color: rgba(0, 103, 255, 0.38);">
         <ui:VisualElement name="seccion_pregunta" class="seccion_pregunta">
             <ui:VisualElement name="pregunta" class="pregunta">
                 <ui:Label text="Label" display-tooltip-when-elided="true" name="pregunta_texto" />
