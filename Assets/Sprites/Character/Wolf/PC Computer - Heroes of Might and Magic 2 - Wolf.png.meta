@@ -1,0 +1,1069 @@
+fileFormatVersion: 2
+guid: 96c66931b04a4164e8b5f580749fcc34
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 514
+        width: 76
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e74e8256d47f6a4aa95ae83bb241c8c
+      internalID: 480554047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_1
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 559
+        width: 90
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a01b6941a68de4c9d630ddb4f83854
+      internalID: -717536425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_2
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 518
+        width: 40
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4847bc78ff4e764f8d443161cad5942
+      internalID: 826906289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 518
+        width: 38
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 088593d2fb5005f4f84d3547a1fbaab0
+      internalID: 1070710294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_4
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 518
+        width: 42
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 701197f15606a974a96dce8f3afb9138
+      internalID: -1539082321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_5
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 518
+        width: 42
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ea81ca74241ab45983e7b9d4864763
+      internalID: 1548915062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_6
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 518
+        width: 40
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7789de71c830cb941a2650b21b456901
+      internalID: -597086077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_7
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 518
+        width: 38
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24c7689f1a640a74e864a8d1cfcec786
+      internalID: 2035521921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_8
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 519
+        width: 49
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5796c9e8d893fe4f85561d4f03325de
+      internalID: 1165085690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_9
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 518
+        width: 55
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9f019e6e7108e24ba614d8038915aee
+      internalID: -1122252743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_10
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 449
+        width: 89
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05476d268b1804b47a1a1530900b088b
+      internalID: 1683679466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_11
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 449
+        width: 100
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eabfe7c0a5a6f14b8cbbe57e1882cbd
+      internalID: -1884062164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_12
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 449
+        width: 108
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 949104ebfeb52e844af4ac5b561b8770
+      internalID: -1909084325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_13
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 461
+        width: 106
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08745aa70011fd44f8ae646b796533c5
+      internalID: 1308022228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_14
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 449
+        width: 101
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06a1e85aff289504c81ce416dab3d826
+      internalID: 2049575998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_15
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 449
+        width: 105
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c398e56ef63eeb4889ef7744c584bc3
+      internalID: -939573656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_16
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 382
+        width: 91
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f15ac057d138a1345974437d02b61e1a
+      internalID: -118856345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_17
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 382
+        width: 100
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fe39f5caf7977542a52ac437d25c5d6
+      internalID: -852778551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_18
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 382
+        width: 103
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31b371943cc7a2a4292bf40e3261b589
+      internalID: 1657179421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_19
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 382
+        width: 103
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 585dba00f54eba64bbcf77af959c7892
+      internalID: -1011486016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_20
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 382
+        width: 91
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6825e866c84ec5c48a468e5aa14fd58f
+      internalID: 920846928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_21
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 382
+        width: 92
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caff2a17bbd2d9e4a9badabc22ae3a5d
+      internalID: 1584597999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_22
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 290
+        width: 84
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7046a76459dbb6647851141d1b356e3c
+      internalID: 814056076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_23
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 345
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28d8da9b9fea5584eb90f0beb03ff351
+      internalID: -1131788434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_24
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 290
+        width: 74
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff66cc9024b2244a97f5b333434b40a
+      internalID: -1569004150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_25
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 290
+        width: 85
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63e88dcaf8094d643b85bc078eaa40a9
+      internalID: -1452766690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_26
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 220
+        width: 89
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e5f590e676b6f4582030f3f0809a7f
+      internalID: -298973306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_27
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 220
+        width: 92
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21bc6d18998b5f46ba4e193157dbabd
+      internalID: -2006879087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_28
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 199
+        width: 71
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e784b7522d4bb1468882c23ad688281
+      internalID: 1250560923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_29
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 205
+        width: 95
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5fd2e8a49466ca43a6fc2e21ef27ea5
+      internalID: 1212672003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_30
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 134
+        width: 76
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6467148e44175f345b71c406a7e7b395
+      internalID: -1042826127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_31
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 134
+        width: 76
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ecfa2d990e08b04aaa6a95aefe87c76
+      internalID: -1874365683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_32
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 134
+        width: 78
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cb1bf4f0128dab4ca127d034359b048
+      internalID: -758013662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_33
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 134
+        width: 81
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1021a16da28e864fafc2799e6c6658e
+      internalID: 1425961326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_34
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 134
+        width: 81
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a393d255c32122a48b6a3b0a34270d84
+      internalID: 1087244853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_35
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 134
+        width: 81
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f4465434d405a744b0c607e42dae5f6
+      internalID: -582085549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_36
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 41
+        width: 57
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5e03396e3dae3b45a4fba5d5670967c
+      internalID: 998864800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_37
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 41
+        width: 45
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1f747e2ca4a41440a9949933d0436c6
+      internalID: 852440792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_38
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 41
+        width: 58
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1277d3ac47a275a478cba8170f4b4fcc
+      internalID: 1129211754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_39
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 41
+        width: 88
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02da2e220929dc74ba5a3a1ada9f67ee
+      internalID: 475522866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_40
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 41
+        width: 91
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9673e7e71920c6140be7d8abcf81ac75
+      internalID: -358424312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_41
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 41
+        width: 92
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db1671009d0ac6f4699d0f64dacef7a5
+      internalID: 1754729459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Heroes of Might and Magic 2 - Wolf_42
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 41
+        width: 91
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b1da34ab4819254e93f857e12d87950
+      internalID: -81883242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PC Computer - Heroes of Might and Magic 2 - Wolf_37: 852440792
+      PC Computer - Heroes of Might and Magic 2 - Wolf_24: -1569004150
+      PC Computer - Heroes of Might and Magic 2 - Wolf_26: -298973306
+      PC Computer - Heroes of Might and Magic 2 - Wolf_27: -2006879087
+      PC Computer - Heroes of Might and Magic 2 - Wolf_41: 1754729459
+      PC Computer - Heroes of Might and Magic 2 - Wolf_5: 1548915062
+      PC Computer - Heroes of Might and Magic 2 - Wolf_28: 1250560923
+      PC Computer - Heroes of Might and Magic 2 - Wolf_13: 1308022228
+      PC Computer - Heroes of Might and Magic 2 - Wolf_3: 1070710294
+      PC Computer - Heroes of Might and Magic 2 - Wolf_7: 2035521921
+      PC Computer - Heroes of Might and Magic 2 - Wolf_38: 1129211754
+      PC Computer - Heroes of Might and Magic 2 - Wolf_11: -1884062164
+      PC Computer - Heroes of Might and Magic 2 - Wolf_31: -1874365683
+      PC Computer - Heroes of Might and Magic 2 - Wolf_18: 1657179421
+      PC Computer - Heroes of Might and Magic 2 - Wolf_2: 826906289
+      PC Computer - Heroes of Might and Magic 2 - Wolf_15: -939573656
+      PC Computer - Heroes of Might and Magic 2 - Wolf_32: -758013662
+      PC Computer - Heroes of Might and Magic 2 - Wolf_19: -1011486016
+      PC Computer - Heroes of Might and Magic 2 - Wolf_25: -1452766690
+      PC Computer - Heroes of Might and Magic 2 - Wolf_6: -597086077
+      PC Computer - Heroes of Might and Magic 2 - Wolf_8: 1165085690
+      PC Computer - Heroes of Might and Magic 2 - Wolf_12: -1909084325
+      PC Computer - Heroes of Might and Magic 2 - Wolf_23: -1131788434
+      PC Computer - Heroes of Might and Magic 2 - Wolf_33: 1425961326
+      PC Computer - Heroes of Might and Magic 2 - Wolf_34: 1087244853
+      PC Computer - Heroes of Might and Magic 2 - Wolf_17: -852778551
+      PC Computer - Heroes of Might and Magic 2 - Wolf_0: 480554047
+      PC Computer - Heroes of Might and Magic 2 - Wolf_4: -1539082321
+      PC Computer - Heroes of Might and Magic 2 - Wolf_30: -1042826127
+      PC Computer - Heroes of Might and Magic 2 - Wolf_16: -118856345
+      PC Computer - Heroes of Might and Magic 2 - Wolf_35: -582085549
+      PC Computer - Heroes of Might and Magic 2 - Wolf_1: -717536425
+      PC Computer - Heroes of Might and Magic 2 - Wolf_42: -81883242
+      PC Computer - Heroes of Might and Magic 2 - Wolf_22: 814056076
+      PC Computer - Heroes of Might and Magic 2 - Wolf_36: 998864800
+      PC Computer - Heroes of Might and Magic 2 - Wolf_39: 475522866
+      PC Computer - Heroes of Might and Magic 2 - Wolf_40: -358424312
+      PC Computer - Heroes of Might and Magic 2 - Wolf_10: 1683679466
+      PC Computer - Heroes of Might and Magic 2 - Wolf_21: 1584597999
+      PC Computer - Heroes of Might and Magic 2 - Wolf_20: 920846928
+      PC Computer - Heroes of Might and Magic 2 - Wolf_9: -1122252743
+      PC Computer - Heroes of Might and Magic 2 - Wolf_29: 1212672003
+      PC Computer - Heroes of Might and Magic 2 - Wolf_14: 2049575998
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
