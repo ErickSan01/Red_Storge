@@ -23,7 +23,8 @@ public class MenuPrincipal : MonoBehaviour
     private void OnBtnJugarClick()
     {
         // Cambiar de escena a "nivel1"
-        SceneManager.LoadScene("nivel1");
+        SceneManager.LoadScene("MenuPrincipal");
+        
     }
 
     // Start is called before the first frame update
