@@ -31,7 +31,6 @@ public class MenuPreguntas : MonoBehaviour
 
     private void OnBtnNivel1Click()
     {
-        Debug.Log("cuca");
         textoParaSegundaEscena = "Texto que quieres pasar a la segunda escena";
         SceneManager.LoadScene("ToolkitPrueba");
     }
