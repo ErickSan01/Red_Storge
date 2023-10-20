@@ -43,6 +43,7 @@ public class InterfacePergamino : MonoBehaviour
     {
         GameObject sqliteDBObject = GameObject.Find("SQLiteDB");
         sqliteDBInstance = sqliteDBObject.GetComponent<SQLiteDB>();
+
         
         //Optiene la id del pergamino
         string idPregunta = Changelvl.textoParaSegundaEscena;

@@ -1,0 +1,20 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Basic/SalaEntrevistas/SalaEntrevistasEstilos.uss?fileID=7433441132597879392&amp;guid=6a95aa7b34435034eb8684e9d64c7413&amp;type=3#SalaEntrevistasEstilos" />
+    <ui:VisualElement name="contenedor_principal" class="contenedor_principal">
+        <ui:VisualElement name="contenedor_sala" class="contenedor_sala">
+            <ui:VisualElement name="contenedor_texto_pregunta" class="texto_pregunta">
+                <ui:Label text="Reconozco los sentimientos que surgen al ejercer violencia psicoemociona" display-tooltip-when-elided="true" name="texto_pregunta" style="color: rgba(0, 0, 0, 255); font-size: 40px; white-space: normal; -unity-font-style: normal;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="contenedor_cuarto" class="contenedor_cuarto" style="align-items: center;">
+                <ui:VisualElement name="contenedor_sofa" class="contenedor_sofa" />
+            </ui:VisualElement>
+            <ui:VisualElement name="contenedor_respuestas_A" focusable="false" class="contenedor_respuestas_A">
+                <ui:Button text="Siempre" display-tooltip-when-elided="true" name="btn_1" class="btn_tipo_A" />
+                <ui:Button text="Frecuentemente" display-tooltip-when-elided="true" name="btn_2" class="btn_tipo_A" />
+                <ui:Button text="Algunas veces" display-tooltip-when-elided="true" name="btn_3" class="btn_tipo_A" />
+                <ui:Button text="Raramente" display-tooltip-when-elided="true" name="btn_4" class="btn_tipo_A" />
+                <ui:Button text="Nunca" display-tooltip-when-elided="true" name="btn_5" class="btn_tipo_A" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
