@@ -527,7 +527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e95cfead3ec3204681fd4706e00793e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombreDelNivel: ToolkitPrueba
+  nombreDelNivel: PergaminoMod2
   textoDinamico: 1
 --- !u!1001 &495209856
 PrefabInstance:
