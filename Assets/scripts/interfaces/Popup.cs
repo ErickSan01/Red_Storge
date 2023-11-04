@@ -45,7 +45,7 @@ public class Popup : MonoBehaviour
         //Boton de cerrar, cerrará la ventana. 
         _buttonCerrar.onClick.AddListener(() =>{
             jugador.GetComponent<Renderer>().enabled = true;
-            jugador.inPopUp = false;
+            // jugador.inPopUp = false;
             GameObject.Destroy(this.gameObject);
         });
         //La acción que pasamos por parametro es asignada al boton. 
