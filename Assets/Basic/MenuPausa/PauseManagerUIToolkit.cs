@@ -32,13 +32,13 @@ public class PauseManagerUIToolkit : MonoBehaviour
         {
             pauseMenu.style.display = DisplayStyle.Flex;
             pauseButton.style.display = DisplayStyle.None;
-            player.walk = false;
+            // player.walk = false;
         }
         else
         {
             pauseMenu.style.display = DisplayStyle.None;
             pauseButton.style.display = DisplayStyle.Flex;
-            player.walk = true;
+            // player.walk = true;
         }
     }
 }
