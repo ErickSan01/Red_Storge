@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Basic/BotonAtras/BotonAtrasStilos.uss?fileID=7433441132597879392&amp;guid=ef2087fede8842d4fbd15c95dbb60f00&amp;type=3#BotonAtrasStilos" />
+    <ui:VisualElement name="Contenedor" class="contenedor">
+        <ui:Button text="Regresar" display-tooltip-when-elided="true" name="btn_regresar" style="width: 200px; height: 100px; font-size: 45px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-top-left-radius: 30px; border-bottom-left-radius: 30px; border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-left-width: 5px; border-right-width: 5px; border-top-width: 5px; border-bottom-width: 5px;" />
+    </ui:VisualElement>
+</ui:UXML>
