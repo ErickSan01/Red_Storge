@@ -1,0 +1,25 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Basic/introduccion/IntroduccionEstilos.uss?fileID=7433441132597879392&amp;guid=307fb0482528b594c9381cd3e5bec8e0&amp;type=3#IntroduccionEstilos" />
+    <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Sprites/Background/Cartoon_Forest_BG_01/Cartoon_Forest_BG_01.png?fileID=2800000&amp;guid=e0a10788ad0b463439dd1bdf58b65b4c&amp;type=3#Cartoon_Forest_BG_01&apos;); position: relative; width: 100%; height: 100%;">
+        <ui:VisualElement style="width: 90%; height: 90%; left: 54px; top: 26px; background-color: rgba(45, 116, 231, 0.5);">
+            <ui:VisualElement>
+                <ui:Label text="Introducción" display-tooltip-when-elided="true" style="left: 0; flex-wrap: wrap; align-items: center; justify-content: center; font-size: 38px; white-space: normal; -unity-text-align: upper-center;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="background-color: rgba(255, 0, 0, 0); width: 100%; height: 50%; justify-content: flex-start; flex-wrap: wrap;">
+                <ui:VisualElement style="height: 100%; width: 25%; background-color: rgba(103, 78, 78, 0); background-image: none;">
+                    <ui:VisualElement style="width: 85%; height: 85%; justify-content: center; align-items: center; flex-direction: row; left: 18px; top: 14px; background-image: url(&apos;project://database/Assets/Sprites/Menu%20Pergamino%20Prueba/pergamino_00.png?fileID=2800000&amp;guid=48edf2edf5dab0147a4395e5d0ebfd5f&amp;type=3#pergamino_00&apos;);" />
+                </ui:VisualElement>
+                <ui:VisualElement style="height: 100%; width: 75%; background-color: rgba(103, 78, 78, 0);">
+                    <ui:Label text="Daremos un recorrido, en el cual encontrarás varios pergaminos. Al tocar los pergaminos aparecerán preguntas que debes contestar para seguir avanzando.&#10;" display-tooltip-when-elided="true" style="flex-wrap: wrap; white-space: normal; font-size: 32px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement style="background-color: rgba(255, 0, 0, 0); width: 100%; height: 50%; justify-content: flex-start; flex-wrap: wrap;">
+                <ui:VisualElement style="height: 100%; width: 25%; background-color: rgba(103, 78, 78, 0); background-image: url(&apos;project://database/Assets/Sprites/Character/buho.png?fileID=2800000&amp;guid=25bc9feb61d4bb64494ee19bf0103afc&amp;type=3#buho&apos;);" />
+                <ui:VisualElement style="height: 100%; width: 75%; background-color: rgba(103, 78, 78, 0);">
+                    <ui:Label text="En caso de contestar erróneamente tendrás que visitar el laberinto de la inconsciencia." display-tooltip-when-elided="true" style="flex-wrap: wrap; white-space: normal; font-size: 32px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:Button text="Comenzar" display-tooltip-when-elided="true" style="width: 400px; height: 60px; left: 28%; background-color: rgba(166, 98, 219, 255); font-size: 24px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

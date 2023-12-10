@@ -30,7 +30,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuPreguntas.unity
     guid: 53c4a787f34f7f349a1929129235d0bc
   - enabled: 0
-    path: Assets/Scenes/ToolkitPrueba.unity
+    path: Assets/Scenes/InterfacePregunta/PergaminoMod2.unity
     guid: 5cd9faddc246af94e9ecbe17420a8c43
   - enabled: 1
     path: Assets/Scenes/Menus/MenuPrincipal.unity
