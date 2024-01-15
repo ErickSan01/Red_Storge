@@ -12,7 +12,7 @@
                     <ui:Label text="Necesitamos hacer un recorrido para buscar partes de escaleras, estas nos ayudarán a salir.&#10;Cada que contestes una pregunta obtendrás una pieza para armar tu escalera.&#10;" display-tooltip-when-elided="true" style="flex-wrap: wrap; white-space: normal; font-size: 32px;" />
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:Button text="Comenzar" display-tooltip-when-elided="true" style="width: 400px; height: 60px; left: 28%; background-color: rgb(166, 98, 219); font-size: 24px;" />
+            <ui:Button text="Comenzar" display-tooltip-when-elided="true" name="Comenzar" style="width: 400px; height: 60px; left: 28%; background-color: rgb(166, 98, 219); font-size: 24px;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
