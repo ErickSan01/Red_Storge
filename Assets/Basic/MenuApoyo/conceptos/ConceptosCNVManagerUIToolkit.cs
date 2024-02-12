@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UIElements;
-public class ConceptosManagerUIToolkit : MonoBehaviour
+public class ConceptosCNVManagerUIToolkit : MonoBehaviour
 {
     public UIDocument uiDocument; // Referencia al UIDocument en la escena.
     public UIDocument uiDocument2;
@@ -16,7 +16,7 @@ public class ConceptosManagerUIToolkit : MonoBehaviour
         // Encuentra el bot�n y el men� en el dise�o.
         cnv = rootElement.Q<Button>("cnv");
         volver = cnvMenu.Q<Button>("volver");
-
+        cnvMenu = cnvMenu.Q("CNVMenu");
         cnv.clicked += TogglePause;
         volver.clicked += TogglePause;
     }
