@@ -1,0 +1,9 @@
+{
+    "IdEstudiante": 0,
+    "ClavePregunta": "hola",
+    "Opcion": {
+        "Inciso": "A",
+        "OpcionTexto": "Opcion A",
+        "Correcta": true
+    }
+}

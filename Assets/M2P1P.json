@@ -1,0 +1,18 @@
+{
+    "Clave": "M2P1P",
+    "Modulo": 2,
+    "Fase": "Puente",
+    "Planteamiento": "Te la pasas viendo el celular, es una:",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Observación",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Evaluación",
+            "Correcta": true
+        }
+    ]
+}
