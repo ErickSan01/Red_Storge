@@ -30,7 +30,7 @@ public class SQLiteDB : MonoBehaviour
         //string[][] matris = ParseFile("D:/Servicio/Red_Storge/Assets/DataBase/archivo.txt");
         //string[] pregunta = matris[0];
         //registrarPreguntaEnBD(pregunta);
-
+        Query("INSERT INTO estudiante (ID_USUARIO, GENERO, EDAD, CONTEXTO, TIPO_FAMILIA, ID_GRUPO) VALUES (1, 'M', 1, 'A', 'Azul', 1)");
 
 
 

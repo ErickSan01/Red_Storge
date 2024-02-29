@@ -2,29 +2,53 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class CambiarColorPanel : MonoBehaviour
 {
     public Dropdown dropdown;
     public Image panel;
+    private SQLiteDB sqliteDBInstance;
+    public TextMeshProUGUI  nombre;
+    public TextMeshProUGUI  edad;
+    public TextMeshProUGUI  color;
 
     void Start()
     {
-        // Configurar las opciones del Dropdown
-        List<string> opciones = new List<string> { "Blanco", "Rojo", "Anaranjado", "Amarillo", "Verde Limón", "Verde Claro", "Azul Claro", "Morado", "Azul Turquesa", "Rosa", "Gris", "Negro" };
-        dropdown.AddOptions(opciones);
-
-        // Suscribir la función al evento de cambio del Dropdown
-        dropdown.onValueChanged.AddListener(delegate {
-            CambiarColorPanelSegunOpcion(dropdown);
-        });
+        GameObject sqliteDBObject = GameObject.Find("SQLiteDB");
+        sqliteDBInstance = sqliteDBObject.GetComponent<SQLiteDB>();  
+        //string[] resultados = sqliteDBInstance.SeleccionarRegistro("estudiante", "ID_USUARIO", "1");
+        //Debug.Log(resultados[5]);
+        string[] resultados2 = sqliteDBInstance.SeleccionarRegistro("usuario", "ID_USUARIO", "1");
+        /*if (resultados2.Length > 1)
+        {
+            string datoEnPosicion2 = resultados2[1];
+            Debug.Log(datoEnPosicion2);
+        }
+        else
+        {
+            Debug.LogError("El arreglo resultados2 no tiene al menos 2 elementos.");
+        }*/
+        CambiarNombre("Pepe");
+        CambiarEdad("12");
+        CambiarColor("Azul Claro");
     }
 
-    void CambiarColorPanelSegunOpcion(Dropdown dropdown)
+    void CambiarColor(string valor)
     {
         // Obtener la opción seleccionada
-        string opcionSeleccionada = dropdown.options[dropdown.value].text;
+        Debug.Log("Cambiao");
+        string opcionSeleccionada = valor;
+        
+        if (color != null)
+        {
+            color.text = "Color favorito: "+valor;
+        }
+        else
+        {
+            Debug.LogError("No se ha asignado el objeto Text al color.");
+        }
 
         // Cambiar el color del panel según la opción seleccionada
         switch (opcionSeleccionada)
@@ -66,6 +90,28 @@ public class CambiarColorPanel : MonoBehaviour
                 panel.color = Color.black;
                 break;
             // Agregar más casos según sea necesario
+        }
+    }
+
+    void CambiarNombre(string valor){
+        if (nombre != null)
+        {
+            nombre.text = "Nombre: "+valor;
+        }
+        else
+        {
+            Debug.LogError("No se ha asignado el objeto Text al nombre.");
+        }
+    }
+
+    void CambiarEdad(string valor){
+        if (edad != null)
+        {
+            edad.text = "Edad: "+valor;
+        }
+        else
+        {
+            Debug.LogError("No se ha asignado el objeto Text a la edad.");
         }
     }
 }
