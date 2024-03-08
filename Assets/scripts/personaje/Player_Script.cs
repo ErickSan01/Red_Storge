@@ -35,6 +35,7 @@ public class Player_Script : MonoBehaviour
         transform.position = new Vector3(-8.68f,-2.96f,1f);
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        Debug.Log("Usuario que tiene la sesion iniciada: " + StateNameController.nombre_usuario);
 
         // walk = true;
     }
