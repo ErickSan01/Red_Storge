@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Models;
 
 
 public class InterfacePergamino : MonoBehaviour
@@ -11,9 +13,11 @@ public class InterfacePergamino : MonoBehaviour
     ScrollView scrollView;
     VisualElement respuestas;
     Button contestar;
+    Button guardar;
     Toggle lastSelectedToggle;
     Label preguntaTexto;
-    private SQLiteDB sqliteDBInstance;
+    Pregunta pregunta;
+    //private SQLiteDB sqliteDBInstance;
 
 
     void OnEnable()
@@ -21,6 +25,7 @@ public class InterfacePergamino : MonoBehaviour
         PergaminoTemplate = GetComponent<UIDocument>();
         VisualElement root = PergaminoTemplate.rootVisualElement;
         //Asiganmos el boton para contestar
+        guardar = root.Q<Button>("guardar");
         contestar = root.Q<Button>("contestar");
         seccion_respuestas = root.Q<VisualElement>("seccion_respuestas"); 
         preguntaTexto = root.Q<Label>("pregunta_texto");
@@ -41,27 +46,29 @@ public class InterfacePergamino : MonoBehaviour
 
     void Start()
     {
-        GameObject sqliteDBObject = GameObject.Find("SQLiteDB");
-        sqliteDBInstance = sqliteDBObject.GetComponent<SQLiteDB>();
-
-        
-        //Optiene la id del pergamino
-        string idPregunta = Changelvl.textoParaSegundaEscena;
-        string[] resultados = sqliteDBInstance.SeleccionarRegistro("pregunta", "id_pregunta", idPregunta);
-        preguntaTexto.text = resultados[1];
-        AgregarOpciones("opcion", "id_pregunta", idPregunta);
-
-
-
+        pregunta = CargarPregunta("M2P1P");
+        preguntaTexto.text = pregunta.Planteamiento;
+        AgregarOpciones(pregunta);
 
         // Configurar el botón "contestar"
         contestar.SetEnabled(false);
         contestar.clicked += ContestarClicked;
+        guardar.clicked += GuardarDocuemnto;
     }
 
-    void AgregarOpciones(string nombreTabla, string nombreColumna, string valor)
+    void AgregarOpciones(Pregunta pregunta)
     {
+        List<Opcion> opciones = pregunta.Opciones;
+        for (int i = 0; i < opciones.Count; i++)
+        {
+         string inciso = opciones[i].Inciso;
+         string descripcion = opciones[i].OpcionTexto;
+         AgregarVisualElement(inciso, descripcion);
+        }
+
+
         //List<string[]> opciones = sqliteDBInstance.SeleccionarRegistro("opcion", "id_pregunta", "1");
+        /*
         List<string[]> opciones = sqliteDBInstance.SeleccionarRegistros( nombreTabla, nombreColumna, valor);
         for (int i = 0; i < opciones.Count; i++)
         {
@@ -71,6 +78,7 @@ public class InterfacePergamino : MonoBehaviour
          AgregarVisualElement(inciso, descripcion);
 
         }
+        */
     }
 
     void AgregarVisualElement(string nombre, string texto)
@@ -94,6 +102,7 @@ public class InterfacePergamino : MonoBehaviour
         // Agregar el toggle al elemento visual
         visualElement.Add(toggle);
         visualElement.Add(label);
+        
 
         // Agregar el elemento visual al elemento padre "respuestas"
         respuestas.Add(visualElement);
@@ -126,12 +135,80 @@ public class InterfacePergamino : MonoBehaviour
         contestar.SetEnabled(lastSelectedToggle != null);
     }
 
+
+    void GuardarRespuesta(DatosRespuesta respuesta){
+        string json = JsonUtility.ToJson(respuesta, true);
+        File.WriteAllText(Application.dataPath+"/Modulos/Modullo2/Documentos/Respuestas/Respuesta"+respuesta.ClavePregunta+".json", json);
+
+    }
+    
+
+    Pregunta CargarPregunta(string clave){
+        Debug.Log("cargando");
+        string json = File.ReadAllText(Application.dataPath+"/Modulos/Modullo2/Documentos/Preguntas/"+clave+".json");
+        Pregunta pregunta = JsonUtility.FromJson<Pregunta>(json);
+        return pregunta;
+    }
+
+
+    void GuardarDocuemnto(){
+        Opcion opcion = new Opcion();
+        opcion.Inciso = "A";
+        opcion.OpcionTexto = "Opcion A";
+        opcion.Correcta = true;
+        DatosRespuesta respuesta = new DatosRespuesta();
+        respuesta.IdEstudiante = 0;
+        respuesta.ClavePregunta = "hola";
+        respuesta.Opcion = opcion;
+        Debug.Log(respuesta.ClavePregunta);
+        GuardarRespuesta(respuesta);
+    }
+
+    DatosRespuesta ArmarRespuesta(string textoT){
+        Debug.Log("El texto del togle es:"+textoT);
+        List<Opcion> Opciones = pregunta.Opciones;
+        Opcion opcionCorrecta = new Opcion();
+        for(int i = 0; i < Opciones.Count; i++){
+            Opcion opcion = Opciones[i];
+            if(opcion.OpcionTexto.Equals(textoT)){
+                opcionCorrecta = opcion;
+            }
+        }
+        DatosRespuesta respuesta = new DatosRespuesta();
+        respuesta.IdEstudiante = 0;
+        respuesta.ClavePregunta = pregunta.Clave;
+        respuesta.Opcion = opcionCorrecta;
+        return respuesta;
+    }
+
+    void GuardarProgreso(string clave){
+        ProgresoModulo progreso = new ProgresoModulo();
+        List<string> pergaminosContestados = new List<string>();
+        pergaminosContestados.Add(clave);
+        
+        progreso.pergaminosContestados = pergaminosContestados;
+        Dictionary<string, string> secuencia = new Dictionary<string, string>();
+        secuencia.Add("M2P1P","M2P7P");
+        secuencia.Add("M2P7P","M2P13P");
+        secuencia.Add("M2P13P","M2P17P");
+        secuencia.Add("M2P17P","M2P23P");
+        secuencia.Add("M2P23P","M2P28P");
+        secuencia.Add("M2P28P","FINAL");
+        progreso.pergaminoActual = secuencia[clave];
+        progreso.secuencia = secuencia;
+        string json = JsonUtility.ToJson(progreso, true);
+        File.WriteAllText(Application.dataPath+"/Modulos/Modullo2/Documentos/Progreso/Progreso.json", json);
+    }
+
     void ContestarClicked()
     {
         if (lastSelectedToggle != null)
         {
             string textoToggle = lastSelectedToggle.text;
             Debug.Log("Respuesta seleccionada: " + textoToggle);
+            DatosRespuesta respuesta = ArmarRespuesta(textoToggle);
+            GuardarRespuesta(respuesta);
+            GuardarProgreso(pregunta.Clave);
         }
     }
     void Update()

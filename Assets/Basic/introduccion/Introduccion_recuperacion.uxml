@@ -1,0 +1,18 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="background-image: none; position: relative; width: 100%; height: 100%; -unity-background-image-tint-color: rgb(56, 56, 56); background-color: rgb(69, 64, 133);">
+        <ui:VisualElement style="width: 90%; height: 90%; left: 54px; top: 26px; background-color: rgba(45, 116, 231, 0.5);">
+            <ui:VisualElement>
+                <ui:Label text="Introducción" display-tooltip-when-elided="true" style="left: 0; flex-wrap: wrap; align-items: center; justify-content: center; font-size: 38px; white-space: normal; -unity-text-align: upper-center;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="background-color: rgba(255, 0, 0, 0); width: 100%; height: 70%; justify-content: flex-start; flex-wrap: wrap; margin-top: 20px;">
+                <ui:VisualElement style="height: 100%; width: 25%; background-color: rgba(103, 78, 78, 0); background-image: none;">
+                    <ui:VisualElement style="width: 85%; height: 85%; justify-content: center; align-items: center; flex-direction: row; left: 18px; top: 14px; background-image: url(&apos;project://database/Assets/Sprites/recursos/escalera.png?fileID=2800000&amp;guid=488540c9e0f32c14998fbbc7010ffaef&amp;type=3#escalera&apos;);" />
+                </ui:VisualElement>
+                <ui:VisualElement style="height: 100%; width: 75%; background-color: rgba(103, 78, 78, 0);">
+                    <ui:Label text="Necesitamos hacer un recorrido para buscar partes de escaleras, estas nos ayudarán a salir.&#10;Cada que contestes una pregunta obtendrás una pieza para armar tu escalera.&#10;" display-tooltip-when-elided="true" style="flex-wrap: wrap; white-space: normal; font-size: 32px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:Button text="Comenzar" display-tooltip-when-elided="true" name="Comenzar" style="width: 400px; height: 60px; left: 28%; background-color: rgb(166, 98, 219); font-size: 24px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

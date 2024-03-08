@@ -7,6 +7,7 @@ public class MapaCodigo : MonoBehaviour
 {
     UIDocument MapaTemplate;
     Button btn_modulo2;
+    Button btn_jugar;
 
     // Start is called before the first frame update
     void OnEnable()
@@ -18,6 +19,17 @@ public class MapaCodigo : MonoBehaviour
         // Agregar el evento de clic al botón "btn_jugar"
         btn_modulo2.clicked += OnBtnModulo2Click;
 
+
+        btn_jugar = root.Q<Button>("Jugar");
+
+        // Agregar el evento de clic al botón "btn_jugar"
+        btn_jugar.clicked += OnBtnJugarClick;
+    }
+    private void OnBtnJugarClick()
+    {
+        // Cambiar de escena a "nivel1"
+        SceneManager.LoadScene("MenuPrincipal");
+        
     }
     private void OnBtnModulo2Click()
     {
