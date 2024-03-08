@@ -25,7 +25,7 @@ public class LoginSystem : MonoBehaviour
     string userName = "";
     string userEmail = "";
 
-    string rootURL = "http://localhost/redstorge/"; //Path where php files are located
+    string rootURL = "http://localhost/"; //Path where php files are located
 
     void OnGUI()
     {
@@ -80,15 +80,15 @@ public class LoginSystem : MonoBehaviour
 
         GUILayout.Space(5);
 
-        if (GUILayout.Button("Submit", GUILayout.Width(85)))
+        if (GUILayout.Button("Enviar", GUILayout.Width(85)))
         {
             StartCoroutine(LoginEnumerator());
         }
 
         GUILayout.FlexibleSpace();
 
-        GUILayout.Label("Do not have account?");
-        if (GUILayout.Button("Register", GUILayout.Width(125)))
+        GUILayout.Label("¿No tienes cuenta?");
+        if (GUILayout.Button("Registrarse", GUILayout.Width(125)))
         {
             ResetValues();
             currentWindow = CurrentWindow.Register;
@@ -120,15 +120,15 @@ public class LoginSystem : MonoBehaviour
 
         GUILayout.Space(5);
 
-        if (GUILayout.Button("Submit", GUILayout.Width(85)))
+        if (GUILayout.Button("Enviar", GUILayout.Width(85)))
         {
             StartCoroutine(RegisterEnumerator());
         }
 
         GUILayout.FlexibleSpace();
 
-        GUILayout.Label("Already have an account?");
-        if (GUILayout.Button("Login", GUILayout.Width(125)))
+        GUILayout.Label("¿Ya tienes una cuenta?");
+        if (GUILayout.Button("Iniciar Sesión", GUILayout.Width(125)))
         {
             ResetValues();
             currentWindow = CurrentWindow.Login;
@@ -206,7 +206,7 @@ public class LoginSystem : MonoBehaviour
 
                     StateNameController.nombre_usuario = userName;
                     StateNameController.pregunta = 1;
-                    LoadScene("colision");
+                    LoadScene("nivel1");
                 }
                 else
                 {
