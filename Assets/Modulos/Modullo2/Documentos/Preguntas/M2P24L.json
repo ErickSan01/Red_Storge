@@ -1,0 +1,23 @@
+{
+    "Clave": "M2P24L",
+    "Modulo": 2,
+    "Fase": "laberinto",
+    "Planteamiento": "¿Qué opción cumple con las características de una evaluación?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Eres un agresiv@ con tu hermana",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Ayer, agrediste a tu hermana",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Las dos anteriores",
+            "Correcta": true
+        }
+    ]
+}

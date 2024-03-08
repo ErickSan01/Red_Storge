@@ -1,0 +1,23 @@
+{
+    "Clave": "M2P3L",
+    "Modulo": 2,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Qué mecanismos y formas del ego se relacionan con la afirmación \"Te la pasas viendo el celular\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "2. Siempre se queja y  9 Es impaciente",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "5 Siempre está evaluando y juzgando y 1 USA SUPERLATIVOS (exageraciones)",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "5 Siempre está evaluando y juzgando y 1 USA SUPERLATIVOS (exageraciones)",
+            "Correcta": true
+        }
+    ]
+}

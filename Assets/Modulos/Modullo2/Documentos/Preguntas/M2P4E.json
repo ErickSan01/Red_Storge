@@ -1,0 +1,23 @@
+{
+    "Clave": "M2P4E",
+    "Modulo": 2,
+    "Fase": "Escalera",
+    "Planteamiento": "¿Cuál es la opción en que se expresa una observación?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Te he visto durante dos horas estar en el celular",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Seguramente que no te has despegado del celular",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "El celular  te tiene hipnotizad@",
+            "Correcta": false
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "Clave": "M2P8L",
+    "Modulo": 2,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Qué características de violencia implica la afirmación \"Hablas demasiado en las conversaciones\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Crítica y minimización",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Exageración y mentira",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Culpabilizar e intimidar",
+            "Correcta": false
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "Clave": "M2P20L",
+    "Modulo": 2,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Qué opción es una observación de la expresión \"Te enojas con todo el mundo por cualquier cosa\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Dices que todos estamos amargándote la vida",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Te ves enojad@ con todos frecuentemente",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "nan",
+            "Correcta": false
+        }
+    ]
+}

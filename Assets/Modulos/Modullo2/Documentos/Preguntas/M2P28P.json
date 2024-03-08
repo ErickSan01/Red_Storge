@@ -1,0 +1,17 @@
+{
+    "Clave": "M2P28P",
+    "Fase": "nan",
+    "Planteamiento": "\"Por las tardes, Martha se deprime\" es una:",
+    "Opciones": [
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Evaluación",
+            "Correcta": true
+        },
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Observación",
+            "Correcta": false
+        }
+    ]
+}

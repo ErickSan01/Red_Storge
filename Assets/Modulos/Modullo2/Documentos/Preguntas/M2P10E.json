@@ -1,0 +1,23 @@
+{
+    "Clave": "M2P10E",
+    "Modulo": 2,
+    "Fase": "Escalera",
+    "Planteamiento": "¿Cuál es la opción correcta para que la frase \"Hablas demasiado en las conversaciones\" sea una observación?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "En la reunión que duró 1 hora, te escuchamos hablar durante 20 minutos",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "En la reunión que acaba de pasar, casi no dejaste hablar a los demás",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "En la reunión, hablaste más que yo",
+            "Correcta": false
+        }
+    ]
+}

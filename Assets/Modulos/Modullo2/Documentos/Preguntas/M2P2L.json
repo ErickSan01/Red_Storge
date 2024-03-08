@@ -1,0 +1,24 @@
+{
+    "Clave": "M2P2L",
+    "Modulo": 2,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Con qué nivel de violencia se relaciona la afirmación \"Te la pasas viendo el celular\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "CULPABILIZAR",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "CRITICAR",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "MENTIR",
+            "Correcta": true
+        }
+    ]
+}
+

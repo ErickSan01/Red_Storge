@@ -46,7 +46,7 @@ public class InterfacePergamino : MonoBehaviour
 
     void Start()
     {
-        pregunta = CargarPregunta("M2P1P");
+        pregunta = CargarPregunta("M2P4E");
         preguntaTexto.text = pregunta.Planteamiento;
         AgregarOpciones(pregunta);
 

@@ -1,0 +1,23 @@
+{
+    "Clave": "M2P9L",
+    "Modulo": 2,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Qué mecanismos del ego se relacionan con la afirmación \"Hablas demasiado en las conversaciones\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "4. Intoxica con sus opiniones, rumores, miedos e insatisfacciones",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "5. Siempre está evaluando y juzgando\n6. Opina sin saber",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "7. No se responsabiliza\n8. Supone sin fundamento",
+            "Correcta": false
+        }
+    ]
+}

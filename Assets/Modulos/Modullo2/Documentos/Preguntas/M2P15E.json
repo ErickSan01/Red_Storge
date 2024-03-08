@@ -1,0 +1,23 @@
+{
+    "Clave": "M2P15E",
+    "Modulo": 2,
+    "Fase": "Escalera",
+    "Planteamiento": "¿Qué es una observación?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Acto de emplear la vista para obtener información cuya tarea es descriptiva",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Juicio cuya finalidad es establecer, tomando en consideración un conjunto de criterios o normas, el valor, la importancia o el significado de algo.",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "nan",
+            "Correcta": false
+        }
+    ]
+}

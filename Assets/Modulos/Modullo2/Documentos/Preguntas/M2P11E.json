@@ -1,0 +1,23 @@
+{
+    "Clave": "M2P11E",
+    "Modulo": 2,
+    "Fase": "Escalera",
+    "Planteamiento": "¿Cuáles son las cualidades o valores asociados para una restauración relativa a la frase \"Hablas demasiado en las conversaciones\" sea una observación?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Realismo\nCapacidad de análisis",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Respeto y confianza",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Asertividad y empatía",
+            "Correcta": false
+        }
+    ]
+}

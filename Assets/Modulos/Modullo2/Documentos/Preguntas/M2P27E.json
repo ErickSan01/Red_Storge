@@ -1,0 +1,23 @@
+{
+    "Clave": "M2P27E",
+    "Modulo": 2,
+    "Fase": "Escalera",
+    "Planteamiento": "¿Cuál es el derecho de las Niñas, niños y adolescentes que se transgrede con la frase \"no sirves para nada, estás muy gord@\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "VI. Derecho a no ser discriminado y a una vida libre de violencia",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "VII. Derecho a vivir en condiciones de bienestar y a un sano desarrollo integral",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "VIII. Derecho a una vida libre de violencia y a la integridad personal;",
+            "Correcta": false
+        }
+    ]
+}

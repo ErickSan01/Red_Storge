@@ -1,0 +1,23 @@
+{
+    "Clave": "M2P25L",
+    "Modulo": 2,
+    "Fase": "laberinto",
+    "Planteamiento": "En la frase: \"eres agresiv@ con tu hermana\" ¿qué forma de ego se hace presente?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Usa la crítica",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Se hace la víctima",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Se compara",
+            "Correcta": false
+        }
+    ]
+}

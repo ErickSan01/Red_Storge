@@ -1,0 +1,22 @@
+{
+    "Clave": "M2P26E",
+    "Fase": "Escalera",
+    "Planteamiento": "¿Con qué nivel del violentómetro se relaciona la frase \"no sirves para nada, estás muy gord@\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Descalificar",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Ofender",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Broma hiriente",
+            "Correcta": false
+        }
+    ]
+}

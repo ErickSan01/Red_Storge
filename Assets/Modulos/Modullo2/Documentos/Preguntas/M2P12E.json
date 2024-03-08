@@ -1,0 +1,23 @@
+{
+    "Clave": "M2P12E",
+    "Modulo": 2,
+    "Fase": "Escalera",
+    "Planteamiento": "¿Cuál sería un esquema apropiado para una disculpa?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Exageré en mi comentario, discúlpame por favor",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Disculpa si te molestó mi observación",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "En realidad me adelanté a juzgar tu forma de actuar, trataré de que no vuelva a ocurrir, ¿podrías disculparme?",
+            "Correcta": true
+        }
+    ]
+}

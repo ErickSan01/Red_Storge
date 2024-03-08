@@ -1,0 +1,23 @@
+{
+    "Clave": "M2P18L",
+    "Modulo": 2,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Qué características de violencia implica la afirmación?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Aconsejar",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Juicio moralista",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Manipular",
+            "Correcta": false
+        }
+    ]
+}

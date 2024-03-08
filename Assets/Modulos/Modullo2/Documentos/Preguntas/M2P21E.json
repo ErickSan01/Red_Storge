@@ -1,0 +1,23 @@
+{
+    "Clave": "M2P21E",
+    "Modulo": 2,
+    "Fase": "Escalera",
+    "Planteamiento": "¿Cuáles son los conceptos del restaurómetro que nos llevan  a una resignificación derivada de la frase \"Te enojas con todo el mundo por cualquier cosa\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Verdad",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Empatía",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Realismo\nCapacidad de análisis",
+            "Correcta": true
+        }
+    ]
+}

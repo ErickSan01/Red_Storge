@@ -1,0 +1,23 @@
+{
+    "Clave": "M2P19L",
+    "Modulo": 2,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Qué mecanismos del ego se relacionan con la afirmación \"Te enojas con todo el mundo por cualquier cosa\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "4. Intoxica con sus opiniones, rumores, miedos e insatisfacciones\n7. No se responsabiliza",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "5. Siempre está evaluando y juzgando\n8. Supone sin fundamentos",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "6. Opina sin saber\n9. Proyecta inseguridad y ansiedad",
+            "Correcta": false
+        }
+    ]
+}

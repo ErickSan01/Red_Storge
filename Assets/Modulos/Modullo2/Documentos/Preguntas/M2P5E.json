@@ -1,0 +1,23 @@
+{
+    "Clave": "M2P5E",
+    "Modulo": 2,
+    "Fase": "Escalera",
+    "Planteamiento": "¿Cuáles son las cualidades asociadas para la restauración de la violencia que contiene la frase \"Te la pasas viendo el celular\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Sinceridad. Cualidad de obrar y expresarse con verdad, sencillez y honestidad, sin fingimientos o segundas intenciones.",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Realismo. Es la habilidad para ver la vida tal cual como es, de manera objetiva y sin idealizaciones. Conlleva objetividad basada en los hechos y no en suposiciones.",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Respeto. Es la capacidad de reconocer, apreciar y valorar a los otros teniendo en cuenta que todos somos válidos. Requiere de reciprocidad y aprender a escuchar a los otros",
+            "Correcta": false
+        }
+    ]
+}
