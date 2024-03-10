@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using Models;
-
+/*
+Esta clase inicia al entrar a Nivel2, lee el json de progreso del modulo, busca y elimina los pergaminos los cuales este marcado como
+contestados para quitalos del camino del jugador. 
+*/
 public class PergaminoManager : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
         string json = File.ReadAllText(Application.dataPath+"/Modulos/Modullo2/Documentos/Progreso/Progreso.json");
@@ -17,7 +19,6 @@ public class PergaminoManager : MonoBehaviour
             GameObject objetoEncontrado = GameObject.Find(pergaminosContestados[i]);
              if (objetoEncontrado != null)
              {
-                Debug.Log("Se encontró el objeto: " + objetoEncontrado.name);
                 Destroy(objetoEncontrado);
              }
             else

@@ -4,6 +4,7 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Models;
+using UnityEngine.SceneManagement;
 
 
 public class InterfacePergamino : MonoBehaviour
@@ -46,7 +47,12 @@ public class InterfacePergamino : MonoBehaviour
 
     void Start()
     {
-        pregunta = CargarPregunta("M2P4E");
+        string json = File.ReadAllText(Application.dataPath+"/Modulos/Modullo2/Documentos/Progreso/Progreso.json");
+        ProgresoModulo progreso = JsonUtility.FromJson<ProgresoModulo>(json);
+        string clave = progreso.pergaminoActual;
+        Debug.Log("Clave problmeatica 1 en start"+clave);
+        pregunta = CargarPregunta(clave);
+        Debug.Log("Clave problmeatica 2 en start"+pregunta.Clave);
         preguntaTexto.text = pregunta.Planteamiento;
         AgregarOpciones(pregunta);
 
@@ -144,7 +150,7 @@ public class InterfacePergamino : MonoBehaviour
     
 
     Pregunta CargarPregunta(string clave){
-        Debug.Log("cargando");
+        Debug.Log("cargando "+clave);
         string json = File.ReadAllText(Application.dataPath+"/Modulos/Modullo2/Documentos/Preguntas/"+clave+".json");
         Pregunta pregunta = JsonUtility.FromJson<Pregunta>(json);
         return pregunta;
@@ -182,11 +188,16 @@ public class InterfacePergamino : MonoBehaviour
     }
 
     void GuardarProgreso(string clave){
-        ProgresoModulo progreso = new ProgresoModulo();
-        List<string> pergaminosContestados = new List<string>();
-        pergaminosContestados.Add(clave);
+        Debug.Log("Clave actual "+clave);
+
+        //Cargamos progreso actual
+        string json = File.ReadAllText(Application.dataPath+"/Modulos/Modullo2/Documentos/Progreso/Progreso.json");
+        ProgresoModulo progreso = JsonUtility.FromJson<ProgresoModulo>(json);
+
+        //Agregamos pregunta contestada
+        progreso.pergaminosContestados.Add(clave);
         
-        progreso.pergaminosContestados = pergaminosContestados;
+        //Guardamos documento de secuencia
         Dictionary<string, string> secuencia = new Dictionary<string, string>();
         secuencia.Add("M2P1P","M2P7P");
         secuencia.Add("M2P7P","M2P13P");
@@ -194,9 +205,15 @@ public class InterfacePergamino : MonoBehaviour
         secuencia.Add("M2P17P","M2P23P");
         secuencia.Add("M2P23P","M2P28P");
         secuencia.Add("M2P28P","FINAL");
+        
+        //Guardar secuencia
         progreso.pergaminoActual = secuencia[clave];
+
+        //Cambiar el pergamino actual
         progreso.secuencia = secuencia;
-        string json = JsonUtility.ToJson(progreso, true);
+
+        //Reescribimos el progreso
+        json = JsonUtility.ToJson(progreso, true);
         File.WriteAllText(Application.dataPath+"/Modulos/Modullo2/Documentos/Progreso/Progreso.json", json);
     }
 
@@ -209,6 +226,8 @@ public class InterfacePergamino : MonoBehaviour
             DatosRespuesta respuesta = ArmarRespuesta(textoToggle);
             GuardarRespuesta(respuesta);
             GuardarProgreso(pregunta.Clave);
+            SceneManager.LoadScene("Modulo2Nivel");
+
         }
     }
     void Update()

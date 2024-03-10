@@ -58,7 +58,7 @@ VisualElement {
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
 }
 
@@ -89,8 +89,8 @@ VisualElement {
     justify-content: flex-start;
     flex-direction: column;
     flex-wrap: wrap;
-    -unity-background-image-tint-color: rgba(255, 255, 255, 255);
-    background-color: rgba(231, 231, 231, 255);
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    background-color: rgb(231, 231, 231);
 }
 
 .boton_pergamino {
