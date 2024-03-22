@@ -216,6 +216,18 @@ public class InterfacePergamino : MonoBehaviour
         json = JsonUtility.ToJson(progreso, true);
         File.WriteAllText(Application.dataPath+"/Modulos/Modullo2/Documentos/Progreso/Progreso.json", json);
     }
+    
+    void GuardarProgresoModulos(string clave){
+        string json = File.ReadAllText(Application.dataPath+"/Modulos/Modullo2/Documentos/Progreso/ProgresoModulos.json");
+        ProgresoModulosCompletados modulosTerminados = JsonUtility.FromJson<ProgresoModulosCompletados>(json);
+
+        string moduloActual = "Modulo" + clave.Substring(1, 1);
+        Debug.Log(moduloActual);
+        modulosTerminados.modulosTerminados.Add(moduloActual);
+
+        json = JsonUtility.ToJson(modulosTerminados, true);
+        File.WriteAllText(Application.dataPath+"/Modulos/Modullo2/Documentos/Progreso/ProgresoModulos.json", json);
+    }
 
     void ContestarClicked()
     {
@@ -226,6 +238,9 @@ public class InterfacePergamino : MonoBehaviour
             DatosRespuesta respuesta = ArmarRespuesta(textoToggle);
             GuardarRespuesta(respuesta);
             GuardarProgreso(pregunta.Clave);
+            if(pregunta.Clave == "FINAL"){
+                GuardarProgresoModulos(pregunta.Clave);
+            }
             SceneManager.LoadScene("Modulo2Nivel");
 
         }
