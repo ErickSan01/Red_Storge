@@ -1,0 +1,18 @@
+{
+    "Clave": "M2P23P",
+    "Modulo": 2,
+    "Fase": "PUENTE",
+    "Planteamiento": "\"Ayer, le diste un golpe a tu hermana\" es una:",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Observación",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Evaluación",
+            "Correcta": false
+        }
+    ]
+}

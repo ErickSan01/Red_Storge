@@ -9,7 +9,7 @@ using Modulo2;
 using JsonUtils;
 
 
-public class InterfacePergamino : MonoBehaviour
+public class InterfaceRecuperacion : MonoBehaviour
 {
     //Elemetos de la Interface Gráfica
     UIDocument PergaminoTemplate;

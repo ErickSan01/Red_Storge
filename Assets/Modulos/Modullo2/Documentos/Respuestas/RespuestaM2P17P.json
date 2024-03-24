@@ -1,9 +1,0 @@
-{
-    "IdEstudiante": 0,
-    "ClavePregunta": "M2P17P",
-    "Opcion": {
-        "Inciso": "A",
-        "OpcionTexto": "Observación",
-        "Correcta": false
-    }
-}

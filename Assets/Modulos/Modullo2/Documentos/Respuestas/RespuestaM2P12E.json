@@ -1,9 +1,0 @@
-{
-    "IdEstudiante": 0,
-    "ClavePregunta": "M2P12E",
-    "Opcion": {
-        "Inciso": "B",
-        "OpcionTexto": "Disculpa si te molestó mi observación",
-        "Correcta": false
-    }
-}

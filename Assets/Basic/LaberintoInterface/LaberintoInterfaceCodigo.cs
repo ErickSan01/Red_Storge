@@ -4,22 +4,46 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using System.Threading;
 using System.Threading.Tasks;
+using UnityEngine.SceneManagement;
+using JsonUtils;
+using Models;
+using System.IO;
+using Modulo2;
 public class LaberintoInterfaceCodigo : MonoBehaviour
 {
+    // Instancias de la Interface Gráfica.
     UIDocument LaberintoInterface;
     Button botonContestar;
     VisualElement cartel;
     VisualElement Puerta;
     Button BotonDer;
     Button BotonIzq;
-    private SQLiteDB sqliteDBInstance;
     Label txt_pregunta;
     Label texto_cartel;
     Label txt_respuesta;
+    //Indice de la opción actual en la pnatall
     int indice;
+    //Cantidad de opciones de la pregunta
     int cantidad_opciones;
-
+    //Pregunta que se muestra en la pantalla
+    Pregunta pregunta;
+    //Opción 
+    Opcion opcionGlobal;
+    //Saber si la opción en turno es correcta
     bool correcta;
+    void Start()
+    {
+        string json = File.ReadAllText(Application.dataPath+"/Modulos/Modulo2/Documentos/Progreso/Progreso.json");
+        ProgresoModulo progreso = JsonUtility.FromJson<ProgresoModulo>(json);
+        string clave = progreso.pergaminoActual;
+        pregunta = PreguntaJson.CargarPregunta(clave);
+        cantidad_opciones = pregunta.Opciones.Count;
+        txt_pregunta.text = pregunta.Planteamiento;
+        indice = 0;
+        AgregarOpciones(pregunta.Opciones);
+    }
+
+    //Método para dar de alta los componentes gráficos y asignarles valor 
     void OnEnable()
     {
         LaberintoInterface = GetComponent<UIDocument>();
@@ -38,11 +62,41 @@ public class LaberintoInterfaceCodigo : MonoBehaviour
         BotonIzq.clicked += navegarIzq;
         correcta = false;
         texto_cartel.text = "";
-        
+    }
 
+
+    //Agregar opcion en pantalla
+    void AgregarOpciones(List<Opcion> Opciones)
+    {
+        Opcion opcion = Opciones[indice];
+        string inciso = opcion.Inciso;
+        string descripcion = opcion.OpcionTexto;
+        txt_respuesta.text = descripcion;
+        correcta = opcion.Correcta;
 
     }
 
+    void navegarDer(){
+        if(indice < cantidad_opciones-1){
+            indice++;
+            opcionGlobal = pregunta.Opciones[indice];
+            AgregarOpciones(pregunta.Opciones);
+            Debug.Log("Derecha: "+correcta);
+        }
+    }
+
+    void navegarIzq(){
+        if(indice > 0){
+            indice--;
+            opcionGlobal = pregunta.Opciones[indice];
+            AgregarOpciones(pregunta.Opciones);
+            Debug.Log("Izquierda: "+correcta);
+    
+
+        }
+    }
+
+    //Método de dar click a al botón de contestar
     private async void ContestarClicked()
     {
         if(correcta == false){
@@ -62,57 +116,61 @@ public class LaberintoInterfaceCodigo : MonoBehaviour
             await Task.Delay(2000);
             Puerta.AddToClassList("puertaCerrada");
         }
-        
-    }
+        //Guardamos la respuesta 
+        DatosRespuesta respuesta = new DatosRespuesta();
+        respuesta.IdEstudiante = 0;
+        respuesta.ClavePregunta = pregunta.Clave;
+        respuesta.Opcion = opcionGlobal;
+        RespuestaJson.GuardarRespuesta(respuesta, pregunta.Modulo);
 
+        //Actualizamos progreso 
+        string siguientePreguntaClave = Secuencia.Secuencia2(pregunta.Clave);
+        ProgresoJson.ActualizarProgreso(pregunta.Modulo, pregunta.Clave, siguientePreguntaClave);
 
-    void Start()
-    {
-        GameObject sqliteDBObject = GameObject.Find("SQLiteDB");
-        sqliteDBInstance = sqliteDBObject.GetComponent<SQLiteDB>();
-        string[] resultados = sqliteDBInstance.SeleccionarRegistro("pregunta", "id_pregunta", "1");
-        List<string[]> opciones = sqliteDBInstance.SeleccionarRegistros("opcion", "id_pregunta", "1");
-        cantidad_opciones = opciones.Count;
-        txt_pregunta.text = resultados[1];
-        indice = 0;
-        AgregarOpciones("opcion", "id_pregunta", "1", indice);
-    }
-
-    void AgregarOpciones(string nombreTabla, string nombreColumna, string valor, int indice)
-    {
-        //List<string[]> opciones = sqliteDBInstance.SeleccionarRegistro("opcion", "id_pregunta", "1");
-        List<string[]> opciones = sqliteDBInstance.SeleccionarRegistros( nombreTabla, nombreColumna, valor);
-        string[] opcion = opciones[indice];
-        string inciso = opcion[2];
-        string descripcion = opcion[4];
-        txt_respuesta.text = descripcion;
-        correcta = bool.Parse(opcion[3].ToLower());
-        //Debug.Log(correcta);
-        //correcta =  int.Parse(opcion[3]);
-    }
-
-    void navegarDer(){
-        if(indice < cantidad_opciones-1){
-            indice++;
-            AgregarOpciones("opcion", "id_pregunta", "1", indice);
-            Debug.Log("Derecha: "+correcta);
+        //Redirijimos al jugador
+        char ultimoCaracter = siguientePreguntaClave[siguientePreguntaClave.Length - 1];
+        if (ultimoCaracter == 'P'){
+            //Si la sigueinte pregunta es de puente se va al nivel
+            SceneManager.LoadScene("Modulo2Nivel");
+        }
+        else{
+            //Si la siguiente pregunta es Laberinto o recuperación, pues seguira en el laberinto
+            SceneManager.LoadScene("Laberinto");
         }
     }
 
-    void navegarIzq(){
-        if(indice > 0){
-            indice--;
-            AgregarOpciones("opcion", "id_pregunta", "1", indice);
-            Debug.Log("Izquierda: "+correcta);
+    /*
+    Pregunta CargarPregunta(string clave){
+        Debug.Log("cargando "+clave);
+        string json = File.ReadAllText(Application.dataPath+"/Modulos/Modullo2/Documentos/Preguntas/"+clave+".json");
+        Pregunta pregunta = JsonUtility.FromJson<Pregunta>(json);
+        return pregunta;
+    }
+    */
     
-
-        }
+    /*
+    void GuardarRespuesta(DatosRespuesta respuesta){
+        string json = JsonUtility.ToJson(respuesta, true);
+        File.WriteAllText(Application.dataPath+"/Modulos/Modullo2/Documentos/Respuestas/Respuesta"+respuesta.ClavePregunta+".json", json);
     }
+    */
 
+    /*
+    string GuardarProgreso(string clave){
+        //Cargamos progreso actual
+        string json = File.ReadAllText(Application.dataPath+"/Modulos/Modullo2/Documentos/Progreso/Progreso.json");
+        ProgresoModulo progreso = JsonUtility.FromJson<ProgresoModulo>(json);
 
-    void Update()
-    {
-        
+        //Actualizamos progreso
+        progreso.pergaminosContestados.Add(clave);
+        progreso.pergaminoActual = Secuencia.Secuencia2(clave);
+
+        //Reescribimos el progreso
+        json = JsonUtility.ToJson(progreso, true);
+        File.WriteAllText(Application.dataPath+"/Modulos/Modullo2/Documentos/Progreso/Progreso.json", json);
+
+        return progreso.pergaminoActual;
     }
-
+    */
+    
 }
