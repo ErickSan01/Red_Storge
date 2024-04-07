@@ -7,7 +7,7 @@ using Models;
 using UnityEngine.SceneManagement;
 using Modulo2;
 using JsonUtils;
-
+using Scripts;
 
 public class InterfacePergamino : MonoBehaviour
 {
@@ -160,6 +160,9 @@ public class InterfacePergamino : MonoBehaviour
         return respuesta;
     }
 
+
+
+    
     void GuardarProgreso(string clave, bool correcta){
 
         string siguientePergamino;
@@ -171,31 +174,7 @@ public class InterfacePergamino : MonoBehaviour
             siguientePergamino = Secuencia.Secuencia2(clave);
         }
         ProgresoJson.ActualizarProgreso(pregunta.Modulo, clave, siguientePergamino);
-    }
-    
-    void GuardarProgresoModulos(string clave){
-
-        Dictionary<string, string> secuenciaPreguntas = new Dictionary<string, string>();
-        secuenciaPreguntas.Add("M2P1P","M2P7P");
-        secuenciaPreguntas.Add("M2P7P","M2P13P");
-        secuenciaPreguntas.Add("M2P13P","M2P17P");
-        secuenciaPreguntas.Add("M2P17P","M2P23P");
-        secuenciaPreguntas.Add("M2P23P","M2P28P");
-        secuenciaPreguntas.Add("M2P28P","FINAL");
-
-        Debug.Log(secuenciaPreguntas[clave]);
-
-        if(secuenciaPreguntas[clave] == "FINAL"){
-            string json = File.ReadAllText(Application.dataPath+"/Modulos/Modullo2/Documentos/Progreso/ProgresoModulos.json");
-            ProgresoModulosCompletados modulosTerminados = JsonUtility.FromJson<ProgresoModulosCompletados>(json);
-
-            string moduloActual = "Modulo" + clave.Substring(1, 1);
-            Debug.Log(moduloActual);
-            modulosTerminados.modulosTerminados.Add(moduloActual);
-
-            json = JsonUtility.ToJson(modulosTerminados, true);
-            File.WriteAllText(Application.dataPath+"/Modulos/Modullo2/Documentos/Progreso/ProgresoModulos.json", json);
-        }
+        SiguienteEscena.SiguienteEscenaRedireccion(siguientePergamino);
     }
 
     void ContestarClicked()
@@ -209,15 +188,6 @@ public class InterfacePergamino : MonoBehaviour
 
             RespuestaJson.GuardarRespuesta(respuesta, pregunta.Modulo);
             GuardarProgreso(pregunta.Clave, opcion.Correcta);
-
-
-            if(opcion.Correcta){
-                SceneManager.LoadScene("Modulo2Nivel");
-            }else{
-                SceneManager.LoadScene("Laberinto");
-            }
-            
-
         }
     }
  

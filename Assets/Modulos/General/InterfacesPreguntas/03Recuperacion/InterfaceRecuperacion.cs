@@ -7,7 +7,7 @@ using Models;
 using UnityEngine.SceneManagement;
 using Modulo2;
 using JsonUtils;
-
+using Scripts;
 
 public class InterfaceRecuperacion : MonoBehaviour
 {
@@ -163,14 +163,12 @@ public class InterfaceRecuperacion : MonoBehaviour
     void GuardarProgreso(string clave, bool correcta){
 
         string siguientePergamino;
-        if(correcta){
-            //Guardar secuencia
-            siguientePergamino = Secuencia.Secuencia1(clave);
-        }else{
-            //Guardar secuencia
-            siguientePergamino = Secuencia.Secuencia2(clave);
-        }
+     
+        //Guardar secuencia
+        siguientePergamino = Secuencia.Secuencia2(clave);
+        
         ProgresoJson.ActualizarProgreso(pregunta.Modulo, clave, siguientePergamino);
+        SiguienteEscena.SiguienteEscenaRedireccion(siguientePergamino);
     }
 
     void ContestarClicked()
@@ -183,16 +181,7 @@ public class InterfaceRecuperacion : MonoBehaviour
             Opcion opcion = respuesta.Opcion;
 
             RespuestaJson.GuardarRespuesta(respuesta, pregunta.Modulo);
-            GuardarProgreso(pregunta.Clave, opcion.Correcta);
-
-
-            if(opcion.Correcta){
-                SceneManager.LoadScene("Modulo2Nivel");
-            }else{
-                SceneManager.LoadScene("Laberinto");
-            }
-            
-
+            GuardarProgreso(pregunta.Clave, opcion.Correcta);            
         }
     }
  

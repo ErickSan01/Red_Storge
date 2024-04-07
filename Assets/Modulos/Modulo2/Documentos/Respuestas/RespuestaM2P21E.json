@@ -1,0 +1,9 @@
+{
+    "IdEstudiante": 0,
+    "ClavePregunta": "M2P21E",
+    "Opcion": {
+        "Inciso": "B",
+        "OpcionTexto": "Empatía",
+        "Correcta": false
+    }
+}

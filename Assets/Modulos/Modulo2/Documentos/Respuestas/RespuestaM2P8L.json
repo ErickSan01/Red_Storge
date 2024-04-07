@@ -1,9 +1,9 @@
 {
     "IdEstudiante": 0,
-    "ClavePregunta": "M2P1P",
+    "ClavePregunta": "M2P8L",
     "Opcion": {
         "Inciso": "B",
-        "OpcionTexto": "Evaluación",
+        "OpcionTexto": "Exageración y mentira",
         "Correcta": true
     }
 }

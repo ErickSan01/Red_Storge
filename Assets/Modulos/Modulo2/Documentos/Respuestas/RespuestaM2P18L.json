@@ -1,9 +1,9 @@
 {
     "IdEstudiante": 0,
-    "ClavePregunta": "M2P1P",
+    "ClavePregunta": "M2P18L",
     "Opcion": {
         "Inciso": "B",
-        "OpcionTexto": "Evaluación",
+        "OpcionTexto": "Juicio moralista",
         "Correcta": true
     }
 }

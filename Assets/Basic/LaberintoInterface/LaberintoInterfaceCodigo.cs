@@ -9,6 +9,7 @@ using JsonUtils;
 using Models;
 using System.IO;
 using Modulo2;
+using Scripts;
 public class LaberintoInterfaceCodigo : MonoBehaviour
 {
     // Instancias de la Interface Gráfica.
@@ -128,15 +129,7 @@ public class LaberintoInterfaceCodigo : MonoBehaviour
         ProgresoJson.ActualizarProgreso(pregunta.Modulo, pregunta.Clave, siguientePreguntaClave);
 
         //Redirijimos al jugador
-        char ultimoCaracter = siguientePreguntaClave[siguientePreguntaClave.Length - 1];
-        if (ultimoCaracter == 'P'){
-            //Si la sigueinte pregunta es de puente se va al nivel
-            SceneManager.LoadScene("Modulo2Nivel");
-        }
-        else{
-            //Si la siguiente pregunta es Laberinto o recuperación, pues seguira en el laberinto
-            SceneManager.LoadScene("Laberinto");
-        }
+        SiguienteEscena.SiguienteEscenaRedireccion(siguientePreguntaClave);
     }
 
     /*

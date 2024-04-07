@@ -34,7 +34,7 @@ public class MapaCodigo : MonoBehaviour
     private void OnBtnModulo2Click()
     {
         // Cambiar de escena a "nivel1"
-        SceneManager.LoadScene("nivel1");
+        SceneManager.LoadScene("Modulo2Nivel");
     }
     void Start()
     {

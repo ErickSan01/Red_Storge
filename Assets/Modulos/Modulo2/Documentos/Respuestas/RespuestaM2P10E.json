@@ -1,0 +1,9 @@
+{
+    "IdEstudiante": 0,
+    "ClavePregunta": "M2P10E",
+    "Opcion": {
+        "Inciso": "A",
+        "OpcionTexto": "En la reunión que duró 1 hora, te escuchamos hablar durante 20 minutos",
+        "Correcta": true
+    }
+}
