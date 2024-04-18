@@ -1,0 +1,23 @@
+{
+    "Clave": "M3P9L",
+    "Modulo": 3,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Cual es la razón de que la fase \"Cuando no me dices “buenos días”, me siento ignorado\" no sea la expresión de un sentimiento?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Negar un saludo no es razón para despertar sentimientos, puede tratarse de una distracción",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "La palabra ignorado es más una interpretación del proceder de los demás que una declaración clara de cómo me siento",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Se trata de un intento de manipulación mediante la culpa para obligar a otro a hacer algo en contra de su voluntad",
+            "Correcta": false
+        }
+    ]
+}

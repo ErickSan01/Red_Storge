@@ -1,0 +1,23 @@
+{
+    "Clave": "M3P16E",
+    "Modulo": 3,
+    "Fase": "Escalera",
+    "Planteamiento": "¿Qué tipo de discriminación conlleva la frase  \"Eres asqueros@,sólo mírate en un espejo\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Discriminación por apariencia",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Discriminación por condición social",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Discriminación por características genéticas",
+            "Correcta": false
+        }
+    ]
+}

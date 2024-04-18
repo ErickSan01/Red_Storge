@@ -1,0 +1,23 @@
+{
+    "Clave": "M3P7E",
+    "Modulo": 3,
+    "Fase": "Escalera",
+    "Planteamiento": "Desde los elementos de la CNV, ¿cuál sería una forma propiada para disculparse tras haber dicho la frase \"me dan ganas de pegarte por la tontería que has dicho\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Con relación a la frase que te dije hace un momento, fue una falta de respeto, reconozco que expresé desde mi enojo juicio y descalificación, ¿podrías disculparme?",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "A veces no me controlo y digo cosas que no van porque hablo sin pensar, no me hagas caso, olvída lo que dije.",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Para una siguiente ocasión mejor piensa bien lo que dices, te lo digo con la mejor intención, para que no generes problemas.",
+            "Correcta": false
+        }
+    ]
+}

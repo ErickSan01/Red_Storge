@@ -1,0 +1,23 @@
+{
+    "Clave": "M3P10",
+    "Modulo": 3,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Con qué mecanismo del ego se relaciona la frase \"Cuando no me dices “buenos días”, me siento ignorado\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Se victimiza",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "No se responsabiliza",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Siempre pide y quiere más",
+            "Correcta": false
+        }
+    ]
+}

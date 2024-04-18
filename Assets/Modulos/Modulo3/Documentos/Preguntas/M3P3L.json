@@ -1,0 +1,23 @@
+{
+    "Clave": "M3P3L",
+    "Modulo": 3,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Qué valor humano se trasngrede con la expresión \"me dan ganas de pegarte por la tontería que has dicho\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Valentía y Cooperación",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Honestidad y tolerancia",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Tolerancia y paz",
+            "Correcta": true
+        }
+    ]
+}

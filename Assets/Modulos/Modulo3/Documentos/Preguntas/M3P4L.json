@@ -1,0 +1,23 @@
+{
+    "Clave": "M3P4L",
+    "Modulo": 3,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Con qué nivel del violentómetro se relaciona la frase \"me dan ganas de pegarte por la tontería que has dicho\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Amenazar",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Descalificar",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Criticar",
+            "Correcta": false
+        }
+    ]
+}

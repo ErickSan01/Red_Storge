@@ -1,0 +1,23 @@
+{
+    "Clave": "M3P11E",
+    "Modulo": 3,
+    "Fase": "Escalera",
+    "Planteamiento": "¿Cual sería la expresión adecuada del sentimiento que conlleva la frase \"Cuando no me dices “buenos días”, me siento ignorado\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Eres poco amable algunas veces y eso me afecta",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Cuando no me saludas, me siento incómodo",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Cuando no me saludas, es como si me dejaras en visto",
+            "Correcta": false
+        }
+    ]
+}
