@@ -5,9 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: "Assets/Scenes/UI auteticacion/InicioSesi\xF3n.unity"
-    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/nivel1.unity
     guid: 7992554e734f27649b0e89f0ddae5021
@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Modulos/Modulo2/Nivel/Modulo2Nivel.unity
     guid: 528ff076210f4ee43993041cca10ab36
+  - enabled: 1
+    path: Assets/Modulos/General/InterfacesPreguntas/03Recuperacion/Recuperacion.unity
+    guid: 612066f0a5e837a48b9b847ef299fac5
   m_configObjects: {}

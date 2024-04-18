@@ -2,8 +2,8 @@
     "IdEstudiante": 0,
     "ClavePregunta": "M2P19L",
     "Opcion": {
-        "Inciso": "C",
-        "OpcionTexto": "6. Opina sin saber\n9. Proyecta inseguridad y ansiedad",
+        "Inciso": "",
+        "OpcionTexto": "",
         "Correcta": false
     }
 }

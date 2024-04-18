@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 using JsonUtils;
 using Models;
 using System.IO;
-using Modulo2;
 using Scripts;
 public class LaberintoInterfaceCodigo : MonoBehaviour
 {
@@ -32,9 +31,14 @@ public class LaberintoInterfaceCodigo : MonoBehaviour
     Opcion opcionGlobal;
     //Saber si la opción en turno es correcta
     bool correcta;
+
+    //Modulo actual
+    int modulo;
     void Start()
     {
-        string json = File.ReadAllText(Application.dataPath+"/Modulos/Modulo2/Documentos/Progreso/Progreso.json");
+        ProgresoGeneral progresoGeneral = ProgresoGeneralJson.CargarProgreso();
+        modulo = progresoGeneral.moduloActual;
+        string json = File.ReadAllText(Application.dataPath+"/Modulos/Modulo"+modulo+"/Documentos/Progreso/Progreso.json");
         ProgresoModulo progreso = JsonUtility.FromJson<ProgresoModulo>(json);
         string clave = progreso.pergaminoActual;
         pregunta = PreguntaJson.CargarPregunta(clave);
@@ -125,7 +129,7 @@ public class LaberintoInterfaceCodigo : MonoBehaviour
         RespuestaJson.GuardarRespuesta(respuesta, pregunta.Modulo);
 
         //Actualizamos progreso 
-        string siguientePreguntaClave = Secuencia.Secuencia2(pregunta.Clave);
+        string siguientePreguntaClave = Secuencia.Secuencia2(pregunta.Clave, modulo);
         ProgresoJson.ActualizarProgreso(pregunta.Modulo, pregunta.Clave, siguientePreguntaClave);
 
         //Redirijimos al jugador

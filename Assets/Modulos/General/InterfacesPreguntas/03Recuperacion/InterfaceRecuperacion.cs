@@ -5,7 +5,6 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using Models;
 using UnityEngine.SceneManagement;
-using Modulo2;
 using JsonUtils;
 using Scripts;
 
@@ -22,13 +21,17 @@ public class InterfaceRecuperacion : MonoBehaviour
 
     VisualElement container;
 
+    int modulo;
+
     //Pregunta actual mostrandose en la interface
     Pregunta pregunta;
 
 
     void Start()
     {
-        string json = File.ReadAllText(Application.dataPath+"/Modulos/Modulo2/Documentos/Progreso/Progreso.json");
+        ProgresoGeneral progresoGeneral = ProgresoGeneralJson.CargarProgreso();
+        modulo = progresoGeneral.moduloActual;
+        string json = File.ReadAllText(Application.dataPath+"/Modulos/Modulo"+modulo+"/Documentos/Progreso/Progreso.json");
         ProgresoModulo progreso = JsonUtility.FromJson<ProgresoModulo>(json);
         string clave = progreso.pergaminoActual;
 
@@ -140,7 +143,7 @@ public class InterfaceRecuperacion : MonoBehaviour
 
     void GuardarRespuesta(DatosRespuesta respuesta){
         string json = JsonUtility.ToJson(respuesta, true);
-        File.WriteAllText(Application.dataPath+"/Modulos/Modullo2/Documentos/Respuestas/Respuesta"+respuesta.ClavePregunta+".json", json);
+        File.WriteAllText(Application.dataPath+"/Modulos/Modulo"+modulo+"/Documentos/Respuestas/Respuesta"+respuesta.ClavePregunta+".json", json);
 
     }
     
@@ -165,7 +168,7 @@ public class InterfaceRecuperacion : MonoBehaviour
         string siguientePergamino;
      
         //Guardar secuencia
-        siguientePergamino = Secuencia.Secuencia2(clave);
+        siguientePergamino = Secuencia.Secuencia2(clave, modulo);
         
         ProgresoJson.ActualizarProgreso(pregunta.Modulo, clave, siguientePergamino);
         SiguienteEscena.SiguienteEscenaRedireccion(siguientePergamino);

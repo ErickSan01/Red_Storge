@@ -5,7 +5,6 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using Models;
 using UnityEngine.SceneManagement;
-using Modulo2;
 using JsonUtils;
 using Scripts;
 
@@ -25,10 +24,15 @@ public class InterfacePergamino : MonoBehaviour
     //Pregunta actual mostrandose en la interface
     Pregunta pregunta;
 
+    //Modulo actual
+    int modulo;
+
 
     void Start()
     {
-        string json = File.ReadAllText(Application.dataPath+"/Modulos/Modulo2/Documentos/Progreso/Progreso.json");
+        ProgresoGeneral progresoGeneral = ProgresoGeneralJson.CargarProgreso();
+        modulo = progresoGeneral.moduloActual;
+        string json = File.ReadAllText(Application.dataPath+"/Modulos/Modulo"+modulo+"/Documentos/Progreso/Progreso.json");
         ProgresoModulo progreso = JsonUtility.FromJson<ProgresoModulo>(json);
         string clave = progreso.pergaminoActual;
 
@@ -42,7 +46,7 @@ public class InterfacePergamino : MonoBehaviour
         // Configurar el botón "contestar"
         contestar.SetEnabled(false);
         contestar.clicked += ContestarClicked;
-        container.AddToClassList("container5");
+        container.AddToClassList("container"+modulo);
     }
 
     void OnEnable()
@@ -140,7 +144,7 @@ public class InterfacePergamino : MonoBehaviour
 
     void GuardarRespuesta(DatosRespuesta respuesta){
         string json = JsonUtility.ToJson(respuesta, true);
-        File.WriteAllText(Application.dataPath+"/Modulos/Modullo2/Documentos/Respuestas/Respuesta"+respuesta.ClavePregunta+".json", json);
+        File.WriteAllText(Application.dataPath+"/Modulos/Modulo"+modulo+"/Documentos/Respuestas/Respuesta"+respuesta.ClavePregunta+".json", json);
 
     }
     
@@ -168,10 +172,10 @@ public class InterfacePergamino : MonoBehaviour
         string siguientePergamino;
         if(correcta){
             //Guardar secuencia
-            siguientePergamino = Secuencia.Secuencia1(clave);
+            siguientePergamino = Secuencia.Secuencia1(clave, modulo);
         }else{
             //Guardar secuencia
-            siguientePergamino = Secuencia.Secuencia2(clave);
+            siguientePergamino = Secuencia.Secuencia2(clave, modulo);
         }
         ProgresoJson.ActualizarProgreso(pregunta.Modulo, clave, siguientePergamino);
         SiguienteEscena.SiguienteEscenaRedireccion(siguientePergamino);

@@ -2,8 +2,8 @@
     "IdEstudiante": 0,
     "ClavePregunta": "M2P21E",
     "Opcion": {
-        "Inciso": "B",
-        "OpcionTexto": "Empatía",
-        "Correcta": false
+        "Inciso": "C",
+        "OpcionTexto": "Realismo\nCapacidad de análisis",
+        "Correcta": true
     }
 }
