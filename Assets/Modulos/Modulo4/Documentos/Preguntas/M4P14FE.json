@@ -1,0 +1,22 @@
+{
+    "Clave": "M4P14FE",
+    "Fase": "Escalera",
+    "Planteamiento": "¿Con qué muro se relaciona la frase \"Necesito que vengas a verme\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Violentómetro,  ya que es una forma de  coaccionar",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Mecanismo del ego, se alimenta de la atención",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Forma de ego, necesita tener el control",
+            "Correcta": false
+        }
+    ]
+}

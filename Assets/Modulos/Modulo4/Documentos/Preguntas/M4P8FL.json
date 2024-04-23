@@ -1,0 +1,23 @@
+{
+    "Clave": "M4P8FL",
+    "Modulo": 4,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Qué sentimiento se proyecta sobre la persona que escucha un mensaje como el \"Me decepciona que no hayas mantenido tu palabra\" ?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Minimización",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Vergüenza",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Irresponsabilidad",
+            "Correcta": false
+        }
+    ]
+}

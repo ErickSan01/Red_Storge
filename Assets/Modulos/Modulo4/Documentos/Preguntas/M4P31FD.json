@@ -1,0 +1,23 @@
+{
+    "Clave": "M4P31FD",
+    "Fase": "nan",
+    "Planteamiento": "!Tu color de piel y tu apariencia son horribles!",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Tienes razón, no soy tan agraciad@ como otras personas:=(\n-Mejor ponte un disfraz para que despistes tu fealdad",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "jajaja mira quien lo dice, se ve que no te has visto en un espejo! \n- Vete de aquí, eres insoportable \n-Yo me quedo donde quiero, vete tú si es que puedes",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Te sientes disgustado porque mi apariencia no es como tú quisieras que fuera?\nSí, perdón, no debí agredirte. De hecho, reconozco que hice discriminación por apariencia, has demostrado en tu respuesta, que estás aprendiendo, por ello, te entregaré la segunda insignia de cosnciencia del nivel 3",
+            "Correcta": true
+        }
+        
+    ]
+}

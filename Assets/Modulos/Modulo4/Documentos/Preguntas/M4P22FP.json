@@ -1,0 +1,23 @@
+{
+    "Clave": "M4P22FP",
+    "Modulo": 4,
+    "Fase": "Puente",
+    "Planteamiento": "\"Necesito solidaridad\" es una frase que:",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Se expresa una observación",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Se expresa una necesidad",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Se expresa un sentimiento",
+            "Correcta": false   
+        }
+    ]
+}

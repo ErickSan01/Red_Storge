@@ -1,0 +1,23 @@
+{
+    "Clave": "M4P4FE",
+    "Modulo": 4,
+    "Fase": "Escalera",
+    "Planteamiento": "¿Con qué muro se relaciona la frase \"Me siento triste porque no me has felicitado por mi cumpleaños?\"",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Violentómetro,  ya que es una forma de culpabilizar",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Mecanismo de los egos, ya que opina sin saber",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Forma de ego, usa la victimización",
+            "Correcta": true
+        }
+    ]
+}

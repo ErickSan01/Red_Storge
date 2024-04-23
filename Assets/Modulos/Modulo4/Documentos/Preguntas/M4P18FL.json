@@ -1,0 +1,23 @@
+{
+    "Clave": "M4P18FL",
+    "Modulo": 4,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Cuál es el error que conecta con la violencia en la manera de expresar \"A veces la gente dice cosas que me ofenden\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Que se proyecta la culpa de lo que se siente implicando a otros",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Que  hay responsabilidad en asumir la necesidad que subyace al juicio",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Que hay consciencia acerca de que los demás con ofensivos",
+            "Correcta": false
+        }
+    ]
+}

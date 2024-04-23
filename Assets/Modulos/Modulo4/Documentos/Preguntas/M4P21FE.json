@@ -1,0 +1,23 @@
+{
+    "Clave": "M4P21FE",
+    "Modulo": 4,
+    "Fase": "Escalera",
+    "Planteamiento": "Expresión sexual, Contacto físico, Movimiento, ejercicio  pertenecen al grupo de necesidades de:",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Autonomia",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Nutrición y cuidado físico",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Esparcimiento",
+            "Correcta": false   
+        }
+    ]
+}

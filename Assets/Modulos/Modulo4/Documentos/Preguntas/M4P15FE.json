@@ -1,0 +1,23 @@
+{
+    "Clave": "M4P15FE",
+    "Modulo": 4,
+    "Fase": "Escalera",
+    "Planteamiento": "Si alguien nos dice: «Tú no me entiendes», lo que está diciéndonos en realidad es que:",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Su necesidad de explicarse mejor a sí mismo",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Su necesidad de que el otro sea empático",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Su necesidad de ser comprendido no está satisfecha...",
+            "Correcta": false
+        }
+    ]
+}

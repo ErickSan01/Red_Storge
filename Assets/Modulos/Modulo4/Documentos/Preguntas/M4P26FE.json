@@ -1,0 +1,23 @@
+{
+    "Clave": "M4P26FE",
+    "Modulo": 4,
+    "Fase": "Escalera",
+    "Planteamiento": "En la frase \"Me alegra que te hayan dado este premio\" …",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Expresa las necesidades o los pensamientos que se esconden detrás de sus sentimientos",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "No expresa las necesidades o los pensamientos que se esconden detrás de sus sentimientos",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Expresa medianamente las necesidades o los pensamientos que se esconden detrás de sus sentimientos",
+            "Correcta": false
+        }
+    ]
+}

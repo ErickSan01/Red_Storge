@@ -1,0 +1,23 @@
+{
+    "Clave": "M4P29FE",
+    "Fase": "Escalera",
+    "Planteamiento": "Desde la CNV, Cuando alguien nos transmite un mensaje negativo, sea verbal o no verbal, tenemos cuatro opciones con respecto a la manera de recibirlo: 1. Culparnos. 2. Culpar a los otros. 3. Percibir nuestros propios  sentimientos y necesidades. 4. Percibir los sentimientos y  necesidades de los otros. Cuál sería un ejemplo de la Tercera opción?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "\"¿Te sientes herida porque necesitas que se tomen en cuenta tus preferencias?\".En lugar de culpar a la otra persona por lo que sentimos, aceptamos la responsabilidad que nos corresponde reconociendo nuestras necesidades, deseos, expectativas, valores o ideas",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Alguien está irritado con nosotros y nos dice:\"¡Eres la persona más egocéntrica que he conocido en mi vida!\", Respondemos: \"No tienes derecho a decirme esto. Siempre tengo en cuenta tus necesidades. ¡Tú eres el egocéntrico!\"  lo más probable es que sintamos rabia",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": " \"Cuando me dices que soy la persona más egocéntrica que conociste en tu vida, me siento herido, porque yo querría que reconocieras los esfuerzos que hago para tener en cuenta tus preferencias\"",
+            "Correcta": true
+        }
+        
+    ]
+}

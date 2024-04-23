@@ -1,0 +1,23 @@
+{
+    "Clave": "M4P3FL",
+    "Modulo": 4,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Qué sentimiento se proyecta sobre la persona que escucha un mensaje como \"Me siento triste porque no me has felicitado por mi cumpleaños?\"",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Disgusto",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Culpa",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Irresponsabilidad",
+            "Correcta": false
+        }
+    ]
+}
