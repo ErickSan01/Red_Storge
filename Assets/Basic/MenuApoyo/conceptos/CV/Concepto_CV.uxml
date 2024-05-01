@@ -12,6 +12,6 @@
                 <ui:Label text="El uso intencional de las capacidades cognitivas, emocionales, sociales o jerárquicas, contra uno mismo, otra persona o un grupo o comunidad, que cause o tenga muchas probabilidades de causar daños psicológicos y emocionales, trastornos del desarrollo o privaciones." display-tooltip-when-elided="true" style="color: rgb(0, 0, 0); font-size: 36px; top: 70px; width: 671px; height: 404px; flex-wrap: wrap; flex-direction: column-reverse; white-space: normal;" />
             </ui:VisualElement>
         </ui:ScrollView>
-        <ui:Button text="Volver" display-tooltip-when-elided="true" name="volver" style="width: 172px; background-image: url(&apos;project://database/Assets/Sprites/recursos/flecha.png?fileID=21300000&amp;guid=58a037cc692759b49b574c947ecd0aa5&amp;type=3#flecha&apos;); background-color: rgba(88, 88, 88, 0); height: 149px; position: absolute; top: 367px; left: 925px; color: rgb(0, 0, 0);" />
+        <ui:Button text="Volver" display-tooltip-when-elided="true" name="volver" style="width: 183px; background-image: url(&apos;project://database/Assets/Sprites/recursos/flecha.png?fileID=21300000&amp;guid=58a037cc692759b49b574c947ecd0aa5&amp;type=3#flecha&apos;); background-color: rgba(88, 88, 88, 0); height: 151px; position: absolute; top: 362px; left: 920px; color: rgb(0, 0, 0); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;" />
     </ui:VisualElement>
 </ui:UXML>
