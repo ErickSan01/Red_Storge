@@ -1154,7 +1154,7 @@ GameObject:
   - component: {fileID: 781479115}
   - component: {fileID: 781479118}
   m_Layer: 7
-  m_Name: M2P16FP
+  m_Name: M4P16FP
   m_TagString: Changelvl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1265,7 +1265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b3bb2a843c41ce459afd2f8264dc75c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clavePergamino: M2P16FP
+  clavePergamino: M4P16FP
 --- !u!1 &785039920
 GameObject:
   m_ObjectHideFlags: 0
@@ -1625,7 +1625,7 @@ GameObject:
   - component: {fileID: 1003331858}
   - component: {fileID: 1003331861}
   m_Layer: 7
-  m_Name: M2P27P
+  m_Name: M4P27FP
   m_TagString: Changelvl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1736,7 +1736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b3bb2a843c41ce459afd2f8264dc75c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clavePergamino: M2P27P
+  clavePergamino: M4P27FP
 --- !u!1 &1013367463
 GameObject:
   m_ObjectHideFlags: 0
@@ -2088,7 +2088,7 @@ GameObject:
   - component: {fileID: 1203432010}
   - component: {fileID: 1203432013}
   m_Layer: 7
-  m_Name: M2P22FP
+  m_Name: M4P22FP
   m_TagString: Changelvl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2199,7 +2199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b3bb2a843c41ce459afd2f8264dc75c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clavePergamino: M2P22FP
+  clavePergamino: M4P22FP
 --- !u!1 &1318738542
 GameObject:
   m_ObjectHideFlags: 0
@@ -2756,7 +2756,7 @@ GameObject:
   - component: {fileID: 1743029381}
   - component: {fileID: 1743029384}
   m_Layer: 7
-  m_Name: M2P13P
+  m_Name: M4P11FP
   m_TagString: Changelvl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2867,7 +2867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b3bb2a843c41ce459afd2f8264dc75c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clavePergamino: M2P13P
+  clavePergamino: M4P11FP
 --- !u!1 &1766802904
 GameObject:
   m_ObjectHideFlags: 0
