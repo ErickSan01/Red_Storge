@@ -1,0 +1,23 @@
+{
+    "Clave": "M3P6L",
+    "Modulo": 3,
+    "Fase": "Escalera",
+    "Planteamiento": "¿Cuál sería la expresión adecuada del sentimiento que conlleva la frase: \"me dan ganas de pegarte por la tontería que has dicho\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Me enojas y quiero desquitarme",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Me siento furioso contigo",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Estoy como una olla de presión, a punto de explotar",
+            "Correcta": false
+        }
+    ]
+}

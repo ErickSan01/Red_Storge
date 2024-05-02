@@ -1,0 +1,23 @@
+{
+    "Clave": "M3P5L",
+    "Modulo": 3,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Cuál derecho humano de las NNAJ se compromete con la expresión \"me dan ganas de pegarte por la tontería que has dicho\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Derecho a la vida, a la paz, a la supervivencia y al desarrollo",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Derecho a la libertad de convicciones éticas, pensamiento, conciencia, religión y cultura",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Derecho a una vida libre de violencia y a la integridad personal",
+            "Correcta": false
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "Clave": "M2P5E",
+    "Modulo": 4,
+    "Fase": "Escalera",
+    "Planteamiento": "¿Qué características debe llevar una adecuada expresión de necesidades según el Modelo de Comunicación No violenta?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Expresar honestamente lo que se siente cuando algo falta con relación a la otra persona",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Se expresa implicando a la otra persona para que sepa qué acción realizar en consecuencia a la necesidad",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Se expresa en términos positivos y no implica ni a otra persona ni una acción concreta.",
+            "Correcta": true
+        }
+    ]
+}

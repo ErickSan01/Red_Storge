@@ -1,0 +1,23 @@
+{
+    "Clave": "M4P16FP",
+    "Modulo": 4,
+    "Fase": "Escalera",
+    "Planteamiento": "\"A veces la gente dice ciertas cosas que me ofenden\" es una frase que:",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Correponde a una necesidad donde se asume la responsabilidad de los sentimientos",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "No expresa una necesidad, sólo un sentimiento de tristeza",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Corresponde a una necesidad sin autoresponsabilidad",
+            "Correcta": true
+        }
+    ]
+}

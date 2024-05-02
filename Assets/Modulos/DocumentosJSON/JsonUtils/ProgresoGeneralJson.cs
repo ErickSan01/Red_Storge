@@ -12,17 +12,17 @@ namespace JsonUtils{
             return progreso;
         }
 
-        public static void GuardarProgreso(ProgresoGeneral progreso){
+        public static void GuardarProgreso(ProgresoGeneral progreso, int modulo){
             progreso.modulosTerminados.Add(progreso.moduloActual);
-            progreso.moduloActual = progreso.moduloActual + 1;
+            progreso.moduloActual = modulo;
         }
 
-        public static void ActualizarProgreso(){
+        public static void ActualizarProgreso(int modulo){
             //Cargamos progreso actual
             ProgresoGeneral progreso = CargarProgreso();
 
             //Actualizamos datos del progreso 
-            GuardarProgreso(progreso);
+            GuardarProgreso(progreso, modulo);
 
             //Guardamos el progreso
             string json = JsonUtility.ToJson(progreso, true);

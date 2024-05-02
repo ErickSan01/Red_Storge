@@ -1,0 +1,23 @@
+{
+    "Clave": "M4P13FL",
+    "Modulo": 4,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Qué sentimiento se provoca sobre la persona que escucha el mensaje: \"Necesito que vengas a verme\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Desconsideración",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Presión",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Incomodidad",
+            "Correcta": false
+        }
+    ]
+}

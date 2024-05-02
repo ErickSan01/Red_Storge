@@ -1,0 +1,23 @@
+{
+    "Clave": "M4P7FL",
+    "Modulo": 4,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Cuál sería la manera correcta de expresar una necesidad tomando en cuenta la frase \"Me decepciona que no hayas mantenido tu palabra\"y el asumir la responsabilidad de los sentimientos?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Reconozco que no me gusta cuando se incumple lo que se acuerda",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Estoy decepcionad@ porque necesito que haya coherencia entre las palabras ",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Necesito que haya mayor formalidad para que no me decepciones",
+            "Correcta": false
+        }        
+    ]
+}

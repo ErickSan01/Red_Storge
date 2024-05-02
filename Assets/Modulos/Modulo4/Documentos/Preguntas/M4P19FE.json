@@ -1,0 +1,23 @@
+{
+    "Clave": "M4P19FE",
+    "Modulo": 2,
+    "Fase": "Escalera",
+    "Planteamiento": "A fin de no \"embarazar a los demás\" con nuestras necesidades, lo correcto sería decir:   “Necesito tranquilidad” y no: “¡necesito que te tranquilices!” en este sentido, en lugar de decir: “Necesitas que te deje en paz? Lo correcto sería decir:",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Necesito que resolvamos esto ahora mismo",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "¿Necesitas estar solo para estabilizarte?",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "¿Necesitas que deje de insistir por ahora?",
+            "Correcta": false
+        }
+    ]
+}

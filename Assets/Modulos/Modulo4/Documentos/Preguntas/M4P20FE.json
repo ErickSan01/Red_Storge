@@ -1,0 +1,23 @@
+{
+    "Clave": "M4P20FE",
+    "Modulo": 4,
+    "Fase": "Escalera",
+    "Planteamiento": " Comprensión, comunidad,  Confianza, Consideración, Empatía Honestidad (la honestidad que nos permite  aprender de nuestras propias limitaciones) Pertenecen al grupo de necesidades de:?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Interdependencia",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Comunion espiritual",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Integridad",
+            "Correcta": false
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "Clave": "M4P10FE",
+    "Modulo": 4,
+    "Fase": "Escalera",
+    "Planteamiento": "¿Qué características NO debe llevar una adecuada expresión de necesidades?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "La implicación de la otra persona como responsable de las necesidades personales",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "La responsabilidad de explicar la necesidad asociada al sentimiento personal",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "La expresión en términos positivos yevitar implicar personas o situaciones concretas.    ",
+            "Correcta": false
+        }
+    ]
+}

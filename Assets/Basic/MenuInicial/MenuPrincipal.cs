@@ -13,9 +13,21 @@ public class MenuPrincipal : MonoBehaviour
     {
         MenuPrincipalTemplate = GetComponent<UIDocument>();
         VisualElement root = MenuPrincipalTemplate.rootVisualElement;
+        VisualElement apoyo = MenuPrincipalTemplate.rootVisualElement;
+        apoyo = apoyo.Q("contenedor");
         btn_jugar = root.Q<Button>("Jugar");
 
         // Agregar el evento de clic al botón "btn_jugar"
+        if (apoyo.resolvedStyle.display == DisplayStyle.None)
+        {
+            apoyo.style.display = DisplayStyle.Flex;
+
+        }
+        else
+        {
+            apoyo.style.display = DisplayStyle.None;
+
+        }        
         btn_jugar.clicked += OnBtnJugarClick;
     }
 

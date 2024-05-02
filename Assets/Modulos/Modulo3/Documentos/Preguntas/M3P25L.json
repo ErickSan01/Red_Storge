@@ -1,0 +1,23 @@
+{
+    "Clave": "M3P25L",
+    "Modulo": 3,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Con cuál FORMA  del ego se relaciona  la frase \"Siento que no me quieres/ que no te caigo bien, mejor aquí que quede la relación, a esto me obligaste\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "ES IMPACIENTE",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "DECIDE DESDE EL MIEDO",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "QUIERE TENER EL CONTROL",
+            "Correcta": false
+        }
+    ]
+}

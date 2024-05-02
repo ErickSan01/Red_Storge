@@ -1,0 +1,18 @@
+{
+    "Clave": "M3P8P",
+    "Modulo": 3,
+    "Fase": "Puente",
+    "Planteamiento": "Cuando no me dices “buenos días”, me siento ignorado es una frase que corresponde a un:",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Sentimiento",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Juicio enmascarado",
+            "Correcta": true
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "Clave": "M3P1P",
+    "Modulo": 3,
+    "Fase": "Puente",
+    "Planteamiento": "\"Me dan ganas de pegarte por la tontería que has dicho\" es  una frase que corresponde a un:",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Sentimiento",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Juicio enmascarado",
+            "Correcta": true
+        }
+    ]
+}
+

@@ -1,0 +1,24 @@
+{
+    "Clave": "M4P1FP",
+    "Modulo": 4,
+    "Fase": "Puente",
+    "Planteamiento": "\"Me siento triste porque no me has felicitado por mi  cumpleaños\" es una frase que:",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Corresponde a una necesidad sin autoresponsabilidad",   
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "No expresa una necesidad, sólo un sentimiento de tristeza",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Correponde a una necesidad donde se asume la responsabilidad de los sentimientos",
+            "Correcta": false
+        }        
+    ]
+}
+

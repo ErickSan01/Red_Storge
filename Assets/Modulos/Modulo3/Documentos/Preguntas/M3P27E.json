@@ -1,0 +1,23 @@
+{
+    "Clave": "M3P27E",
+    "Modulo": 3,
+    "Fase": "Escalera",
+    "Planteamiento": "¿Cual sería la expresión adecuada del sentimiento que conlleva la frase \"Siento que no me quieres/ que no te caigo bien, mejor aquí que quede la relación, a esto me obligaste\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Me siento triste y en desesperación por hacer algo, porque me estoy contando que no me quieres.",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Me frustra y desalienta no lograr que me demuestres que me quieres, por eso siento ganas de  alejarme",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "No sé que hacer para no perder la dignidad porque veo que no sientes lo mismo que yo, por eso mejor es terminar la relaciòn",
+            "Correcta": false
+        }
+    ]
+}

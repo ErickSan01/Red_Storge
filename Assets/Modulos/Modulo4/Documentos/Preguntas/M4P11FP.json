@@ -1,0 +1,23 @@
+{
+    "Clave": "M4P11FP",
+    "Modulo": 4,
+    "Fase": "Puente",
+    "Planteamiento": "\"Necesito que vengas a verme\" es una frase que:",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Correponde a una necesidad donde se asume la responsabilidad de los sentimientos",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Corresponde a una necesidad sin autoresponsabilidad",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "No expresa una necesidad, sólo un sentimiento de tristeza",
+            "Correcta": false
+        }
+    ]
+}

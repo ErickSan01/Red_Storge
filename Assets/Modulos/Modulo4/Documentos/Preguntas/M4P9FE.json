@@ -1,0 +1,23 @@
+{
+    "Clave": "M4P9FE",
+    "Modulo": 4,
+    "Fase": "Escalera",
+    "Planteamiento": "¿Con qué muro se relaciona la frase \"Me decepciona que no hayas mantenido tu palabra\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Violentómetro,  ya que es una forma de  descalificar",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Mecanismo del ego, siempre se queja",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Forma de ego, critica",
+            "Correcta": false
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "Clave": "M4P27FP",
+    "Fase": "Puente",
+    "Planteamiento": "\"Me asustas cuando levantas la vo \" es una frase que:",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Se expresa un juicio ",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Se expresa una necesidad",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Se expresa un sentimiento",
+            "Correcta": false
+        }
+    ]
+}

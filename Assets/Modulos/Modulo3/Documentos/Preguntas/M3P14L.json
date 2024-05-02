@@ -1,0 +1,23 @@
+{
+    "Clave": "M3P14L",
+    "Modulo": 3,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Cuál derecho humano  de las NNAJ se compromete con la expresión  \"Eres asqueros@,sólo mírate en un espejo\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Derecho a la libertad de convicciones éticas, pensamiento, conciencia, religión y cultura;",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Derecho a la igualdad sustantiva",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Derecho a no ser discriminado",
+            "Correcta": true
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "Clave": "M3P2L",
+    "Modulo": 2,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Cual es la razón de que la frase \"Me dan ganas de pegarte por la tontería que has dicho\" no sea la expresión de un sentimiento?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "No expresa lo que la persona  siente, sino lo que se imagina que haría o su deseo de hacer",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "No expresa lo que la persona siente, sino un juicio de valor de lo que cree que el otro merece.",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "No expresa lo que siente de manera directa, lo hace indirectamente y en primera persona",
+            "Correcta": false
+        }
+    ]
+}
+

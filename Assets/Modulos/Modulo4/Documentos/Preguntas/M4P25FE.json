@@ -1,0 +1,22 @@
+{
+    "Clave": "M4P25FE",
+    "Fase": "Escalera",
+    "Planteamiento": " Proximidad, respeto, seguridad emocional, pertenecen al grupo de necesidades de:",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Interdependencia",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Comunion espiritual",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Integridad",
+            "Correcta": false
+        }
+    ]
+}

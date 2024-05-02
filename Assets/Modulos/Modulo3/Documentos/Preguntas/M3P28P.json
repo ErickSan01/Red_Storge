@@ -1,0 +1,18 @@
+{
+    "Clave": "M3P28P",
+    "Modulo": 3,
+    "Fase": "Puente",
+    "Planteamiento": "\"Me entristece que te vayas\". es  una frase que corresponde a un:",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Sentimiento",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Juicio enmascarado",
+            "Correcta": false
+        }
+    ]
+}

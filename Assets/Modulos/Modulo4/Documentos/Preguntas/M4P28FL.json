@@ -1,0 +1,22 @@
+{
+    "Clave": "M4P28FL",
+    "Fase": "Laberinto",
+    "Planteamiento": "Me asustas cuando levantas la voz, la necesidad debajo del sentimiento es:",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Confianza",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Silencio",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Tranquilidad",
+            "Correcta": false
+        }
+    ]
+}
