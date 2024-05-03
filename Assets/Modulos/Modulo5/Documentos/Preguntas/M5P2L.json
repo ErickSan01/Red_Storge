@@ -1,0 +1,23 @@
+{
+    "Clave": "M5P2L",
+    "Modulo": 5,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Cómo sería la manera correcta de pedir una acción especifica en la frase \"quiero que me comprendas\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "«Quiero que me digas qué comprendiste»",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Dime cómo sería en ti, si estuvieras en mi lugar",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Quiero que no me juzques, y resignifiques lo que crees de mí",
+            "Correcta": false
+        }
+    ]
+}

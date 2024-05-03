@@ -1,0 +1,23 @@
+{
+    "Clave": "M5P25L",
+    "Modulo": 5,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Cuál seria la forma correcta en expresar una necesidad de manera concreta de la frase \" Quiero conocerte mejor\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "«Me gustaría que me dijeras si quieres que comamos juntos una vez por semana",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "«Me gustaría saber si puedo llamarte más seguido\"",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "«Me gustaría que me dijeras si quieres hablarme más de ti\"",
+            "Correcta": false
+        }
+    ]
+}

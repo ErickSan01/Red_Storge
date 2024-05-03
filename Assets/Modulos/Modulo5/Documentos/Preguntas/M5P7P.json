@@ -1,0 +1,23 @@
+{
+    "Clave": "M5P7P",
+    "Modulo": 5,
+    "Fase": "Puente",
+    "Planteamiento": "\"Desearía que me escucharas\" es una frase que:",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Corresponde a una expresión clara de petición, en donde se pide una acción específica",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "No corresponde a la expresión de una expresión clara de petcion, pero se pide que re realice una acción específica",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Corresponde a una expresión clara de petición, pero no pide una acción específica",
+            "Correcta": true
+        }
+    ]
+}

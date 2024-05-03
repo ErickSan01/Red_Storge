@@ -1,0 +1,23 @@
+{
+    "Clave": "M5P11E",
+    "Modulo": 5,
+    "Fase": "Escalera",
+    "Planteamiento": "\"En la frase \"\"¿ Tendrías algún problema en que continuáramos nuestra conversación tras la cena?\"\" Con cuantos de los siguientes criterios cumple?  \nSe dirige a una persona en concreto\n  Se refiere al momento actual\n  Es concreta\n Se expresa en un lenguaje positivo\n Es factible\n Da libertad\"",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "\"NO cumple con los 6 criterios para hacer peticiones \"",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Cumple con los 6 criterios para hacer peticiones",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Cumple con la mitad de los 6 criterios para hacer peticiones",
+            "Correcta": false
+        }
+    ]
+}

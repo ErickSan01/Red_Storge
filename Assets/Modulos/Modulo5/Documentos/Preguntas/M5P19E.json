@@ -1,0 +1,23 @@
+{
+    "Clave": "M5P19E",
+    "Modulo": 5,
+    "Fase": "Escalera",
+    "Planteamiento": "¿Cómo sería la manera correcta de pedir una acción específica en la frase:  \"Me gustaría que nos viéramos más a menudo\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Me gustaría pedirte que nos viéramos en persona, más seguido",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Me gustaría pedirte que nos viéramos al menos cada lunes",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Me gustaría pedirte que no dejáramos pasar tanto tiempo entre cada vez que nos vemos",
+            "Correcta": false
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "Clave": "M5P21L",
+    "Modulo": 5,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Cuál seria la forma correcta en expresar una necesidad de manera concreta de la frase \" me gustaria que te sintieras mas agusto con tu exposición?\"",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "¿Te sentirías más cómodo si repitieras tu exposición esta tarde ante mi?",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Necesito saber si estás lo suficientemente confiado para exponer",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Necesito que sepas que puedes practicar tu exposición frente a mí, si lo crees necesario",
+            "Correcta": false
+        }
+    ]
+}
