@@ -19,23 +19,12 @@ public class MapaCodigo : MonoBehaviour
         btn_modulo2 = root.Q<Button>("btn_modulo2");
         btn_modulo4 = root.Q<Button>("btn_modulo4");
 
-        // Agregar el evento de clic al botón "btn_jugar"
+        // Agregar el evento de clic al botón "btn_modulo2"
         btn_modulo2.clicked += OnBtnModulo2Click;
-
+        // Agregar el evento de clic al botón "btn_modulo4"
         btn_modulo4.clicked += OnBtnModulo4Click;
-
-
-        btn_jugar = root.Q<Button>("Jugar");
-
-        // Agregar el evento de clic al botón "btn_jugar"
-        btn_jugar.clicked += OnBtnJugarClick;
     }
-    private void OnBtnJugarClick()
-    {
-        // Cambiar de escena a "nivel1"
-        SceneManager.LoadScene("MenuPrincipal");
-        
-    }
+
     private void OnBtnModulo2Click()
     {
         ProgresoGeneralJson.ActualizarProgreso(2);

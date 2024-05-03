@@ -1,0 +1,9 @@
+{
+    "IdEstudiante": 0,
+    "ClavePregunta": "M2P24L",
+    "Opcion": {
+        "Inciso": "C",
+        "OpcionTexto": "Las dos anteriores",
+        "Correcta": true
+    }
+}

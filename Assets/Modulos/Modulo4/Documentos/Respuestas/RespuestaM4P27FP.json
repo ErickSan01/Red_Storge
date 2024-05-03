@@ -1,9 +1,9 @@
 {
     "IdEstudiante": 0,
-    "ClavePregunta": "M2P13P",
+    "ClavePregunta": "M4P27FP",
     "Opcion": {
         "Inciso": "A",
-        "OpcionTexto": "Observación",
+        "OpcionTexto": "Se expresa un juicio ",
         "Correcta": true
     }
 }

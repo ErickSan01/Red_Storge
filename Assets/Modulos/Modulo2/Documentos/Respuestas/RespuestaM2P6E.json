@@ -2,8 +2,8 @@
     "IdEstudiante": 0,
     "ClavePregunta": "M2P6E",
     "Opcion": {
-        "Inciso": "C",
-        "OpcionTexto": "Sé que hice un aseguramiento, exagerando lo que no me consta, te juzgué, disculpame, trataré que no se repita.",
-        "Correcta": true
+        "Inciso": "A",
+        "OpcionTexto": "Ya olvida lo que dije, estemos bien y no le des importancia, a veces no sé ni lolo que digo",
+        "Correcta": false
     }
 }

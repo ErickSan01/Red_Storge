@@ -12,21 +12,18 @@ namespace JsonUtils{
             return progreso;
         }
 
-        public static void GuardarProgreso(ProgresoGeneral progreso, int modulo){
-            progreso.modulosTerminados.Add(progreso.moduloActual);
-            progreso.moduloActual = modulo;
-        }
 
         public static void ActualizarProgreso(int modulo){
             //Cargamos progreso actual
             ProgresoGeneral progreso = CargarProgreso();
 
             //Actualizamos datos del progreso 
-            GuardarProgreso(progreso, modulo);
+            progreso.modulosTerminados.Add(progreso.moduloActual);
+            progreso.moduloActual = modulo;
 
             //Guardamos el progreso
             string json = JsonUtility.ToJson(progreso, true);
-            File.WriteAllText(Application.dataPath+"/Modulos/General/Documentos/ProgresoGeneral/Progreso.jsonn", json);
+            File.WriteAllText(Application.dataPath+"/Modulos/General/Documentos/ProgresoGeneral/Progreso.json", json);
         }
     }
 }

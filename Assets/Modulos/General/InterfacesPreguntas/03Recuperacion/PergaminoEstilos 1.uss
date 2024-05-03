@@ -14,8 +14,8 @@ VisualElement {
     height: 30%;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     color: rgb(0, 0, 0);
     font-size: 50px;
 }
@@ -125,4 +125,5 @@ VisualElement {
 
 .texto_invisible {
     color: rgba(210, 210, 210, 0);
+    font-size: 1px;
 }

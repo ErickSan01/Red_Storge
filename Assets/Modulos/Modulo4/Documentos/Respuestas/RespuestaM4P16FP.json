@@ -1,0 +1,9 @@
+{
+    "IdEstudiante": 0,
+    "ClavePregunta": "M4P16FP",
+    "Opcion": {
+        "Inciso": "C",
+        "OpcionTexto": "Corresponde a una necesidad sin autoresponsabilidad",
+        "Correcta": true
+    }
+}

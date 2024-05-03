@@ -2,8 +2,8 @@
     "IdEstudiante": 0,
     "ClavePregunta": "M2P5E",
     "Opcion": {
-        "Inciso": "C",
-        "OpcionTexto": "Respeto. Es la capacidad de reconocer, apreciar y valorar a los otros teniendo en cuenta que todos somos válidos. Requiere de reciprocidad y aprender a escuchar a los otros",
-        "Correcta": false
+        "Inciso": "A",
+        "OpcionTexto": "Sinceridad. Cualidad de obrar y expresarse con verdad, sencillez y honestidad, sin fingimientos o segundas intenciones.",
+        "Correcta": true
     }
 }
