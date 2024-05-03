@@ -73,3 +73,7 @@ VisualElement {
 .txt_copyrigth {
     font-size: 60px;
 }
+
+.imagen {
+    background-image: url('project://database/Assets/Sprites/UI_Jugador/button%20UI.png?fileID=1514384863&guid=5edf918fa0799ab4ca3c0f02f5c04783&type=3#button UI_59');
+}

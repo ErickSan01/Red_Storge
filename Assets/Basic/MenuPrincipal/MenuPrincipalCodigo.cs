@@ -8,6 +8,7 @@ public class MenuPrincipalCodigo : MonoBehaviour
     UIDocument MenuPrincipalTemplate;
     Button btn_mapa;
     Button btn_material;
+	Button btn_medallas;
 
     void OnEnable()
     {
@@ -15,10 +16,12 @@ public class MenuPrincipalCodigo : MonoBehaviour
         VisualElement root = MenuPrincipalTemplate.rootVisualElement;
         btn_material = root.Q<Button>("btn_material");
         btn_mapa = root.Q<Button>("btn_mapa");
+		btn_medallas = root.Q<Button> ("btn_medallas");
 
         // Agregar el evento de clic al botón "btn_jugar"
         btn_mapa.clicked += OnBtnMapaClick;
         btn_material.clicked += OnBtnMaterialClick;
+		btn_medallas.clicked += OnBtnMedallasClick;
     }
     // Start is called before the first frame update
      private void OnBtnMapaClick()
@@ -30,6 +33,11 @@ public class MenuPrincipalCodigo : MonoBehaviour
     private void OnBtnMaterialClick(){
         SceneManager.LoadScene("MenuApoyo");
     }
+
+	private void OnBtnMedallasClick(){
+		SceneManager.LoadScene ("Menu Medallas");
+	}
+
     void Start()
     {
         
