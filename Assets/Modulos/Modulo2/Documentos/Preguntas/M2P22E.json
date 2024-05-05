@@ -1,0 +1,23 @@
+{
+    "Clave": "M2P22E",
+    "Modulo": 2,
+    "Fase": "Escalera",
+    "Planteamiento": "¿Cual es la estructura para una disculpa?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "El aseguramiento que hice, no fue correcto. En realidad no me consta del todo.  Discúlpame",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Sé que tal vez exageré, pero, no me hagas caso, te puedes enojar con quien tú quieras",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Mi comentario fue un juicio, no estuvo bien hacerlo, discúlpame por favor, veré que no se repita",
+            "Correcta": true
+        }
+    ]
+}

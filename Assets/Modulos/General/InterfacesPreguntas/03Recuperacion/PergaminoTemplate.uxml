@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Modulos/General/InterfacesPreguntas/03Recuperacion/PergaminoEstilos%201.uss?fileID=7433441132597879392&amp;guid=e237e250edeac4a4582d829311df821a&amp;type=3#PergaminoEstilos 1" />
+    <ui:VisualElement name="contenedor" class="contenedor" style="background-image: url(&apos;project://database/Assets/Sprites/Background/Cartoon_Forest_BG_04/Cartoon_Forest_BG_04.png?fileID=21300000&amp;guid=34b5026b6f35c5d4fbe208934d03bc88&amp;type=3#Cartoon_Forest_BG_04&apos;); -unity-background-image-tint-color: rgba(123, 100, 100, 255);">
+        <ui:VisualElement name="seccion_pregunta" class="seccion_pregunta">
+            <ui:VisualElement name="pregunta" class="pregunta">
+                <ui:Label text="Label" display-tooltip-when-elided="true" name="pregunta_texto" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="seccion_respuestas" class="seccion_respuestas" />
+        <ui:VisualElement name="seccion_btones" class="seccion_botones">
+            <ui:Button text="Contestar" display-tooltip-when-elided="true" name="contestar" enable-rich-text="false" class="boton_pergamino" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

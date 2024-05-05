@@ -1,0 +1,23 @@
+{
+    "Clave": "M3P13L",
+    "Modulo": 3,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Qué nivel del violentómetro se relaciona a la frase \"Eres asqueros@,sólo mírate en un espejo\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Ofender, insultar",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Comparaciones descalificadoras",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Hostilizar",
+            "Correcta": false
+        }
+    ]
+}

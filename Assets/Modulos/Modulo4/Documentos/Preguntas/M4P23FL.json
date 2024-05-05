@@ -1,0 +1,23 @@
+{
+    "Clave": "M4P23FL",
+    "Modulo": 4,
+    "Fase": "laberinto",
+    "Planteamiento": "\"Me gustaría más claridad\" es una frase que:",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Correponde a una necesidad ",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Correponde a una observación",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Correponde a una evaluación",
+            "Correcta": false
+        }
+    ]
+}

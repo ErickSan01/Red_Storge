@@ -1,0 +1,23 @@
+{
+    "Clave": "M3P38D",
+    "Modulo": 3,
+    "Fase": "Dragón",
+    "Planteamiento": "Eres un@  tortuga, ¡Otros pasaron éste nivel más rápido que tú!",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "\"Tienes razón, lo que pasa es que no se me dá bien el analizar y comprender las cosas -Mejor ponte a hacer otras cosas, aquí no vas a llegar lejos\"",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "\"- No me interesa escucharte, imbécil -Porque te cala que es verdad lo que digo jajajaja - Vete de aquí, eres insoportable -Yo me quedo donde quiero, vete tú si es que puedes\"",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "\"Te sientes frustado porque consideras que fallé o tardé mucho? Sí, perdón, no debí agredirte. De hecho, reconozco tu perseverancia, has demostrado en tu respuesta, que estás aprendiendo, por ello, te entregaré la segunda insignia de cosnciencia del nivel 2\"",
+            "Correcta": true
+        }
+    ]
+}

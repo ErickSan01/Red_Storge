@@ -1,0 +1,23 @@
+{
+    "Clave": "M3P15L",
+    "Modulo": 3,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Cuál expresión correspondería a un sentimiento derivado de la frase  \"Eres asqueros@,sólo mírate en un espejo\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Siento asco/ Estoy asquead@",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Me afecta ver cómo luces",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Siento que no te ves muy bien",
+            "Correcta": false
+        }
+    ]
+}

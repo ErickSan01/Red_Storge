@@ -1,0 +1,23 @@
+{
+    "Clave": "M3P26E",
+    "Modulo": 3,
+    "Fase": "Escalera",
+    "Planteamiento": "¿Cual es la razón de que la fase \"Siento que no me quieres/ que no te caigo bien, mejor  terminar la relación, a esto me obligaste\" no sea la expresión de un sentimiento?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Por que en realidad refiere lo que cree que el otro siente y una reacción en consecuencia al juicio realizado",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Porque se está apresurando en tomar una desición en funciòn de lo que observa",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Porque no describe cómo es en el cuerpo la sensasiòn de lo que siente al verse obligado a terminar la relación",
+            "Correcta": false
+        }
+    ]
+}

@@ -5,28 +5,59 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using Models;
 using UnityEngine.SceneManagement;
-
+using JsonUtils;
+using Scripts;
 
 public class InterfacePergamino : MonoBehaviour
 {
+    //Elemetos de la Interface Gráfica
     UIDocument PergaminoTemplate;
-    VisualElement seccion_respuestas; // Elemento padre para las preguntas
+    VisualElement seccion_respuestas; 
     ScrollView scrollView;
     VisualElement respuestas;
     Button contestar;
-    Button guardar;
     Toggle lastSelectedToggle;
     Label preguntaTexto;
-    Pregunta pregunta;
-    //private SQLiteDB sqliteDBInstance;
 
+    VisualElement container;
+
+    //Pregunta actual mostrandose en la interface
+    Pregunta pregunta;
+
+    //Modulo actual
+    int modulo;
+
+
+    void Start()
+    {
+        ProgresoGeneral progresoGeneral = ProgresoGeneralJson.CargarProgreso();
+        modulo = progresoGeneral.moduloActual;
+        string json = File.ReadAllText(Application.dataPath+"/Modulos/Modulo"+modulo+"/Documentos/Progreso/Progreso.json");
+        ProgresoModulo progreso = JsonUtility.FromJson<ProgresoModulo>(json);
+        string clave = progreso.pergaminoActual;
+        if(clave == "FINAL"){
+            SceneManager.LoadScene("Mapa");
+        }
+
+
+        pregunta = PreguntaJson.CargarPregunta(clave);
+
+        //Colocamos los eleemtos de la pregunta in la interface
+        preguntaTexto.text = pregunta.Planteamiento;
+        AgregarOpciones(pregunta);
+
+        // Configurar el botón "contestar"
+        contestar.SetEnabled(false);
+        contestar.clicked += ContestarClicked;
+        container.AddToClassList("container"+modulo);
+    }
 
     void OnEnable()
     {
         PergaminoTemplate = GetComponent<UIDocument>();
         VisualElement root = PergaminoTemplate.rootVisualElement;
         //Asiganmos el boton para contestar
-        guardar = root.Q<Button>("guardar");
+        
         contestar = root.Q<Button>("contestar");
         seccion_respuestas = root.Q<VisualElement>("seccion_respuestas"); 
         preguntaTexto = root.Q<Label>("pregunta_texto");
@@ -42,25 +73,11 @@ public class InterfacePergamino : MonoBehaviour
         respuestas.name = "respuestas";
         respuestas.AddToClassList("full_size");
         scrollView.Add(respuestas);
+
+        container = root.Q<VisualElement>("contenedor");
         
     }
 
-    void Start()
-    {
-        string json = File.ReadAllText(Application.dataPath+"/Modulos/Modullo2/Documentos/Progreso/Progreso.json");
-        ProgresoModulo progreso = JsonUtility.FromJson<ProgresoModulo>(json);
-        string clave = progreso.pergaminoActual;
-        Debug.Log("Clave problmeatica 1 en start"+clave);
-        pregunta = CargarPregunta(clave);
-        Debug.Log("Clave problmeatica 2 en start"+pregunta.Clave);
-        preguntaTexto.text = pregunta.Planteamiento;
-        AgregarOpciones(pregunta);
-
-        // Configurar el botón "contestar"
-        contestar.SetEnabled(false);
-        contestar.clicked += ContestarClicked;
-        guardar.clicked += GuardarDocuemnto;
-    }
 
     void AgregarOpciones(Pregunta pregunta)
     {
@@ -71,20 +88,6 @@ public class InterfacePergamino : MonoBehaviour
          string descripcion = opciones[i].OpcionTexto;
          AgregarVisualElement(inciso, descripcion);
         }
-
-
-        //List<string[]> opciones = sqliteDBInstance.SeleccionarRegistro("opcion", "id_pregunta", "1");
-        /*
-        List<string[]> opciones = sqliteDBInstance.SeleccionarRegistros( nombreTabla, nombreColumna, valor);
-        for (int i = 0; i < opciones.Count; i++)
-        {
-         string[] opcion = opciones[i];
-         string inciso = opcion[2];
-         string descripcion = opcion[4];
-         AgregarVisualElement(inciso, descripcion);
-
-        }
-        */
     }
 
     void AgregarVisualElement(string nombre, string texto)
@@ -95,8 +98,13 @@ public class InterfacePergamino : MonoBehaviour
         visualElement.AddToClassList("respuesta");
 
         // Crear el label hijo con el texto especificado
-        Label label = new Label(texto);
+        Label label = new Label(texto.Trim());
         label.AddToClassList("respuesta_texto");
+
+        //Crear cuadro limite textio
+        VisualElement limiteTexto  = new VisualElement();
+        limiteTexto.Add(label);
+
         
 
         // Crear el toggle hijo
@@ -107,7 +115,7 @@ public class InterfacePergamino : MonoBehaviour
         toggle.AddToClassList("texto_invisible");
         // Agregar el toggle al elemento visual
         visualElement.Add(toggle);
-        visualElement.Add(label);
+        visualElement.Add(limiteTexto);
         
 
         // Agregar el elemento visual al elemento padre "respuestas"
@@ -142,36 +150,8 @@ public class InterfacePergamino : MonoBehaviour
     }
 
 
-    void GuardarRespuesta(DatosRespuesta respuesta){
-        string json = JsonUtility.ToJson(respuesta, true);
-        File.WriteAllText(Application.dataPath+"/Modulos/Modullo2/Documentos/Respuestas/Respuesta"+respuesta.ClavePregunta+".json", json);
-
-    }
     
-
-    Pregunta CargarPregunta(string clave){
-        Debug.Log("cargando "+clave);
-        string json = File.ReadAllText(Application.dataPath+"/Modulos/Modullo2/Documentos/Preguntas/"+clave+".json");
-        Pregunta pregunta = JsonUtility.FromJson<Pregunta>(json);
-        return pregunta;
-    }
-
-
-    void GuardarDocuemnto(){
-        Opcion opcion = new Opcion();
-        opcion.Inciso = "A";
-        opcion.OpcionTexto = "Opcion A";
-        opcion.Correcta = true;
-        DatosRespuesta respuesta = new DatosRespuesta();
-        respuesta.IdEstudiante = 0;
-        respuesta.ClavePregunta = "hola";
-        respuesta.Opcion = opcion;
-        Debug.Log(respuesta.ClavePregunta);
-        GuardarRespuesta(respuesta);
-    }
-
     DatosRespuesta ArmarRespuesta(string textoT){
-        Debug.Log("El texto del togle es:"+textoT);
         List<Opcion> Opciones = pregunta.Opciones;
         Opcion opcionCorrecta = new Opcion();
         for(int i = 0; i < Opciones.Count; i++){
@@ -187,59 +167,20 @@ public class InterfacePergamino : MonoBehaviour
         return respuesta;
     }
 
-    void GuardarProgreso(string clave){
-        Debug.Log("Clave actual "+clave);
 
-        //Cargamos progreso actual
-        string json = File.ReadAllText(Application.dataPath+"/Modulos/Modullo2/Documentos/Progreso/Progreso.json");
-        ProgresoModulo progreso = JsonUtility.FromJson<ProgresoModulo>(json);
 
-        //Agregamos pregunta contestada
-        progreso.pergaminosContestados.Add(clave);
-        
-        //Guardamos documento de secuencia
-        Dictionary<string, string> secuencia = new Dictionary<string, string>();
-        secuencia.Add("M2P1P","M2P7P");
-        secuencia.Add("M2P7P","M2P13P");
-        secuencia.Add("M2P13P","M2P17P");
-        secuencia.Add("M2P17P","M2P23P");
-        secuencia.Add("M2P23P","M2P28P");
-        secuencia.Add("M2P28P","FINAL");
-        
-        //Guardar secuencia
-        progreso.pergaminoActual = secuencia[clave];
-
-        //Cambiar el pergamino actual
-        progreso.secuencia = secuencia;
-
-        //Reescribimos el progreso
-        json = JsonUtility.ToJson(progreso, true);
-        File.WriteAllText(Application.dataPath+"/Modulos/Modullo2/Documentos/Progreso/Progreso.json", json);
-    }
     
-    void GuardarProgresoModulos(string clave){
-
-        Dictionary<string, string> secuenciaPreguntas = new Dictionary<string, string>();
-        secuenciaPreguntas.Add("M2P1P","M2P7P");
-        secuenciaPreguntas.Add("M2P7P","M2P13P");
-        secuenciaPreguntas.Add("M2P13P","M2P17P");
-        secuenciaPreguntas.Add("M2P17P","M2P23P");
-        secuenciaPreguntas.Add("M2P23P","M2P28P");
-        secuenciaPreguntas.Add("M2P28P","FINAL");
-
-        Debug.Log(secuenciaPreguntas[clave]);
-
-        if(secuenciaPreguntas[clave] == "FINAL"){
-            string json = File.ReadAllText(Application.dataPath+"/Modulos/Modullo2/Documentos/Progreso/ProgresoModulos.json");
-            ProgresoModulosCompletados modulosTerminados = JsonUtility.FromJson<ProgresoModulosCompletados>(json);
-
-            string moduloActual = "Modulo" + clave.Substring(1, 1);
-            Debug.Log(moduloActual);
-            modulosTerminados.modulosTerminados.Add(moduloActual);
-
-            json = JsonUtility.ToJson(modulosTerminados, true);
-            File.WriteAllText(Application.dataPath+"/Modulos/Modullo2/Documentos/Progreso/ProgresoModulos.json", json);
+    void GuardarProgreso(string clave, bool correcta){
+        string siguientePergamino;
+        if(correcta){
+            //Guardar secuencia
+            siguientePergamino = Secuencia.Secuencia1(clave, modulo);
+        }else{
+            //Guardar secuencia
+            siguientePergamino = Secuencia.Secuencia2(clave, modulo);
         }
+        ProgresoJson.ActualizarProgreso(modulo, clave, siguientePergamino);
+        SiguienteEscena.SiguienteEscenaRedireccion(siguientePergamino);
     }
 
     void ContestarClicked()
@@ -249,17 +190,13 @@ public class InterfacePergamino : MonoBehaviour
             string textoToggle = lastSelectedToggle.text;
             Debug.Log("Respuesta seleccionada: " + textoToggle);
             DatosRespuesta respuesta = ArmarRespuesta(textoToggle);
-            GuardarRespuesta(respuesta);
-            GuardarProgreso(pregunta.Clave);
-            GuardarProgresoModulos(pregunta.Clave);
-            SceneManager.LoadScene("nivel1");
-
+            Opcion opcion = respuesta.Opcion;
+            Debug.Log("Modulo _____________"+modulo);
+            RespuestaJson.GuardarRespuesta(respuesta, modulo);
+            GuardarProgreso(pregunta.Clave, opcion.Correcta);
         }
     }
-    void Update()
-    {
-        
-    }
+ 
 }
 
 

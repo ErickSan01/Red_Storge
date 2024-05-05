@@ -1,0 +1,18 @@
+{
+    "Clave": "M3P12P",
+    "Modulo": 3,
+    "Fase": "Puente",
+    "Planteamiento": "\"Eres asqueros@,sólo mírate en un espejo\" es  una frase que corresponde a un:",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Sentimiento",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Juicio enmascarado",
+            "Correcta": true
+        }
+    ]
+}

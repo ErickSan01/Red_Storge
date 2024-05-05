@@ -1,0 +1,23 @@
+{
+    "Clave": "M4P17FL",
+    "Modulo": 4,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Cuál sería la manera correcta de expresar una necesidad en la frase \"A veces la gente dice ciertas cosas que me ofenden\" asumiendo la responsabilidad de los sentimientos?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "A veces, no me gusta que las personas sean ofensivas con otras, porque eso es violencia",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "A veces la gente dice ciertas cosas que me ofenden porque no practican el valor del respeto",
+            "Correcta": false   
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "A veces la gente dice ciertas cosas que me ofenden porque quiero que me respeten, no que me critiquen",
+            "Correcta": true
+        }
+    ]
+}

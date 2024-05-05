@@ -1,0 +1,23 @@
+{
+    "Clave": "M5P5E",
+    "Modulo": 5,
+    "Fase": "Escalera",
+    "Planteamiento": "¿Cómo sería la manera correcta de pedir una acción específica en la frase \"Me gustaría que confiaras más en ti mismo\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Me gustaría que creyeras más en ti, eres muy inteligente, que te tuvieras más fe",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Me gustarría que no dudaras de tus capacidades, de tus habilidades",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Me gustaría que hicieras algún curso de autoestima que te ayude a confiar más en ti",
+            "Correcta": true
+        }
+    ]
+}

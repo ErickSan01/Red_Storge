@@ -1,0 +1,9 @@
+{
+    "IdEstudiante": 0,
+    "ClavePregunta": "M4P11FP",
+    "Opcion": {
+        "Inciso": "A",
+        "OpcionTexto": "Correponde a una necesidad donde se asume la responsabilidad de los sentimientos",
+        "Correcta": false
+    }
+}

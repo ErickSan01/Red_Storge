@@ -1,0 +1,9 @@
+{
+    "IdEstudiante": 0,
+    "ClavePregunta": "M2P4E",
+    "Opcion": {
+        "Inciso": "A",
+        "OpcionTexto": "Te he visto durante dos horas estar en el celular",
+        "Correcta": true
+    }
+}

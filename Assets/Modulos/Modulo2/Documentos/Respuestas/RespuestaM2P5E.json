@@ -1,0 +1,9 @@
+{
+    "IdEstudiante": 0,
+    "ClavePregunta": "M2P5E",
+    "Opcion": {
+        "Inciso": "A",
+        "OpcionTexto": "Sinceridad. Cualidad de obrar y expresarse con verdad, sencillez y honestidad, sin fingimientos o segundas intenciones.",
+        "Correcta": true
+    }
+}

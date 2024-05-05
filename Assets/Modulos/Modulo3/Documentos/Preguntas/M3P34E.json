@@ -1,0 +1,23 @@
+{
+    "Clave": "M3P34E",
+    "Modulo": 3,
+    "Fase": "Escalera",
+    "Planteamiento": "¿Cuál es la estructura correcta para expresar sentimientos?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Nombrando cómo interpretamos el proceder de los demás \" Me siento ignorado\" \"Estoy siendo utilizad@\"",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Nombrando  en primera persona, seguido por el estado de ánimo o emoción \"Me siento triste…\" Estoy decepcionado…\"",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Nombrando lo que creemos acerca de nosotros  mismos \"Creo que no sirvo pa nada\" \"Siento como si hablara con una pared\"",
+            "Correcta": false
+        }
+    ]
+}

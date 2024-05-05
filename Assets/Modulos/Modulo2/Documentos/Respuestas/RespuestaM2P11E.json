@@ -1,0 +1,9 @@
+{
+    "IdEstudiante": 0,
+    "ClavePregunta": "M2P11E",
+    "Opcion": {
+        "Inciso": "A",
+        "OpcionTexto": "Realismo\nCapacidad de análisis",
+        "Correcta": true
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "Clave": "M5P22E",
+    "Modulo": 5,
+    "Fase": "Escalera",
+    "Planteamiento": "Acorde con  el modelo de la CNV , las peticiones se interpretan como exigencias siempre que las personas que las reciben creen que:",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Se sienten obligados a decir que sí",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Se las culpará o maltratará si no acceden a satisfacerlas.",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "No pueden negarse para no quedar mal",
+            "Correcta": false
+        }
+    ]
+}

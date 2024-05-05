@@ -1,0 +1,23 @@
+{
+    "Clave": "M3P20L",
+    "Modulo": 3,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Con qué nivel del violentómetro se relaciona la frase \"Creo que prefieres a Gaby.\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Culpabilización",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Manipulación",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Celar",
+            "Correcta": false
+        }
+    ]
+}

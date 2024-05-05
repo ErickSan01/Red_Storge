@@ -1,0 +1,23 @@
+{
+    "Clave": "M3P35P",
+    "Modulo": 3,
+    "Fase": "Puente",
+    "Planteamiento": "7. \"Lo que hiciste por mí me hizo mucho bien\" es una frase que corresponde a un:",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Sentimiento",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Juicio enmascarado",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Una forma de agradecer",
+            "Correcta": true
+        }
+    ]
+}

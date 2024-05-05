@@ -1,0 +1,23 @@
+{
+    "Clave": "M5P15E",
+    "Modulo": 5,
+    "Fase": "Escalera",
+    "Planteamiento": "En la frase: \"Me gustaría que seas sincero conmigo y me digas qué te pareció nuestro encuentro de ayer\" las palabras «que fueras sincero conmigo» no expresan claramente lo que quiere de la otra persona quien las pronuncia, ¿qué podría haber dicho, en cambio?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "\": «Quiero que me digas qué te parece lo que hice ayer, y si\nalgo no te gustó, que me digas cómo querrías que lo hiciera»\"",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "«Quiero que me tengas confianza y me digas cómo te sentiste ayer conmigo",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "\": «Quiero que me digas qué te parece lo que hice ayer, y si\nalgo no te gustó, que me digas cómo querrías que lo hiciera»\"",
+            "Correcta": false
+        }
+    ]
+}

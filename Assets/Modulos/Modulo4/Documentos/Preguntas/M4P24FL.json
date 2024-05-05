@@ -1,0 +1,23 @@
+{
+    "Clave": "M4P24FL",
+    "Modulo": 2,
+    "Fase": "laberinto",
+    "Planteamiento": "Qué necesidad se identifica, en resonsablidad personal, frente a la frase  \"Me gustaría que te callaras cuando hablo\"",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Necesidad de que el otro guarde silencio",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Necesidad de calma, de tranquilizarse",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Necesidad de espacio personal",
+            "Correcta": false
+        }
+    ]
+}

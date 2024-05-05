@@ -1,0 +1,18 @@
+{
+    "Clave": "M2P16E",
+    "Modulo": 2,
+    "Fase": "Escalera",
+    "Planteamiento": "¿Por qué razón la frase \"Esta mañana, has dejado tus trastes sin lavar\" es una observación y no una evaluación?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "La referencia que se hace es precisa y contextualizada, describe los hechos",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Porque toma en cuenta en cuenta los hechos para dar su opinión",
+            "Correcta": false
+        }
+    ]
+}

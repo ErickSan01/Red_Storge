@@ -1,0 +1,23 @@
+{
+    "Clave": "M3P19L",
+    "Modulo": 3,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Con cuáles mecanismos del ego se relaciona  la frase \"Creo que prefieres a Gaby\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Siempre se queja Intoxica con sus opiniones, rumores, miedos e insatisfacciones",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Siempre está evaluando y juzgando Supone sin fundamentos",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Proyecta inseguridad y ansiedad Se alimenta de la atención Se victimiza",
+            "Correcta": false
+        }
+    ]
+}

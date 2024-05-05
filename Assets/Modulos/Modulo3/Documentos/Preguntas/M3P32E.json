@@ -1,0 +1,23 @@
+{
+    "Clave": "M3P32E",
+    "Modulo": 3,
+    "Fase": "Escalera",
+    "Planteamiento": "¿Cuáles son palabras que No expresan claramente sentimientos, debido a que son expresiones de deseos de reaccionar?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Los juicios enmascarados, ya que son procesos mentales",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Las palabras \"que\" y  \"como\"",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Las palabras que expresan lo que se quiere hacer por la emoción que se siente",
+            "Correcta": true
+        }
+    ]
+}

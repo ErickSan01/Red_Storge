@@ -1,0 +1,23 @@
+{
+    "Clave": "M3P17E",
+    "Modulo": 3,
+    "Fase": "Escalera",
+    "Planteamiento": "¿Desde los elementos de la CNV, cuál sería una forma propiada para disculparse, relacionada a la frase  \"Eres asqueros@,sólo mírate en un espejo\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "A veces no me controlo y digo cosas que no van porque hablo sin pensar, no me hagas caso, olvída lo que dije.",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Para una siguente ocasión mejor pideme un consejo para que te veas mejor, te lo digo por tu bien",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Con relación a la frase que te dije hace un momento, fue una falta de respeto,reconozco que  no soy quien para juzgar tu apariencia, podrías disculparme?",
+            "Correcta": true
+        }
+    ]
+}

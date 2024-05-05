@@ -1,0 +1,17 @@
+{
+    "Clave": "M2P29E",
+    "Fase": "Escalera",
+    "Planteamiento": "La frase \"Por las tardes, Martha se deprime\" ¿Cómo correspondería a una observación?",
+    "Opciones": [
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Martha ha llorado por  6 tardes",
+            "Correcta": true
+        },
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Martha llora siempre",
+            "Correcta": false
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "Clave": "M4P12FL",
+    "Modulo": 4,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Cuál sería la manera correcta de expresar una necesidad en la frase \"Necesito que vengas a verme\" asumiendo la responsabilidad de los sentimientos?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Necesito alimentar nuestra relación de manera personal, porque eres importante para mí",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Necesito alimentar nuestra relación de manera personal, porque la relación es importante para mí",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Necesito alimentar nuestra relación porque para mí es importante nutrir el vínculo de manera cercana",
+            "Correcta": false
+        }
+    ]
+}

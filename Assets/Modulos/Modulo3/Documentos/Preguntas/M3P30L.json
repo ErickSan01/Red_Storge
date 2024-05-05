@@ -1,0 +1,23 @@
+{
+    "Clave": "M3P30L",
+    "Modulo": 3,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Qué oración expresa adecuadamente un sentimiento?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Me siento incapaz como expositor",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Siento que me da vergüenza exponer",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Siento decepción de mi forma de exponer",
+            "Correcta": true
+        }
+    ]
+}

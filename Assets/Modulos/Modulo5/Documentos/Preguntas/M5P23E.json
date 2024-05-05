@@ -1,0 +1,23 @@
+{
+    "Clave": "M5P23E",
+    "Modulo": 5,
+    "Fase": "Escalera",
+    "Planteamiento": "Acorde con  el modelo de la CNV, para lograr que los demás confíen en que les estamos pidiendo algo, y no exigiéndoselo, debemos indicarles de alguna manera que sólo queremos que:",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Hagan lo que pedimos si realmente desean hacerlo",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Comprendan nuestra necesidad de ser tomados en cuenta",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Hagan lo que se necesita para estar bien en la relación",
+            "Correcta": false
+        }
+    ]
+}

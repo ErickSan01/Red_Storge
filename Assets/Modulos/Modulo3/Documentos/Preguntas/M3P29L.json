@@ -1,0 +1,23 @@
+{
+    "Clave": "M3P29L",
+    "Modulo": 3,
+    "Fase": "Laberinto",
+    "Planteamiento": "Es un ejemplo de una descripción de lo que creemos ser",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Me siento incapaz como expositor",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Siento vergüenza al exponer",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Me siento como un mal expositor",
+            "Correcta": false
+        }
+    ]
+}

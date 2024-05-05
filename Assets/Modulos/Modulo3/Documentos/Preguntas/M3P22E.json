@@ -1,0 +1,23 @@
+{
+    "Clave": "M3P22E",
+    "Modulo": 3,
+    "Fase": "Escalera",
+    "Planteamiento": "¿Cual sería la expresión adecuada del sentimiento que conlleva la frase anterior \"Creo que prefieres a Gaby.\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Siento que no es justo que no me prefieras más que a Gaby",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Siento como si Gaby te importara más que yo",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Estoy disgustad@ porque creo que prefieres a Gaby",
+            "Correcta": false
+        }
+    ]
+}

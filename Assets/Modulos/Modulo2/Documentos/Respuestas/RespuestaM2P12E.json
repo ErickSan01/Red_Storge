@@ -1,0 +1,9 @@
+{
+    "IdEstudiante": 0,
+    "ClavePregunta": "M2P12E",
+    "Opcion": {
+        "Inciso": "A",
+        "OpcionTexto": "Exageré en mi comentario, discúlpame por favor",
+        "Correcta": false
+    }
+}

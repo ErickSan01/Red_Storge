@@ -1,0 +1,18 @@
+{
+    "Clave": "M2P17P",
+    "Modulo": 2,
+    "Fase": "PUENTE",
+    "Planteamiento": "\"Te enojas con todo el mundo por cualquier cosa\" es una:",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Observación",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Evaluación",
+            "Correcta": true
+        }
+    ]
+}

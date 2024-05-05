@@ -1,0 +1,23 @@
+{
+    "Clave": "M3P21E",
+    "Modulo": 3,
+    "Fase": "Escalera",
+    "Planteamiento": "¿Cual es la razón de que la fase \"Creo que prefieres a Gaby.\" no sea la expresión de un sentimiento?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Se presenta un juicio de valor, pues el \"creo\" corresponde al área del pensar, no del sentir",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Porque habla de los sentimientos de la otra persona, no de los propios",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Se trata de un intento de victimismo de menosprecio para que el otro afirme su preferencia por el hablante",
+            "Correcta": false
+        }
+    ]
+}

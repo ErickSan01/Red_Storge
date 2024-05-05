@@ -1,0 +1,23 @@
+{
+    "Clave": "M3P24L",
+    "Modulo": 3,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Con cuáles mecanismos del ego se relaciona  la frase \"Siento que no me quieres/ que no te caigo bien, mejor aquí que quede la relación, a esto me obligaste\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Vive de derechos mas que deberes Siempre se queja Siempre busca y pide mas Opina sin saber",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Siempre se queja Intoxica con sus opiniones, miedos e insatisfacciones Opina sin saber Proyecta inseguridad y ansiedad",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Intoxica con sus opiniones, rumores, miedos e insatisfacciones Siempre está evaluando y juzgando No se responsabiliza Supone sin fundamentos",
+            "Correcta": true
+        }
+    ]
+}

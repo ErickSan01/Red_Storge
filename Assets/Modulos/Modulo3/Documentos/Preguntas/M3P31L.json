@@ -1,0 +1,23 @@
+{
+    "Clave": "M3P31L",
+    "Modulo": 3,
+    "Fase": "Laberinto",
+    "Planteamiento": "Son palabras que No expresan claramente sentimientos, debido a que son expresiones de pensamientos y comparaciones o analogías  de base",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Los juicios enmascarados",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "que   \"como\" y \"como si\"",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "expresar lo que se quiere hacer por la emoción que se siente (quisiera vengarme por lo que siento)",
+            "Correcta": false
+        }
+    ]
+}

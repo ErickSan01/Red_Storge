@@ -1,0 +1,24 @@
+{
+    "Clave": "M4P2FL",
+    "Modulo": 4,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Cuál sería la manera correcta de expresar una necesidad tomando en cuenta la frase \"Me siento triste porque no me has felicitado por mi cumpleaños\" y el asumir la responsabilidad de los sentimientos?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Soy responsable de necesitar que me feliciten en mi cumpleaños",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Necesito que me hagas sentir importante en mi cumpleaños",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": " Me siento triste porque me gusta ser felicitado",
+            "Correcta": true
+        }
+    ]
+}
+
