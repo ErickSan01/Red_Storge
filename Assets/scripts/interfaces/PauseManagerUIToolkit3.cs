@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 using System.IO;
 using Models;
 using JsonUtils;
-public class PauseManagerUIToolkit2 : MonoBehaviour
+public class PauseManagerUIToolkit3 : MonoBehaviour
 {
     public UIDocument uiDocument; // Referencia al UIDocument en la escena.
     public UIDocument uiDocument2;
@@ -26,7 +26,7 @@ public class PauseManagerUIToolkit2 : MonoBehaviour
         // Encuentra el botón y el menú en el diseño.
         pauseButton = rootElement.Q<Button>("PauseButton");
         ayudaButton = rootElement.Q<Button>("AyudaButton");
-        pergamino = rootElement.Q("contenedor");
+        pergamino = rootElement.Q("Contenedor");
         continueButton = pauseMenu.Q<Button>("continueButton");
         pauseMenu = pauseMenu.Q("PauseMenu");
 
@@ -56,9 +56,9 @@ public class PauseManagerUIToolkit2 : MonoBehaviour
 
     public void ToggleAyuda()
     {
-        if (SceneManager.GetActiveScene().name == "PergaminoMod2")
+        if (SceneManager.GetActiveScene().name == "Laberinto")
         {
-            SceneManager.LoadScene("introduccion");
+            SceneManager.LoadScene("introduccionLaberinto");
         }
     }
 }

@@ -15,15 +15,15 @@ public class introduccionScript : MonoBehaviour
         VisualElement root = Introduccion.rootVisualElement;
         btn_jugar = root.Q<Button>("Comenzar");
 
-        // Agregar el evento de clic al botón "btn_jugar"
+        // Agregar el evento de clic al botï¿½n "btn_jugar"
         btn_jugar.clicked += OnBtnJugarClick;
     }
 
-    // Método que se ejecutará cuando se haga clic en el botón "btn_jugar"
+    // Mï¿½todo que se ejecutarï¿½ cuando se haga clic en el botï¿½n "btn_jugar"
     private void OnBtnJugarClick()
     {
         // Cambiar de escena a "nivel1"
-        SceneManager.LoadScene("nivel1");
+        SceneManager.LoadScene("PergaminoMod2");
 
     }
 

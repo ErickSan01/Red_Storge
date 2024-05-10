@@ -6,6 +6,7 @@ public class ConceptosViolentometroManagerUIToolkit : MonoBehaviour
     public UIDocument uiDocument2;
     private VisualElement rootElement;
     private VisualElement violentometroMenu;
+    private VisualElement generalMenu;
     private Button violentometro;
     private Button volver;
 
@@ -13,10 +14,13 @@ public class ConceptosViolentometroManagerUIToolkit : MonoBehaviour
     {
         rootElement = uiDocument.rootVisualElement;
         violentometroMenu = uiDocument2.rootVisualElement;
+        
         // Encuentra el bot�n y el men� en el dise�o.
         violentometro = rootElement.Q<Button>("violentometro");
         volver = violentometroMenu.Q<Button>("volver");
         violentometroMenu = violentometroMenu.Q("violentometroMenu");
+        generalMenu = rootElement.Q("contenedor");
+
         violentometro.clicked += TogglePause;
         volver.clicked += TogglePause;
     }
@@ -27,13 +31,13 @@ public class ConceptosViolentometroManagerUIToolkit : MonoBehaviour
         if (violentometroMenu.resolvedStyle.display == DisplayStyle.None)
         {
             violentometroMenu.style.display = DisplayStyle.Flex;
-            violentometro.style.display = DisplayStyle.None;
+            generalMenu.style.display = DisplayStyle.None;
 
         }
         else
         {
             violentometroMenu.style.display = DisplayStyle.None;
-            violentometro.style.display = DisplayStyle.Flex;
+            generalMenu.style.display = DisplayStyle.Flex;
 
         }
     }
