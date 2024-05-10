@@ -1,0 +1,9 @@
+{
+    "IdEstudiante": 0,
+    "ClavePregunta": "M4P4FE",
+    "Opcion": {
+        "Inciso": "C",
+        "OpcionTexto": "Forma de ego, usa la victimización",
+        "Correcta": true
+    }
+}

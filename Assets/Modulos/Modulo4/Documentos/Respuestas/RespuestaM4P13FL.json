@@ -2,8 +2,8 @@
     "IdEstudiante": 0,
     "ClavePregunta": "M4P13FL",
     "Opcion": {
-        "Inciso": "",
-        "OpcionTexto": "",
-        "Correcta": false
+        "Inciso": "B",
+        "OpcionTexto": "Presión",
+        "Correcta": true
     }
 }

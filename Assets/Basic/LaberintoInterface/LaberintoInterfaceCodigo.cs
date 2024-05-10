@@ -41,6 +41,9 @@ public class LaberintoInterfaceCodigo : MonoBehaviour
         string json = File.ReadAllText(Application.dataPath+"/Modulos/Modulo"+modulo+"/Documentos/Progreso/Progreso.json");
         ProgresoModulo progreso = JsonUtility.FromJson<ProgresoModulo>(json);
         string clave = progreso.pergaminoActual;
+        if(clave == "FINAL"){
+            SceneManager.LoadScene("Mapa");
+        }
         pregunta = PreguntaJson.CargarPregunta(clave);
         cantidad_opciones = pregunta.Opciones.Count;
         txt_pregunta.text = pregunta.Planteamiento;
@@ -126,7 +129,7 @@ public class LaberintoInterfaceCodigo : MonoBehaviour
         respuesta.IdEstudiante = 0;
         respuesta.ClavePregunta = pregunta.Clave;
         respuesta.Opcion = opcionGlobal;
-        RespuestaJson.GuardarRespuesta(respuesta, pregunta.Modulo);
+        RespuestaJson.GuardarRespuesta(respuesta, modulo);
 
         //Actualizamos progreso 
         string siguientePreguntaClave = Secuencia.Secuencia2(pregunta.Clave, modulo);

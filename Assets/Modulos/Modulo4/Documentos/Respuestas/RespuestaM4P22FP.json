@@ -2,8 +2,8 @@
     "IdEstudiante": 0,
     "ClavePregunta": "M4P22FP",
     "Opcion": {
-        "Inciso": "A",
-        "OpcionTexto": "Se expresa una observación",
-        "Correcta": false
+        "Inciso": "B",
+        "OpcionTexto": "Se expresa una necesidad",
+        "Correcta": true
     }
 }

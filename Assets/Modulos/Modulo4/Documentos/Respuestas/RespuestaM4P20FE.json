@@ -1,0 +1,9 @@
+{
+    "IdEstudiante": 0,
+    "ClavePregunta": "M4P20FE",
+    "Opcion": {
+        "Inciso": "B",
+        "OpcionTexto": "Comunion espiritual",
+        "Correcta": false
+    }
+}

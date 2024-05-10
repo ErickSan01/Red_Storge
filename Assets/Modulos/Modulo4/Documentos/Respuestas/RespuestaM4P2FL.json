@@ -1,0 +1,9 @@
+{
+    "IdEstudiante": 0,
+    "ClavePregunta": "M4P2FL",
+    "Opcion": {
+        "Inciso": "C",
+        "OpcionTexto": " Me siento triste porque me gusta ser felicitado",
+        "Correcta": true
+    }
+}

@@ -2,8 +2,8 @@
     "IdEstudiante": 0,
     "ClavePregunta": "M4P12FL",
     "Opcion": {
-        "Inciso": "",
-        "OpcionTexto": "",
-        "Correcta": false
+        "Inciso": "B",
+        "OpcionTexto": "Necesito alimentar nuestra relación de manera personal, porque la relación es importante para mí",
+        "Correcta": true
     }
 }
