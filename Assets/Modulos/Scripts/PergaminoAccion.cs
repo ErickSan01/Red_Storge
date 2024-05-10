@@ -25,11 +25,27 @@ public class PergaminoAccion : MonoBehaviour
     //Método que manda a la interface del pergamino
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        ProgresoGeneral progresoGeneral = ProgresoGeneralJson.CargarProgreso();
+        int modulo = progresoGeneral.moduloActual;
         if (collision.gameObject.CompareTag("Player"))
         {
             FijarPergaminoActual(clavePergamino);
-            SceneManager.LoadScene("PergaminoMod2");
+            if(modulo == 2)
+            {
+                SceneManager.LoadScene("PergaminoMod2");
+        
+            }
+            if(modulo == 3)
+            {
+                SceneManager.LoadScene("PergaminoMod3");
+            }
+            if(modulo == 4)
+            {
+                SceneManager.LoadScene("PergaminoMod4");
+            }
+        
         }
+                
     }
 }
 

@@ -30,6 +30,8 @@ public class Player_Script : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    private bool isPlayingFootstepSound = false;
+
 
     private void Start() {
         transform.position = new Vector3(-8.68f,-2.96f,1f);
@@ -68,26 +70,47 @@ public class Player_Script : MonoBehaviour
         moveRight = false;
     }
 
-    private void MovePlayer(){
+        
+    
+    private IEnumerator PlayFootstepSound()
+    {
+        isPlayingFootstepSound = true;
+        audioSource.PlayOneShot(footstepSound, 1f);
+        yield return new WaitForSeconds(footstepSound.length);
+        isPlayingFootstepSound = false;
+    }
+    
+    private void MovePlayer()
+    {
         if (moveRight)
         {
             horizontalSpeed = moveSpeed;
             anim.SetBool("walk", true);
-			audioSource.PlayOneShot(footstepSound);
+    
+            if (!isPlayingFootstepSound)
+            {
+                StartCoroutine(PlayFootstepSound());
+            }
+    
             flip(1);
         }
         else if (moveLeft)
         {
             horizontalSpeed = -moveSpeed;
             anim.SetBool("walk", true);
-			audioSource.PlayOneShot(footstepSound);
+    
+            if (!isPlayingFootstepSound)
+            {
+                StartCoroutine(PlayFootstepSound());
+            }
+    
             flip(-1);
         }
         else
         {
-			anim.SetBool("walk", false);
+            anim.SetBool("walk", false);
             horizontalSpeed = 0;
-			audioSource.Stop();
+            StopAllCoroutines();
         }
     }
     

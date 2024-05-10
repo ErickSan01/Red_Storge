@@ -12,4 +12,6 @@
             <ui:Button text="Contestar" display-tooltip-when-elided="true" name="contestar" enable-rich-text="false" class="boton_pergamino" />
         </ui:VisualElement>
     </ui:VisualElement>
+    <ui:Button display-tooltip-when-elided="true" name="AyudaButton" style="border-top-left-radius: 40px; border-bottom-left-radius: 40px; border-top-right-radius: 40px; border-bottom-right-radius: 40px; height: 78px; width: 80px; background-image: url(&apos;project://database/Assets/Sprites/recursos/f85279da-f29e-4ab4-a592-efbabb6b2cd0.png?fileID=2800000&amp;guid=08493c4842bfe1f4bb1702ed33e4cc7d&amp;type=3#f85279da-f29e-4ab4-a592-efbabb6b2cd0&apos;); left: 905px; background-color: rgba(255, 255, 255, 0.39); position: absolute; top: 0;" />
+    <ui:Button display-tooltip-when-elided="true" name="PauseButton" style="border-top-left-radius: 40px; border-bottom-left-radius: 40px; border-top-right-radius: 40px; border-bottom-right-radius: 40px; height: 78px; width: 80px; background-image: url(&apos;project://database/Assets/Sprites/Vector-Pause-Button-PNG-Clipart.png?fileID=2800000&amp;guid=5a1e885092863734089320dd42f87ec3&amp;type=3#Vector-Pause-Button-PNG-Clipart&apos;); left: 996px; background-color: rgba(255, 255, 255, 0.39); position: absolute; top: 0;" />
 </ui:UXML>
