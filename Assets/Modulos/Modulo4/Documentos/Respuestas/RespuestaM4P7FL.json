@@ -1,0 +1,9 @@
+{
+    "IdEstudiante": 0,
+    "ClavePregunta": "M4P7FL",
+    "Opcion": {
+        "Inciso": "C",
+        "OpcionTexto": "Necesito que haya mayor formalidad para que no me decepciones",
+        "Correcta": false
+    }
+}

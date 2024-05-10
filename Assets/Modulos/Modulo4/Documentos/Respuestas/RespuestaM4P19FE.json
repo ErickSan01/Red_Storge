@@ -1,0 +1,9 @@
+{
+    "IdEstudiante": 0,
+    "ClavePregunta": "M4P19FE",
+    "Opcion": {
+        "Inciso": "C",
+        "OpcionTexto": "¿Necesitas que deje de insistir por ahora?",
+        "Correcta": false
+    }
+}

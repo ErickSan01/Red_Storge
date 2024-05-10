@@ -1,0 +1,9 @@
+{
+    "IdEstudiante": 0,
+    "ClavePregunta": "M2P5E",
+    "Opcion": {
+        "Inciso": "A",
+        "OpcionTexto": "Expresar honestamente lo que se siente cuando algo falta con relación a la otra persona",
+        "Correcta": false
+    }
+}

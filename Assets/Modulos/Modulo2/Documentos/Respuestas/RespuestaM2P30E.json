@@ -1,0 +1,9 @@
+{
+    "IdEstudiante": 0,
+    "ClavePregunta": "M2P30E",
+    "Opcion": {
+        "Inciso": "A",
+        "OpcionTexto": "Describir de manera detallada, situada, objetiva y contextualizada",
+        "Correcta": true
+    }
+}

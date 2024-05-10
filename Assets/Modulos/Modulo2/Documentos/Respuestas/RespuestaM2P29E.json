@@ -1,0 +1,9 @@
+{
+    "IdEstudiante": 0,
+    "ClavePregunta": "M2P29E",
+    "Opcion": {
+        "Inciso": "A",
+        "OpcionTexto": "Martha llora siempre",
+        "Correcta": false
+    }
+}

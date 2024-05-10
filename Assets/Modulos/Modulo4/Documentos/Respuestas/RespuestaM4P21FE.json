@@ -1,0 +1,9 @@
+{
+    "IdEstudiante": 0,
+    "ClavePregunta": "M4P21FE",
+    "Opcion": {
+        "Inciso": "A",
+        "OpcionTexto": "Autonomia",
+        "Correcta": false
+    }
+}

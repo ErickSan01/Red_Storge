@@ -1,0 +1,9 @@
+{
+    "IdEstudiante": 0,
+    "ClavePregunta": "M4P9FE",
+    "Opcion": {
+        "Inciso": "B",
+        "OpcionTexto": "Mecanismo del ego, siempre se queja",
+        "Correcta": true
+    }
+}

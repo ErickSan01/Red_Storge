@@ -1,0 +1,9 @@
+{
+    "IdEstudiante": 0,
+    "ClavePregunta": "M4P15FE",
+    "Opcion": {
+        "Inciso": "B",
+        "OpcionTexto": "Su necesidad de que el otro sea empático",
+        "Correcta": false
+    }
+}
