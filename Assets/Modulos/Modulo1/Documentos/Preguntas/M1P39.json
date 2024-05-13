@@ -1,0 +1,33 @@
+{
+    "Clave": "M1P39",
+    "Modulo": 1,
+    "Fase": "",
+    "Planteamiento": "Reconozco valores humanos como la empatía y la compasión en mis interacciones.",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Siempre",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Frecuentemente",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Algunas veces",
+            "Correcta": true
+        },
+        {
+            "Inciso": "D",
+            "OpcionTexto": "Raramente",
+            "Correcta": true
+        },
+        {
+            "Inciso": "E",
+            "OpcionTexto": "Nunca",
+            "Correcta": true
+        }
+    ]
+}

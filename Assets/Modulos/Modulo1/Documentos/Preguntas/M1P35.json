@@ -1,0 +1,34 @@
+{
+    "Clave": "M1P35",
+    "Modulo": 1,
+    "Fase": "",
+    "Planteamiento": "Reconozco cómo mis interacciones pueden afectar los derechos humanos de los demás.",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Siempre",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Frecuentemente",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Algunas veces",
+            "Correcta": true
+        },
+        {
+            "Inciso": "D",
+            "OpcionTexto": "Raramente",
+            "Correcta": true
+        },
+        {
+            "Inciso": "E",
+            "OpcionTexto": "Nunca",
+            "Correcta": true
+        }
+    ]
+}
+
