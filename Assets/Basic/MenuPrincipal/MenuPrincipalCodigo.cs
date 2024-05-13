@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
+
 public class MenuPrincipalCodigo : MonoBehaviour
 {
     UIDocument MenuPrincipalTemplate;
@@ -26,7 +27,7 @@ public class MenuPrincipalCodigo : MonoBehaviour
     // Start is called before the first frame update
      private void OnBtnMapaClick()
     {
-        // Cambiar de escena a "nivel1"
+        // Cambiar de escena a "mapa"
         SceneManager.LoadScene("Mapa");
     }
 
