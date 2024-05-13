@@ -1,0 +1,9 @@
+{
+    "IdEstudiante": 0,
+    "ClavePregunta": "M2P16E",
+    "Opcion": {
+        "Inciso": "B",
+        "OpcionTexto": "Porque toma en cuenta en cuenta los hechos para dar su opinión",
+        "Correcta": false
+    }
+}

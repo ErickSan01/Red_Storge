@@ -1,0 +1,9 @@
+{
+    "IdEstudiante": 0,
+    "ClavePregunta": "M2P22E",
+    "Opcion": {
+        "Inciso": "A",
+        "OpcionTexto": "El aseguramiento que hice, no fue correcto. En realidad no me consta del todo.  Discúlpame",
+        "Correcta": false
+    }
+}

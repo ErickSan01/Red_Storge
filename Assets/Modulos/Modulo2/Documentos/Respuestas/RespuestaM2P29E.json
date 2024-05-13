@@ -2,8 +2,8 @@
     "IdEstudiante": 0,
     "ClavePregunta": "M2P29E",
     "Opcion": {
-        "Inciso": "A",
-        "OpcionTexto": "Martha llora siempre",
-        "Correcta": false
+        "Inciso": "B",
+        "OpcionTexto": "Martha ha llorado por  6 tardes",
+        "Correcta": true
     }
 }

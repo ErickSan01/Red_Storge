@@ -24,7 +24,7 @@ namespace Scripts{
                 secuencia.Add("M4P11FP","M4P16FP");
                 secuencia.Add("M4P16FP","M4P22FP");
                 secuencia.Add("M4P22FP","M4P27FP");
-                secuencia.Add("M4P27FP","M4P31FD");
+                secuencia.Add("M4P27FP","FINAL");
 
             }            
             
@@ -104,6 +104,7 @@ namespace Scripts{
                      secuencia2.Add("M4P28FL", "M4P29FE");
                      secuencia2.Add("M4P29FE", "M4P30FE");
                      secuencia2.Add("M4P30FE", "M4P31FD");
+                     secuencia2.Add("M4P31FD", "FINAL");
                  }           
                return secuencia2[clave];
             }

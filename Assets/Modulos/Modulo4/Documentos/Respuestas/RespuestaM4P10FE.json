@@ -2,8 +2,8 @@
     "IdEstudiante": 0,
     "ClavePregunta": "M4P10FE",
     "Opcion": {
-        "Inciso": "C",
-        "OpcionTexto": "La expresión en términos positivos yevitar implicar personas o situaciones concretas.    ",
-        "Correcta": false
+        "Inciso": "A",
+        "OpcionTexto": "La implicación de la otra persona como responsable de las necesidades personales",
+        "Correcta": true
     }
 }

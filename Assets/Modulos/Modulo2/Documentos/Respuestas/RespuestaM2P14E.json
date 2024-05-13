@@ -1,0 +1,9 @@
+{
+    "IdEstudiante": 0,
+    "ClavePregunta": "M2P14E",
+    "Opcion": {
+        "Inciso": "B",
+        "OpcionTexto": "Juicio cuya finalidad es establecer, tomando en consideración un conjunto de criterios o normas, el valor, la importancia o el significado de algo.",
+        "Correcta": false
+    }
+}

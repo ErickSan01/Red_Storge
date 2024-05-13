@@ -2,8 +2,8 @@
     "IdEstudiante": 0,
     "ClavePregunta": "M4P9FE",
     "Opcion": {
-        "Inciso": "B",
-        "OpcionTexto": "Mecanismo del ego, siempre se queja",
-        "Correcta": true
+        "Inciso": "A",
+        "OpcionTexto": "Violentómetro,  ya que es una forma de  descalificar",
+        "Correcta": false
     }
 }

@@ -98,7 +98,7 @@ public class InterfaceRecuperacion : MonoBehaviour
 
         // Crear el label hijo con el texto especificado
         Label label = new Label(texto.Trim());
-        label.AddToClassList("respuesta_texto");
+        label.AddToClassList("respuesta_texto_2");
         
         // Crear cuadro de contención de texto
         VisualElement limiteTexto = new VisualElement();

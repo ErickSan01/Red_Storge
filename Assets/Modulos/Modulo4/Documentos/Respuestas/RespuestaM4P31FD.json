@@ -1,0 +1,9 @@
+{
+    "IdEstudiante": 0,
+    "ClavePregunta": "M4P31FD",
+    "Opcion": {
+        "Inciso": "C",
+        "OpcionTexto": "Te sientes disgustado porque mi apariencia no es como tú quisieras que fuera?\nSí, perdón, no debí agredirte. De hecho, reconozco que hice discriminación por apariencia, has demostrado en tu respuesta, que estás aprendiendo, por ello, te entregaré la segunda insignia de cosnciencia del nivel 3",
+        "Correcta": true
+    }
+}

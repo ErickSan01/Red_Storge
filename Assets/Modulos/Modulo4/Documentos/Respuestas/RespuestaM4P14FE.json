@@ -2,8 +2,8 @@
     "IdEstudiante": 0,
     "ClavePregunta": "M4P14FE",
     "Opcion": {
-        "Inciso": "B",
-        "OpcionTexto": "Mecanismo del ego, se alimenta de la atención",
-        "Correcta": false
+        "Inciso": "A",
+        "OpcionTexto": "Violentómetro,  ya que es una forma de  coaccionar",
+        "Correcta": true
     }
 }

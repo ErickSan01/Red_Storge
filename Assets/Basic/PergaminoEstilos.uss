@@ -39,6 +39,8 @@ null .contenedor {
 
 .respuesta {
     align-items: flex-start;
+    flex-grow: 0.5;
+    flex-shrink: 1;
 }
 
 .pregunta {
@@ -64,10 +66,12 @@ null .contenedor {
     padding-right: 0;
     padding-top: 0;
     padding-bottom: 0;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
     flex-wrap: wrap;
+    font-size: 40px;
+    -unity-text-align: upper-left;
 }
 
 .boton_pergamino {
@@ -88,9 +92,10 @@ null .contenedor {
 
 .respuesta_texto {
     white-space: normal;
-    font-size: 30px;
     -unity-font-style: normal;
     -unity-text-align: upper-left;
+    font-size: 15px;
+    flex-shrink: 0;
 }
 
 .full_size {
@@ -117,4 +122,14 @@ null .contenedor {
 
 .container5 {
     background-color: rgba(138, 0, 255, 0.38);
+}
+
+.respuesta_texto_2 {
+    font-size: 30px;
+    color: rgba(0, 0, 0, 255);
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    -unity-text-align: upper-left;
+    white-space: normal;
 }

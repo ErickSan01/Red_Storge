@@ -1,0 +1,9 @@
+{
+    "IdEstudiante": 0,
+    "ClavePregunta": "M4P26FE",
+    "Opcion": {
+        "Inciso": "B",
+        "OpcionTexto": "No expresa las necesidades o los pensamientos que se esconden detrás de sus sentimientos",
+        "Correcta": true
+    }
+}

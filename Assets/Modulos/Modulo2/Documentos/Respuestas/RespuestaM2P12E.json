@@ -2,8 +2,8 @@
     "IdEstudiante": 0,
     "ClavePregunta": "M2P12E",
     "Opcion": {
-        "Inciso": "A",
-        "OpcionTexto": "Exageré en mi comentario, discúlpame por favor",
+        "Inciso": "B",
+        "OpcionTexto": "Disculpa si te molestó mi observación",
         "Correcta": false
     }
 }

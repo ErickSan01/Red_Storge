@@ -2,8 +2,8 @@
     "IdEstudiante": 0,
     "ClavePregunta": "M4P1FP",
     "Opcion": {
-        "Inciso": "B",
-        "OpcionTexto": "No expresa una necesidad, sólo un sentimiento de tristeza",
-        "Correcta": false
+        "Inciso": "A",
+        "OpcionTexto": "Corresponde a una necesidad sin autoresponsabilidad",
+        "Correcta": true
     }
 }

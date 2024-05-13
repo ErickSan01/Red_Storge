@@ -2,14 +2,14 @@
     <Style src="project://database/Assets/Basic/LaberintoInterface/LaberintoInterfaceEstilos.uss?fileID=7433441132597879392&amp;guid=15822d1b12cfb174eac37d179b4027e0&amp;type=3#LaberintoInterfaceEstilos" />
     <ui:VisualElement name="Contenedor" class="contenedor">
         <ui:VisualElement name="AreaPregunta" class="AreaPregunta">
-            <ui:VisualElement name="AreaPregunta" class="AreaPreguntaTexto">
-                <ui:Label text="Planteamiento de la pregunta" display-tooltip-when-elided="true" name="Texto_pregunta" style="font-size: 30px; -unity-font-style: bold; color: rgb(0, 0, 0);" />
+            <ui:VisualElement name="AreaPregunta" class="AreaPreguntaTexto" style="align-items: flex-start; justify-content: flex-start;">
+                <ui:Label text="Planteamiento de la pregunta" display-tooltip-when-elided="true" name="Texto_pregunta" style="font-size: 25px; -unity-font-style: bold; color: rgb(0, 0, 0); white-space: normal;" />
             </ui:VisualElement>
             <ui:VisualElement name="Laberinto" class="Laberinto" style="width: 100%; height: 50%; background-color: rgb(12, 4, 19); flex-direction: row;">
                 <ui:VisualElement name="Arbusto1" class="arbusto" />
                 <ui:VisualElement name="Puerta" class="puerta puertaCerrada">
                     <ui:VisualElement name="cartel" class="cartelEstilo1">
-                        <ui:Label text="Incorrecto" display-tooltip-when-elided="true" name="texto_cartel" style="font-size: 40px; -unity-font-style: bold;" />
+                        <ui:Label text="Incorrecto" display-tooltip-when-elided="true" name="texto_cartel" style="font-size: 25px; -unity-font-style: bold; white-space: normal;" />
                     </ui:VisualElement>
                 </ui:VisualElement>
                 <ui:VisualElement name="Arbusto2" class="arbusto" />
@@ -18,9 +18,9 @@
                 <ui:Button text="&lt;" display-tooltip-when-elided="true" name="BotonIzq" class="botonDireccion" />
                 <ui:Button text="&gt;" display-tooltip-when-elided="true" name="boton_der" class="botonDireccion" />
                 <ui:VisualElement name="TextoRespuesta" class="TextoRespuesta">
-                    <ui:Label text="Respuesta a elegir" display-tooltip-when-elided="true" name="Texto_respuesta" style="font-size: 30px; color: rgb(0, 0, 0); -unity-font-style: bold;" />
+                    <ui:Label text="Respuesta a elegir" display-tooltip-when-elided="true" name="Texto_respuesta" style="font-size: 25px; color: rgb(0, 0, 0); -unity-font-style: bold; white-space: normal;" />
                 </ui:VisualElement>
-                <ui:Button text="Contestar" display-tooltip-when-elided="true" name="BotonContestar" class="BotonContestar" style="font-size: 35px;" />
+                <ui:Button text="Contestar" display-tooltip-when-elided="true" name="BotonContestar" class="BotonContestar" style="font-size: 20px;" />
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>

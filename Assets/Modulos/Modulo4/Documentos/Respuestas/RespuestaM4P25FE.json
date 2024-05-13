@@ -1,9 +1,9 @@
 {
     "IdEstudiante": 0,
-    "ClavePregunta": "M2P13P",
+    "ClavePregunta": "M4P25FE",
     "Opcion": {
         "Inciso": "B",
-        "OpcionTexto": "Evaluación",
+        "OpcionTexto": "Comunion espiritual",
         "Correcta": false
     }
 }

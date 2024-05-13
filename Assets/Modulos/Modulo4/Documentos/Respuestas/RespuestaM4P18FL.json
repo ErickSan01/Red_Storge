@@ -2,8 +2,8 @@
     "IdEstudiante": 0,
     "ClavePregunta": "M4P18FL",
     "Opcion": {
-        "Inciso": "B",
-        "OpcionTexto": "Que  hay responsabilidad en asumir la necesidad que subyace al juicio",
-        "Correcta": true
+        "Inciso": "",
+        "OpcionTexto": "",
+        "Correcta": false
     }
 }

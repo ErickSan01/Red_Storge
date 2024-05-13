@@ -2,8 +2,8 @@
     "IdEstudiante": 0,
     "ClavePregunta": "M2P3L",
     "Opcion": {
-        "Inciso": "",
-        "OpcionTexto": "",
-        "Correcta": false
+        "Inciso": "C",
+        "OpcionTexto": "5 Siempre está evaluando y juzgando y 1 USA SUPERLATIVOS (exageraciones)",
+        "Correcta": true
     }
 }

@@ -2,8 +2,8 @@
     "IdEstudiante": 0,
     "ClavePregunta": "M4P17FL",
     "Opcion": {
-        "Inciso": "C",
-        "OpcionTexto": "A veces la gente dice ciertas cosas que me ofenden porque quiero que me respeten, no que me critiquen",
-        "Correcta": true
+        "Inciso": "",
+        "OpcionTexto": "",
+        "Correcta": false
     }
 }

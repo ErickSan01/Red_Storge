@@ -2,8 +2,8 @@
     "IdEstudiante": 0,
     "ClavePregunta": "M2P2L",
     "Opcion": {
-        "Inciso": "A",
-        "OpcionTexto": "CULPABILIZAR",
+        "Inciso": "",
+        "OpcionTexto": "",
         "Correcta": false
     }
 }

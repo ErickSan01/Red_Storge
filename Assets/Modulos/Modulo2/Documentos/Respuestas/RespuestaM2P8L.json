@@ -2,8 +2,8 @@
     "IdEstudiante": 0,
     "ClavePregunta": "M2P8L",
     "Opcion": {
-        "Inciso": "B",
-        "OpcionTexto": "Exageración y mentira",
-        "Correcta": true
+        "Inciso": "",
+        "OpcionTexto": "",
+        "Correcta": false
     }
 }

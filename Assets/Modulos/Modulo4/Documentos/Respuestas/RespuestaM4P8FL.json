@@ -2,8 +2,8 @@
     "IdEstudiante": 0,
     "ClavePregunta": "M4P8FL",
     "Opcion": {
-        "Inciso": "C",
-        "OpcionTexto": "Irresponsabilidad",
+        "Inciso": "",
+        "OpcionTexto": "",
         "Correcta": false
     }
 }

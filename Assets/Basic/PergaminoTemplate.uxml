@@ -4,7 +4,7 @@
     <ui:VisualElement name="contenedor" class="contenedor" style="background-image: url(&apos;project://database/Assets/Sprites/Background/Cartoon_Forest_BG_01.png?fileID=21300000&amp;guid=e9d2513792ebb1b4794adbf9ae1da2bd&amp;type=3#Cartoon_Forest_BG_01&apos;); -unity-background-image-tint-color: rgba(0, 103, 255, 0.38);">
         <ui:VisualElement name="seccion_pregunta" class="seccion_pregunta">
             <ui:VisualElement name="pregunta" class="pregunta">
-                <ui:Label text="Label" display-tooltip-when-elided="true" name="pregunta_texto" />
+                <ui:Label text="Label " display-tooltip-when-elided="false" name="pregunta_texto" enable-rich-text="true" style="white-space: normal;" />
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="seccion_respuestas" class="seccion_respuestas" />

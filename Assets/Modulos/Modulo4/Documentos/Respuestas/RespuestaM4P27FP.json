@@ -2,8 +2,8 @@
     "IdEstudiante": 0,
     "ClavePregunta": "M4P27FP",
     "Opcion": {
-        "Inciso": "C",
-        "OpcionTexto": "Se expresa un sentimiento",
-        "Correcta": false
+        "Inciso": "A",
+        "OpcionTexto": "Se expresa un juicio ",
+        "Correcta": true
     }
 }

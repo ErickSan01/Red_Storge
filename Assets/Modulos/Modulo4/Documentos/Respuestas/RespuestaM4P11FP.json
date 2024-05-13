@@ -2,8 +2,8 @@
     "IdEstudiante": 0,
     "ClavePregunta": "M4P11FP",
     "Opcion": {
-        "Inciso": "A",
-        "OpcionTexto": "Correponde a una necesidad donde se asume la responsabilidad de los sentimientos",
+        "Inciso": "C",
+        "OpcionTexto": "No expresa una necesidad, sólo un sentimiento de tristeza",
         "Correcta": false
     }
 }

@@ -1,13 +1,16 @@
 {
-    "pergaminoActual": "FINAL",
+    "pergaminoActual": "M2P17P",
     "pergaminosContestados": [
         "M2P1P",
+        "M2P2L",
+        "M2P3L",
+        "M2P4E",
+        "M2P5E",
+        "M2P6E",
         "M2P7P",
         "M2P13P",
-        "M2P17P",
-        "M2P23P",
-        "M2P28P",
-        "M2P29E",
-        "M2P30E"
+        "M2P14E",
+        "M2P15E",
+        "M2P16E"
     ]
 }
