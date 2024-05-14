@@ -3,11 +3,7 @@
     <ui:VisualElement name="contenedor" class="contenedor" style="align-items: center; justify-content: center; -unity-background-scale-mode: stretch-to-fill;">
         <ui:VisualElement name="contenido_menu" class="contenido_menu">
             <ui:VisualElement name="seccion_titulo" class="seccion_titulo">
-<<<<<<< HEAD
-                <ui:Label text="RED STORGE" display-tooltip-when-elided="true" name="titulo" enable-rich-text="false" style="width: auto; font-size: 100px; color: rgb(204, 24, 96); -unity-font-style: bold; -unity-font-definition: url(&apos;project://database/Assets/Fuentes/motley-forces-font/MotleyForcesRegular-w1rZ3%20SDF.asset?fileID=11400000&amp;guid=5fee44a99406c1c4c8e18ec63005885c&amp;type=2#MotleyForcesRegular-w1rZ3 SDF&apos;);" />
-=======
                 <ui:Label text="RED STORGE" display-tooltip-when-elided="true" name="titulo" enable-rich-text="false" style="width: auto; font-size: 120px; color: rgb(204, 24, 96); -unity-font-style: bold; -unity-font-definition: url(&apos;project://database/Assets/Fuentes/motley-forces-font/MotleyForcesRegular-w1rZ3%20SDF.asset?fileID=11400000&amp;guid=5fee44a99406c1c4c8e18ec63005885c&amp;type=2#MotleyForcesRegular-w1rZ3 SDF&apos;);" />
->>>>>>> 74080d87e261d3d17394055f023498ea24a43c12
             </ui:VisualElement>
             <ui:VisualElement name="seccion_botones" class="seccion_botones" style="background-color: rgba(0, 255, 236, 0);">
                 <ui:Button text="Jugar" display-tooltip-when-elided="true" name="btn_jugar" enable-rich-text="false" class="boton_menu" />
