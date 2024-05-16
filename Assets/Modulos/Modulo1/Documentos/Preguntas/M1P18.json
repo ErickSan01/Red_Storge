@@ -1,0 +1,33 @@
+{
+    "Clave": "M1P18",
+    "Modulo": 1,
+    "Fase": "",
+    "Planteamiento": "Formulo peticiones que fomenten la empatía y la comprensión.",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Siempre",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Frecuentemente",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Algunas veces",
+            "Correcta": true
+        },
+        {
+            "Inciso": "D",
+            "OpcionTexto": "Raramente",
+            "Correcta": true
+        },
+        {
+            "Inciso": "E",
+            "OpcionTexto": "Nunca",
+            "Correcta": true
+        }
+    ]
+}
