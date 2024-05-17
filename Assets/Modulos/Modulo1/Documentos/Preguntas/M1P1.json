@@ -1,0 +1,23 @@
+{
+    "Clave": "M1P1",
+    "Modulo": 1,
+    "Fase": "",
+    "Planteamiento": "¿Quién soy yo?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Hombre",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Mujer",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Otro",
+            "Correcta": true
+        }
+    ]
+}

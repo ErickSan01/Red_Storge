@@ -1,0 +1,28 @@
+{
+    "Clave": "M1P4",
+    "Modulo": 1,
+    "Fase": "",
+    "Planteamiento": "¿Cúal es mi contexto?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Urbano",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Rural",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Semirural",
+            "Correcta": true
+        },
+        {
+            "Inciso": "D",
+            "OpcionTexto": "Semiurbano",
+            "Correcta": true
+        }
+    ]
+}
