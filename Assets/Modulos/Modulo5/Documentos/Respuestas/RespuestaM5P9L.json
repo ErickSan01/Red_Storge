@@ -1,0 +1,9 @@
+{
+    "IdEstudiante": 0,
+    "ClavePregunta": "M5P9L",
+    "Opcion": {
+        "Inciso": "B",
+        "OpcionTexto": "Corresponde a una expresión clara de petición, en donde se pide una acción específica",
+        "Correcta": false
+    }
+}

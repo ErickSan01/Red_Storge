@@ -1,0 +1,9 @@
+{
+    "IdEstudiante": 0,
+    "ClavePregunta": "M5P10E",
+    "Opcion": {
+        "Inciso": "A",
+        "OpcionTexto": "¡Me gustaría decidir por mí misma la ropa que voy a ponerme el sábado!",
+        "Correcta": true
+    }
+}
