@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 using JsonUtils;
+using Scripts;
+using Models;
 public class MapaCodigo : MonoBehaviour
 {
     UIDocument MapaTemplate;
@@ -35,9 +37,12 @@ public class MapaCodigo : MonoBehaviour
 
     private void OnBtnModulo2Click()
     {
+        //Modificar progreso
         ProgresoGeneralJson.ActualizarProgreso(2);
-        // Cambiar de escena a "nivel1"
-        SceneManager.LoadScene("Modulo2Nivel");
+        //Redirección
+        ProgresoModulo progreso = ProgresoJson.CargarProgreso(2);
+        string clave = progreso.pergaminoActual;
+        SiguienteEscena.SiguienteEscenaRedireccion(clave);
     }
 
     private void OnBtnModulo3Click()
@@ -49,9 +54,12 @@ public class MapaCodigo : MonoBehaviour
 
         private void OnBtnModulo4Click()
     {
+        //Modificar progreso
         ProgresoGeneralJson.ActualizarProgreso(4);
-        // Cambiar de escena a "nivel1"
-        SceneManager.LoadScene("Modulo4Nivel");
+        //Redirección
+        ProgresoModulo progreso = ProgresoJson.CargarProgreso(4);
+        string clave = progreso.pergaminoActual;
+        SiguienteEscena.SiguienteEscenaRedireccion(clave);
     }
 
     private void OnBtnModulo5Click()
