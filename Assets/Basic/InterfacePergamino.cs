@@ -8,6 +8,9 @@ using UnityEngine.SceneManagement;
 using JsonUtils;
 using Scripts;
 
+/// <summary>
+/// Clase que representa la interfaz gráfica de un pergamino en el juego.
+/// </summary>
 public class InterfacePergamino : MonoBehaviour
 {
     //Elemetos de la Interface Gráfica
@@ -27,7 +30,9 @@ public class InterfacePergamino : MonoBehaviour
     //Modulo actual
     int modulo;
 
-
+    /// <summary>
+    /// Método que se ejecuta al iniciar el objeto.
+    /// </summary>
     void Start()
     {
         ProgresoGeneral progresoGeneral = ProgresoGeneralJson.CargarProgreso();
@@ -38,7 +43,6 @@ public class InterfacePergamino : MonoBehaviour
         if(clave == "FINAL"){
             SceneManager.LoadScene("Mapa");
         }
-
 
         pregunta = PreguntaJson.CargarPregunta(clave);
 
@@ -52,6 +56,9 @@ public class InterfacePergamino : MonoBehaviour
         container.AddToClassList("container"+modulo);
     }
 
+    /// <summary>
+    /// Método que se ejecuta al habilitar el objeto.
+    /// </summary>
     void OnEnable()
     {
         PergaminoTemplate = GetComponent<UIDocument>();
@@ -78,7 +85,10 @@ public class InterfacePergamino : MonoBehaviour
         
     }
 
-
+    /// <summary>
+    /// Método que agrega las opciones de respuesta a la interfaz gráfica.
+    /// </summary>
+    /// <param name="pregunta">La pregunta actual.</param>
     void AgregarOpciones(Pregunta pregunta)
     {
         List<Opcion> opciones = pregunta.Opciones;
@@ -90,6 +100,11 @@ public class InterfacePergamino : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Método que agrega un elemento visual de respuesta a la interfaz gráfica.
+    /// </summary>
+    /// <param name="nombre">El nombre del elemento visual.</param>
+    /// <param name="texto">El texto de la respuesta.</param>
     void AgregarVisualElement(string nombre, string texto)
     {
         // Crear el elemento visual con la clase de estilos ".respuesta"
@@ -105,8 +120,6 @@ public class InterfacePergamino : MonoBehaviour
         VisualElement limiteTexto  = new VisualElement();
         limiteTexto.Add(label);
 
-        
-
         // Crear el toggle hijo
         Toggle toggle = new Toggle();
         toggle.text = texto;
@@ -116,12 +129,15 @@ public class InterfacePergamino : MonoBehaviour
         // Agregar el toggle al elemento visual
         visualElement.Add(toggle);
         visualElement.Add(limiteTexto);
-        
 
         // Agregar el elemento visual al elemento padre "respuestas"
         respuestas.Add(visualElement);
     }
 
+    /// <summary>
+    /// Método que se ejecuta cuando se cambia el valor de un toggle.
+    /// </summary>
+    /// <param name="evt">El evento de cambio de valor.</param>
     void OnToggleValueChanged(ChangeEvent<bool> evt)
     {
         Toggle toggle = (Toggle)evt.target;
@@ -149,14 +165,20 @@ public class InterfacePergamino : MonoBehaviour
         contestar.SetEnabled(lastSelectedToggle != null);
     }
 
-
-    
-    DatosRespuesta ArmarRespuesta(string textoT){
+    /// <summary>
+    /// Método que arma la respuesta seleccionada por el usuario.
+    /// </summary>
+    /// <param name="textoT">El texto de la respuesta seleccionada.</param>
+    /// <returns>Los datos de la respuesta armada.</returns>
+    DatosRespuesta ArmarRespuesta(string textoT)
+    {
         List<Opcion> Opciones = pregunta.Opciones;
         Opcion opcionCorrecta = new Opcion();
-        for(int i = 0; i < Opciones.Count; i++){
+        for(int i = 0; i < Opciones.Count; i++)
+        {
             Opcion opcion = Opciones[i];
-            if(opcion.OpcionTexto.Equals(textoT)){
+            if(opcion.OpcionTexto.Equals(textoT))
+            {
                 opcionCorrecta = opcion;
             }
         }
@@ -167,15 +189,21 @@ public class InterfacePergamino : MonoBehaviour
         return respuesta;
     }
 
-
-
-    
-    void GuardarProgreso(string clave, bool correcta){
+    /// <summary>
+    /// Método que guarda el progreso del juego y redirecciona a la siguiente escena.
+    /// </summary>
+    /// <param name="clave">La clave de la pregunta actual.</param>
+    /// <param name="correcta">Indica si la respuesta seleccionada es correcta.</param>
+    void GuardarProgreso(string clave, bool correcta)
+    {
         string siguientePergamino;
-        if(correcta){
+        if(correcta)
+        {
             //Guardar secuencia
             siguientePergamino = Secuencia.Secuencia1(clave, modulo);
-        }else{
+        }
+        else
+        {
             //Guardar secuencia
             siguientePergamino = Secuencia.Secuencia2(clave, modulo);
         }
@@ -183,6 +211,9 @@ public class InterfacePergamino : MonoBehaviour
         SiguienteEscena.SiguienteEscenaRedireccion(siguientePergamino);
     }
 
+    /// <summary>
+    /// Método que se ejecuta cuando se hace clic en el botón "contestar".
+    /// </summary>
     void ContestarClicked()
     {
         if (lastSelectedToggle != null)
@@ -196,7 +227,6 @@ public class InterfacePergamino : MonoBehaviour
             GuardarProgreso(pregunta.Clave, opcion.Correcta);
         }
     }
- 
 }
 
 

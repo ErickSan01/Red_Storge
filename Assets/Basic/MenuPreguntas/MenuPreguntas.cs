@@ -3,12 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
+/// <summary>
+/// Clase que representa el menú de preguntas.
+/// </summary>
 public class MenuPreguntas : MonoBehaviour
 {
     UIDocument MenuPregunta;
 
     Button btn_nivel1;
 
+    /// <summary>
+    /// Texto que se pasa a la segunda escena.
+    /// </summary>
     public static string textoParaSegundaEscena;
 
     void OnEnable(){
@@ -17,6 +23,7 @@ public class MenuPreguntas : MonoBehaviour
         btn_nivel1 = root.Q<Button>("btn_nivel1");
         btn_nivel1.clicked += OnBtnNivel1Click;
     }
+
     // Start is called before the first frame update
     void Start()
     {

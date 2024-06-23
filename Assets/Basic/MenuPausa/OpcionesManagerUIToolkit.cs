@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 
+/// <summary>
+/// Gestiona las opciones del menú de pausa utilizando el UIToolkit de Unity.
+/// </summary>
 public class OpcionesManagerUIToolkit : MonoBehaviour
 {
     public UIDocument uiDocument; // Referencia al UIDocument en la escena.
@@ -21,14 +24,12 @@ public class OpcionesManagerUIToolkit : MonoBehaviour
         rootElement = uiDocument.rootVisualElement;
         confMenu = uiDocument2.rootVisualElement;
         apoMenu = uiDocument3.rootVisualElement;
-        // Encuentra el bot�n y el men� en el dise�o.
+        // Encuentra el botón y el menú en el diseño.
         opcionesButton = rootElement.Q<Button>("opcionesButton");
         salirButtom = confMenu.Q<Button>("salirButtom");
         apoyoButton = rootElement.Q<Button>("apoyoButton");        
         jugarButtom = apoMenu.Q<Button>("Jugar");
 
-        //aquí me quedé 
-        
         confMenu = confMenu.Q("ConfigMenu");
         volumen = confMenu.Q<SliderInt>("Volumen");
         apoMenu = apoMenu.Q("contenedor");
@@ -36,8 +37,8 @@ public class OpcionesManagerUIToolkit : MonoBehaviour
         // Configura el deslizador con valores que tengan sentido para el volumen (0 a 100 por ejemplo).
         volumen.lowValue = 1;
         volumen.highValue = 100;
-        volumen.value = (int)(audioSource.volume * 100); // Asume que el volumen inicial del AudioSource est� entre 0 y 1.
-        // A�ade un listener para manejar el cambio en el deslizador.
+        volumen.value = (int)(audioSource.volume * 100); // Asume que el volumen inicial del AudioSource está entre 0 y 1.
+        // Añade un listener para manejar el cambio en el deslizador.
         volumen.RegisterValueChangedCallback(OnVolumeChanged);
 
         opcionesButton.clicked += TogglePause;
@@ -48,42 +49,43 @@ public class OpcionesManagerUIToolkit : MonoBehaviour
 
     private void OnVolumeChanged(ChangeEvent<int> evt)
     {
-        // Actualiza el volumen del AudioSource basado en la posici�n del deslizador.
+        // Actualiza el volumen del AudioSource basado en la posición del deslizador.
         audioSource.volume = evt.newValue / 100f;
     }
 
+    /// <summary>
+    /// Alterna la visualización del menú de opciones y el menú principal.
+    /// </summary>
     public void TogglePause()
     {
-        // Comprueba el estado actual del men� y c�mbialo.
+        // Comprueba el estado actual del menú y cámbialo.
         if (confMenu.resolvedStyle.display == DisplayStyle.None)
         {
             confMenu.style.display = DisplayStyle.Flex;
             rootElement.style.display = DisplayStyle.None;
-
         }
         else
         {
             confMenu.style.display = DisplayStyle.None;
             rootElement.style.display = DisplayStyle.Flex;
-
         }
     }
 
+    /// <summary>
+    /// Alterna la visualización del menú de apoyo y el menú principal.
+    /// </summary>
     public void TogglePause2()
     {
-        // Comprueba el estado actual del men� y c�mbialo.
+        // Comprueba el estado actual del menú y cámbialo.
         if (apoMenu.resolvedStyle.display == DisplayStyle.None)
         {
             apoMenu.style.display = DisplayStyle.Flex;
             rootElement.style.display = DisplayStyle.None;
-
         }
         else
         {
-            print("hola");
             apoMenu.style.display = DisplayStyle.None;
             rootElement.style.display = DisplayStyle.Flex;
-
         }
     }
 }

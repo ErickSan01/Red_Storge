@@ -9,6 +9,9 @@ using JsonUtils;
 using Models;
 using System.IO;
 using Scripts;
+/// <summary>
+/// Clase que representa el código de la interfaz del laberinto.
+/// </summary>
 public class LaberintoInterfaceCodigo : MonoBehaviour
 {
     // Instancias de la Interface Gráfica.
@@ -34,6 +37,10 @@ public class LaberintoInterfaceCodigo : MonoBehaviour
 
     //Modulo actual
     int modulo;
+
+    /// <summary>
+    /// Método que se ejecuta al iniciar el objeto.
+    /// </summary>
     void Start()
     {
         ProgresoGeneral progresoGeneral = ProgresoGeneralJson.CargarProgreso();
@@ -51,7 +58,9 @@ public class LaberintoInterfaceCodigo : MonoBehaviour
         AgregarOpciones(pregunta.Opciones);
     }
 
-    //Método para dar de alta los componentes gráficos y asignarles valor 
+    /// <summary>
+    /// Método que se ejecuta al habilitar el objeto.
+    /// </summary>
     void OnEnable()
     {
         LaberintoInterface = GetComponent<UIDocument>();
@@ -72,8 +81,10 @@ public class LaberintoInterfaceCodigo : MonoBehaviour
         texto_cartel.text = "";
     }
 
-
-    //Agregar opcion en pantalla
+    /// <summary>
+    /// Método para agregar las opciones en pantalla.
+    /// </summary>
+    /// <param name="Opciones">Lista de opciones de la pregunta.</param>
     void AgregarOpciones(List<Opcion> Opciones)
     {
         Opcion opcion = Opciones[indice];
@@ -81,10 +92,13 @@ public class LaberintoInterfaceCodigo : MonoBehaviour
         string descripcion = opcion.OpcionTexto;
         txt_respuesta.text = descripcion;
         correcta = opcion.Correcta;
-
     }
 
-    void navegarDer(){
+    /// <summary>
+    /// Método para navegar hacia la derecha.
+    /// </summary>
+    void navegarDer()
+    {
         if(indice < cantidad_opciones-1){
             indice++;
             opcionGlobal = pregunta.Opciones[indice];
@@ -93,18 +107,22 @@ public class LaberintoInterfaceCodigo : MonoBehaviour
         }
     }
 
-    void navegarIzq(){
+    /// <summary>
+    /// Método para navegar hacia la izquierda.
+    /// </summary>
+    void navegarIzq()
+    {
         if(indice > 0){
             indice--;
             opcionGlobal = pregunta.Opciones[indice];
             AgregarOpciones(pregunta.Opciones);
             Debug.Log("Izquierda: "+correcta);
-    
-
         }
     }
 
-    //Método de dar click a al botón de contestar
+    /// <summary>
+    /// Método que se ejecuta al hacer clic en el botón de contestar.
+    /// </summary>
     private async void ContestarClicked()
     {
         if(correcta == false){
@@ -138,39 +156,4 @@ public class LaberintoInterfaceCodigo : MonoBehaviour
         //Redirijimos al jugador
         SiguienteEscena.SiguienteEscenaRedireccion(siguientePreguntaClave);
     }
-
-    /*
-    Pregunta CargarPregunta(string clave){
-        Debug.Log("cargando "+clave);
-        string json = File.ReadAllText(Application.dataPath+"/Modulos/Modullo2/Documentos/Preguntas/"+clave+".json");
-        Pregunta pregunta = JsonUtility.FromJson<Pregunta>(json);
-        return pregunta;
-    }
-    */
-    
-    /*
-    void GuardarRespuesta(DatosRespuesta respuesta){
-        string json = JsonUtility.ToJson(respuesta, true);
-        File.WriteAllText(Application.dataPath+"/Modulos/Modullo2/Documentos/Respuestas/Respuesta"+respuesta.ClavePregunta+".json", json);
-    }
-    */
-
-    /*
-    string GuardarProgreso(string clave){
-        //Cargamos progreso actual
-        string json = File.ReadAllText(Application.dataPath+"/Modulos/Modullo2/Documentos/Progreso/Progreso.json");
-        ProgresoModulo progreso = JsonUtility.FromJson<ProgresoModulo>(json);
-
-        //Actualizamos progreso
-        progreso.pergaminosContestados.Add(clave);
-        progreso.pergaminoActual = Secuencia.Secuencia2(clave);
-
-        //Reescribimos el progreso
-        json = JsonUtility.ToJson(progreso, true);
-        File.WriteAllText(Application.dataPath+"/Modulos/Modullo2/Documentos/Progreso/Progreso.json", json);
-
-        return progreso.pergaminoActual;
-    }
-    */
-    
 }

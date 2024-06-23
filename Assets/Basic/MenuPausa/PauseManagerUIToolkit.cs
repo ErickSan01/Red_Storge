@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 
+/// <summary>
+/// Clase que gestiona la pausa del juego utilizando el UIToolkit de Unity.
+/// </summary>
 public class PauseManagerUIToolkit : MonoBehaviour
 {
     public UIDocument uiDocument; // Referencia al UIDocument en la escena.
@@ -11,7 +14,9 @@ public class PauseManagerUIToolkit : MonoBehaviour
     private Button pauseButton;
     private Button continueButton;
 
-
+    /// <summary>
+    /// Método que se llama al iniciar el objeto.
+    /// </summary>
     private void Start()
     {
         rootElement = uiDocument.rootVisualElement;
@@ -25,6 +30,9 @@ public class PauseManagerUIToolkit : MonoBehaviour
         continueButton.clicked += TogglePause;
     }
 
+    /// <summary>
+    /// Método que alterna entre pausar y reanudar el juego.
+    /// </summary>
     public void TogglePause()
     {
         // Comprueba el estado actual del menú y cámbialo.

@@ -8,6 +8,9 @@ using UnityEngine.SceneManagement;
 using JsonUtils;
 using Scripts;
 
+/// <summary>
+/// Clase que representa la interfaz de recuperación de preguntas.
+/// </summary>
 public class InterfaceRecuperacion : MonoBehaviour
 {
     //Elemetos de la Interface Gráfica

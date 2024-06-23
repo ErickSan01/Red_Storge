@@ -1,5 +1,8 @@
 using UnityEngine;
 using UnityEngine.UIElements;
+/// <summary>
+/// Clase que gestiona el menú de conceptos EGO en la interfaz de usuario.
+/// </summary>
 public class ConceptosEGOManagerUIToolkit : MonoBehaviour
 {
     public UIDocument uiDocument; // Referencia al UIDocument en la escena.
@@ -13,7 +16,7 @@ public class ConceptosEGOManagerUIToolkit : MonoBehaviour
     {
         rootElement = uiDocument.rootVisualElement;
         egoMenu = uiDocument2.rootVisualElement;
-        // Encuentra el bot�n y el men� en el dise�o.
+        // Encuentra el botón y el menú en el diseño.
         ego = rootElement.Q<Button>("ego");
         volver = egoMenu.Q<Button>("volver");
         egoMenu = egoMenu.Q("egoMenu");
@@ -21,20 +24,21 @@ public class ConceptosEGOManagerUIToolkit : MonoBehaviour
         volver.clicked += TogglePause;
     }
 
+    /// <summary>
+    /// Alterna la visibilidad del menú de EGO y el botón de EGO.
+    /// </summary>
     public void TogglePause()
     {
-        // Comprueba el estado actual del men� y c�mbialo.
+        // Comprueba el estado actual del menú y cambialo.
         if (egoMenu.resolvedStyle.display == DisplayStyle.None)
         {
             egoMenu.style.display = DisplayStyle.Flex;
             ego.style.display = DisplayStyle.None;
-
         }
         else
         {
             egoMenu.style.display = DisplayStyle.None;
             ego.style.display = DisplayStyle.Flex;
-
         }
     }
 }

@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 using JsonUtils;
 using Scripts;
 using Models;
+/// <summary>
+/// Clase que representa el código del mapa.
+/// </summary>
 public class MapaCodigo : MonoBehaviour
 {
     UIDocument MapaTemplate;
