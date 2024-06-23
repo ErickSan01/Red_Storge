@@ -1,0 +1,9 @@
+{
+    "IdEstudiante": 0,
+    "ClavePregunta": "M5P2L",
+    "Opcion": {
+        "Inciso": "C",
+        "OpcionTexto": "Quiero que no me juzques, y resignifiques lo que crees de mí",
+        "Correcta": false
+    }
+}
