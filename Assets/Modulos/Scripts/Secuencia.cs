@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Clase que contiene las secuencias de los módulos.
+/// </summary>
 namespace Scripts{
     /// <summary>
     /// Clase que contiene las secuencias de los módulos.

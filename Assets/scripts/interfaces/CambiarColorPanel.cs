@@ -5,14 +5,17 @@ using UnityEngine.UI;
 using TMPro;
 
 
+/// <summary>
+/// Clase que controla el cambio de color de un panel según la opción seleccionada en un Dropdown.
+/// </summary>
 public class CambiarColorPanel : MonoBehaviour
 {
     public Dropdown dropdown;
     public Image panel;
     private SQLiteDB sqliteDBInstance;
-    public TextMeshProUGUI  nombre;
-    public TextMeshProUGUI  edad;
-    public TextMeshProUGUI  color;
+    public TextMeshProUGUI nombre;
+    public TextMeshProUGUI edad;
+    public TextMeshProUGUI color;
 
     void Start()
     {
@@ -35,6 +38,10 @@ public class CambiarColorPanel : MonoBehaviour
         CambiarColor("Azul Claro");
     }
 
+    /// <summary>
+    /// Cambia el color del panel según la opción seleccionada en el Dropdown.
+    /// </summary>
+    /// <param name="valor">La opción seleccionada en el Dropdown.</param>
     void CambiarColor(string valor)
     {
         // Obtener la opción seleccionada
@@ -93,6 +100,10 @@ public class CambiarColorPanel : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Cambia el nombre mostrado en el TextMeshProUGUI de nombre.
+    /// </summary>
+    /// <param name="valor">El nuevo nombre.</param>
     void CambiarNombre(string valor){
         if (nombre != null)
         {
@@ -104,6 +115,10 @@ public class CambiarColorPanel : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Cambia la edad mostrada en el TextMeshProUGUI de edad.
+    /// </summary>
+    /// <param name="valor">La nueva edad.</param>
     void CambiarEdad(string valor){
         if (edad != null)
         {

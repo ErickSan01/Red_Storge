@@ -7,6 +7,9 @@ using UnityEngine.SceneManagement;
 using System;
 
 
+/// <summary>
+/// Clase que maneja el inicio de sesión en el juego.
+/// </summary>
 public class Login : MonoBehaviour
 {
     public Servidor servidor;
@@ -15,20 +18,20 @@ public class Login : MonoBehaviour
     public InputField inpPass;
     public GameObject imLoading;
 
+    /// <summary>
+    /// Método que se llama al hacer clic en el botón de iniciar sesión.
+    /// </summary>
     public void IniciarSesion()
     {
         StartCoroutine(Iniciar());
     }
 
+    /// <summary>
+    /// Corrutina que realiza el inicio de sesión.
+    /// </summary>
     IEnumerator Iniciar()
     {
         imLoading.SetActive(true);
-        //string[] datos = new string[2];
-        //datos[0] = inpUsuario.text;
-        //datos[1] = inpPass.text;
-        //StartCoroutine(servidor.consumirServicio("login",datos)); 
-        //yield return new WaitForSeconds(0.5f);     
-        //yield return new WaitUntil(()=> !servidor.ocupado);
 
         WWWForm form = new WWWForm();
         form.AddField("nombre_usuario", inpUsuario.text);
@@ -52,6 +55,10 @@ public class Login : MonoBehaviour
         imLoading.SetActive(false);
     }
 
+    /// <summary>
+    /// Método que carga una escena específica.
+    /// </summary>
+    /// <param name="sceneName">Nombre de la escena a cargar.</param>
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);

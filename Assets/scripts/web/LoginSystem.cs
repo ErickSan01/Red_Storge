@@ -4,29 +4,47 @@ using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 
 public class LoginSystem : MonoBehaviour
+/// <summary>
+/// Clase que maneja el sistema de inicio de sesión y registro de usuarios.
+/// </summary>
+public class LoginSystem : MonoBehaviour
 {
+    /// <summary>
+    /// Enumeración que representa la ventana actual del sistema.
+    /// </summary>
     public enum CurrentWindow { Login, Register }
+
+    /// <summary>
+    /// Ventana actual del sistema.
+    /// </summary>
     public CurrentWindow currentWindow = CurrentWindow.Login;
 
+    // Variables de inicio de sesión
     string loginUsername = "";
     string loginPassword = "";
 
+    // Variables de registro
     string registerUsername = "";
     string registerFullName = "";
     string registerEmail = "";
     string registerPassword = "";
     string errorMessage = "";
 
+    // Variables de estado
     bool isWorking = false;
     bool registrationCompleted = false;
     bool isLoggedIn = false;
 
-    //Logged-in user data
+    // Datos del usuario logueado
     string userName = "";
     string userEmail = "";
 
-    string rootURL = "http://localhost/"; //Path where php files are located
+    // URL base para las solicitudes HTTP
+    string rootURL = "http://localhost/"; // Ruta donde se encuentran los archivos PHP
 
+    /// <summary>
+    /// Método que se ejecuta en cada frame para dibujar la interfaz de usuario.
+    /// </summary>
     void OnGUI()
     {
         if (!isLoggedIn)
@@ -41,10 +59,10 @@ public class LoginSystem : MonoBehaviour
             }
         }
 
-        GUI.Label(new Rect(5, 5, 500, 25), "Status: " + (isLoggedIn ? "Logged-in Username: " + userName + " Email: " + userEmail : "Logged-out"));
+        GUI.Label(new Rect(5, 5, 500, 25), "Estado: " + (isLoggedIn ? "Usuario logueado: " + userName + " Email: " + userEmail : "Usuario no logueado"));
         if (isLoggedIn)
         {
-            if (GUI.Button(new Rect(5, 30, 100, 25), "Log Out"))
+            if (GUI.Button(new Rect(5, 30, 100, 25), "Cerrar Sesión"))
             {
                 isLoggedIn = false;
                 userName = "";
@@ -54,6 +72,10 @@ public class LoginSystem : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Método que dibuja la ventana de inicio de sesión.
+    /// </summary>
+    /// <param name="index">Índice de la ventana.</param>
     void LoginWindow(int index)
     {
         if (isWorking)
@@ -69,13 +91,13 @@ public class LoginSystem : MonoBehaviour
         if (registrationCompleted)
         {
             GUI.color = Color.green;
-            GUILayout.Label("Registrado Correctamente!");
+            GUILayout.Label("¡Registro completado correctamente!");
         }
 
         GUI.color = Color.white;
         GUILayout.Label("Nombre de Usuario:");
         loginUsername = GUILayout.TextField(loginUsername);
-        GUILayout.Label("Password:");
+        GUILayout.Label("Contraseña:");
         loginPassword = GUILayout.PasswordField(loginPassword, '*');
 
         GUILayout.Space(5);
@@ -95,6 +117,10 @@ public class LoginSystem : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Método que dibuja la ventana de registro.
+    /// </summary>
+    /// <param name="index">Índice de la ventana.</param>
     void RegisterWindow(int index)
     {
         if (isWorking)
@@ -135,6 +161,9 @@ public class LoginSystem : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Corrutina para realizar el registro de un usuario.
+    /// </summary>
     IEnumerator RegisterEnumerator()
     {
         isWorking = true;
@@ -176,6 +205,9 @@ public class LoginSystem : MonoBehaviour
         isWorking = false;
     }
 
+    /// <summary>
+    /// Corrutina para realizar el inicio de sesión de un usuario.
+    /// </summary>
     IEnumerator LoginEnumerator()
     {
         isWorking = true;
@@ -218,6 +250,9 @@ public class LoginSystem : MonoBehaviour
         isWorking = false;
     }
 
+    /// <summary>
+    /// Método para restablecer los valores de las variables.
+    /// </summary>
     void ResetValues()
     {
         errorMessage = "";
@@ -229,6 +264,10 @@ public class LoginSystem : MonoBehaviour
         registerPassword = "";
     }
 
+    /// <summary>
+    /// Método para cargar una escena.
+    /// </summary>
+    /// <param name="sceneName">Nombre de la escena a cargar.</param>
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);

@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controlador de la cámara que sigue al personaje en el juego.
+/// </summary>
 public class CameraController : MonoBehaviour
 {
     public Transform personaje;
@@ -22,6 +25,9 @@ public class CameraController : MonoBehaviour
         CalcularPosicionCamara();
     }
 
+    /// <summary>
+    /// Calcula la posición de la cámara en función de la posición del personaje.
+    /// </summary>
     void CalcularPosicionCamara()
     {
         int pantallaPersonaje = (int)(personaje.position.y / alturaPantalla);

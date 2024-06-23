@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 using System.IO;
 using Models;
 using JsonUtils;
+/// <summary>
+/// Clase que gestiona la pausa y la ayuda en el juego utilizando el UIToolkit de Unity.
+/// </summary>
 public class PauseManagerUIToolkit3 : MonoBehaviour
 {
     public UIDocument uiDocument; // Referencia al UIDocument en la escena.
@@ -18,7 +21,9 @@ public class PauseManagerUIToolkit3 : MonoBehaviour
     private Button ayudaButton;
     private Button continueButton;
 
-
+    /// <summary>
+    /// Método que se ejecuta al iniciar el objeto.
+    /// </summary>
     private void Start()
     {
         rootElement = uiDocument.rootVisualElement;
@@ -35,6 +40,9 @@ public class PauseManagerUIToolkit3 : MonoBehaviour
         ayudaButton.clicked += ToggleAyuda;
     }
 
+    /// <summary>
+    /// Método que cambia el estado de pausa del juego.
+    /// </summary>
     public void TogglePause()
     {
         // Comprueba el estado actual del menú y cámbialo.
@@ -54,6 +62,9 @@ public class PauseManagerUIToolkit3 : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Método que gestiona la acción de ayuda en el juego.
+    /// </summary>
     public void ToggleAyuda()
     {
         if (SceneManager.GetActiveScene().name == "Laberinto")

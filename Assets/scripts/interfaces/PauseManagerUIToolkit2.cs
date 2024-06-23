@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 using System.IO;
 using Models;
 using JsonUtils;
+/// <summary>
+/// Clase que gestiona la pausa y la ayuda en la interfaz de usuario utilizando UIToolkit.
+/// </summary>
 public class PauseManagerUIToolkit2 : MonoBehaviour
 {
     public UIDocument uiDocument; // Referencia al UIDocument en la escena.
@@ -18,7 +21,9 @@ public class PauseManagerUIToolkit2 : MonoBehaviour
     private Button ayudaButton;
     private Button continueButton;
 
-
+    /// <summary>
+    /// Método que se llama al inicio del juego.
+    /// </summary>
     private void Start()
     {
         rootElement = uiDocument.rootVisualElement;
@@ -35,6 +40,9 @@ public class PauseManagerUIToolkit2 : MonoBehaviour
         ayudaButton.clicked += ToggleAyuda;
     }
 
+    /// <summary>
+    /// Método que cambia el estado de pausa del juego.
+    /// </summary>
     public void TogglePause()
     {
         // Comprueba el estado actual del menú y cámbialo.
@@ -54,6 +62,9 @@ public class PauseManagerUIToolkit2 : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Método que maneja el evento de clic en el botón de ayuda.
+    /// </summary>
     public void ToggleAyuda()
     {
         if (SceneManager.GetActiveScene().name == "PergaminoMod2")

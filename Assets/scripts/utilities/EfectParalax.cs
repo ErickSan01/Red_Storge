@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controla el efecto de paralaje en un objeto en relación con la cámara principal.
+/// </summary>
 public class EfectParalax : MonoBehaviour
 {
     [SerializeField] private float ParallaxMultiplier;

@@ -6,37 +6,44 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
+/// <summary>
+/// Clase que gestiona el flujo del juego y las preguntas.
+/// </summary>
 public class GameManager : MonoBehaviour
 {
-    private  Question[]  _questions  = null;
-    public Question[] Questions  { get { return _questions; } }
+    private Question[] _questions = null;
+    public Question[] Questions { get { return _questions; } }
 
-    [SerializeField]    GameEvents          events                  = null;
+    [SerializeField] GameEvents events = null;
 
-    [SerializeField]    Animator            timerAnimtor            = null;
-    [SerializeField]    TextMeshProUGUI     timerText               = null;
-    [SerializeField]    Color               timerHalfWayOutColor    = Color.yellow;
-    [SerializeField]    Color               timerAlmostOutColor     = Color.red;
-    private             Color               timerDefaultColor       = Color.white;
+    [SerializeField] Animator timerAnimtor = null;
+    [SerializeField] TextMeshProUGUI timerText = null;
+    [SerializeField] Color timerHalfWayOutColor = Color.yellow;
+    [SerializeField] Color timerAlmostOutColor = Color.red;
+    private Color timerDefaultColor = Color.white;
 
-    private             List<AnswerData>    PickedAnswers           = new List<AnswerData>();
-    private             List<int>           FinishedQuestions       = new List<int>();
-    private int  currentQuestion = 0;
-    
+    private List<AnswerData> PickedAnswers = new List<AnswerData>();
+    private List<int> FinishedQuestions = new List<int>();
+    private int currentQuestion = 0;
 
-    private             int                 timerStateParaHash      = 0;
+    private int timerStateParaHash = 0;
 
-    private             IEnumerator         IE_WaitTillNextRound    = null;
-    private             IEnumerator         IE_StartTimer           = null;
+    private IEnumerator IE_WaitTillNextRound = null;
+    private IEnumerator IE_StartTimer = null;
 
-    private             bool                IsFinished
+    /// <summary>
+    /// Indica si se han respondido todas las preguntas.
+    /// </summary>
+    private bool IsFinished
     {
         get
         {
             return (FinishedQuestions.Count < Questions.Length) ? false : true;
         }
     }
-    void Start(){
+
+    void Start()
+    {
         LoadQuestions();
         var seed = UnityEngine.Random.Range(int.MinValue, int.MaxValue);
         UnityEngine.Random.InitState(seed);
@@ -75,6 +82,10 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
+    /// <summary>
+    /// Borra las respuestas seleccionadas.
+    /// </summary>
     public void EraseAnswers()
     {
         PickedAnswers = new List<AnswerData>();
@@ -88,9 +99,17 @@ public class GameManager : MonoBehaviour
         if (events.UpdateQuestionUI != null)
         {
             events.UpdateQuestionUI(question);
-        } else { Debug.LogWarning("Ups! Something went wrong while trying to display new Question UI Data. GameEvents.UpdateQuestionUI is null. Issue occured in GameManager.Display() method."); }
+        }
+        else
+        {
+            Debug.LogWarning("Ups! Algo salió mal al intentar mostrar los datos de la nueva pregunta en la interfaz. GameEvents.UpdateQuestionUI es nulo. El problema ocurrió en el método GameManager.Display().");
+        }
     }
 
+    /// <summary>
+    /// Obtiene una pregunta aleatoria que no haya sido respondida anteriormente.
+    /// </summary>
+    /// <returns>La pregunta aleatoria.</returns>
     Question GetRandomQuestion()
     {
         var randomIndex = GetRandomQuestionIndex();
@@ -98,6 +117,11 @@ public class GameManager : MonoBehaviour
 
         return Questions[currentQuestion];
     }
+
+    /// <summary>
+    /// Obtiene un índice aleatorio para seleccionar una pregunta.
+    /// </summary>
+    /// <returns>El índice aleatorio.</returns>
     int GetRandomQuestionIndex()
     {
         var random = 0;
@@ -120,6 +144,11 @@ public class GameManager : MonoBehaviour
             _questions[i] = (Question)objs[i];
         }
     }
+
+    /// <summary>
+    /// Verifica si las respuestas seleccionadas son correctas.
+    /// </summary>
+    /// <returns>True si las respuestas son correctas, false de lo contrario.</returns>
     bool CheckAnswers()
     {
         if (!CompareAnswers())
@@ -138,7 +167,7 @@ public class GameManager : MonoBehaviour
             //Las respuestas seleccionadas
             List<int> p = PickedAnswers.Select(x => x.AnswerIndex).ToList();
 
-            //Operación de interesección de los vectores
+            //Operación de intersección de los vectores
             var f = c.Except(p).ToList();
             var s = p.Except(c).ToList();
 
@@ -147,7 +176,8 @@ public class GameManager : MonoBehaviour
         return false;
     }
 
-    public void Accept(){
+    public void Accept()
+    {
         UpdateTimer(false);
         bool isCorrect = CheckAnswers();
         FinishedQuestions.Add(currentQuestion);
@@ -159,9 +189,8 @@ public class GameManager : MonoBehaviour
             SetHighscore();
         }
 
-        var type 
-            = (IsFinished) 
-            ? UIManager.ResolutionScreenType.Finish 
+        var type = (IsFinished)
+            ? UIManager.ResolutionScreenType.Finish
             : (isCorrect) ? UIManager.ResolutionScreenType.Correcto
             : UIManager.ResolutionScreenType.Incorrecto;
 
@@ -181,8 +210,9 @@ public class GameManager : MonoBehaviour
             IE_WaitTillNextRound = WaitTillNextRound();
             StartCoroutine(IE_WaitTillNextRound);
         }
-     }
-     void UpdateTimer(bool state)
+    }
+
+    void UpdateTimer(bool state)
     {
         switch (state)
         {
@@ -202,6 +232,7 @@ public class GameManager : MonoBehaviour
                 break;
         }
     }
+
     IEnumerator StartTimer()
     {
         var totalTime = Questions[currentQuestion].Timer;
@@ -228,11 +259,13 @@ public class GameManager : MonoBehaviour
         }
         Accept();
     }
+
     IEnumerator WaitTillNextRound()
     {
         yield return new WaitForSeconds(GameUtility.ResolutionDelayTime);
         Display();
     }
+
     private void UpdateScore(int add)
     {
         events.CurrentFinalScore += add;
@@ -242,6 +275,7 @@ public class GameManager : MonoBehaviour
             events.ScoreUpdated();
         }
     }
+
     private void SetHighscore()
     {
         var highscore = PlayerPrefs.GetInt(GameUtility.SavePrefKey);

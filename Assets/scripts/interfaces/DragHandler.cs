@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+/// <summary>
+/// Controlador para arrastrar objetos en la interfaz.
+/// </summary>
 public class DragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
     public static GameObject itemDragging;
@@ -18,6 +21,10 @@ public class DragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
 
     #region DragFunctions
 
+    /// <summary>
+    /// Se llama cuando se comienza a arrastrar el objeto.
+    /// </summary>
+    /// <param name="eventData">Datos del evento de arrastre.</param>
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("OnBeginDrag");
@@ -26,15 +33,21 @@ public class DragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
         startPosition = transform.position;
         startParent = transform.parent;
         transform.SetParent(dragParent);
-
-
     }
 
+    /// <summary>
+    /// Se llama mientras se arrastra el objeto.
+    /// </summary>
+    /// <param name="eventData">Datos del evento de arrastre.</param>
     public void OnDrag(PointerEventData eventData)
     {
         transform.position = Input.mousePosition;
     }
 
+    /// <summary>
+    /// Se llama cuando se termina de arrastrar el objeto.
+    /// </summary>
+    /// <param name="eventData">Datos del evento de arrastre.</param>
     public void OnEndDrag(PointerEventData eventData)
     {
         Debug.Log("OnEndDrag");

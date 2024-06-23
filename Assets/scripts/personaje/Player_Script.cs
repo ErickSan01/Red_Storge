@@ -8,6 +8,9 @@ using System;
 using UnityEngine.SceneManagement;
 
 
+/// <summary>
+/// Clase que controla el comportamiento del jugador en el juego.
+/// </summary>
 public class Player_Script : MonoBehaviour
 {
     UIDocument TeclasTemplate;
@@ -54,18 +57,30 @@ public class Player_Script : MonoBehaviour
         // HandleFootstepSound();
     }
 
+    /// <summary>
+    /// Método que se llama cuando se presiona el botón de mover hacia la izquierda.
+    /// </summary>
     public void PointerDownLeft(){
         moveLeft = true;
     }
 
+    /// <summary>
+    /// Método que se llama cuando se suelta el botón de mover hacia la izquierda.
+    /// </summary>
     public void PointerUpLeft(){
         moveLeft = false;
     }
 
+    /// <summary>
+    /// Método que se llama cuando se presiona el botón de mover hacia la derecha.
+    /// </summary>
     public void PointerDownRight(){
         moveRight = true;
     }
 
+    /// <summary>
+    /// Método que se llama cuando se suelta el botón de mover hacia la derecha.
+    /// </summary>
     public void PointerUpRight(){
         moveRight = false;
     }
@@ -129,8 +144,10 @@ public class Player_Script : MonoBehaviour
         transform.localScale = theScale;
     }
 
-    
-
+    /// <summary>
+    /// Método que se llama cuando el jugador colisiona con otro objeto.
+    /// </summary>
+    /// <param name="collision">El objeto con el que el jugador colisiona.</param>
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Obstaculo"))
@@ -157,7 +174,4 @@ public class Player_Script : MonoBehaviour
             audioSource.Stop();
         }
     }
-
-
-
 }
