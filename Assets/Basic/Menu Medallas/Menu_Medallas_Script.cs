@@ -6,11 +6,17 @@ using Models;
 using System.IO;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Clase que controla el comportamiento del menú de medallas.
+/// </summary>
 public class Menu_Medallas_Script : MonoBehaviour
 {
     UIDocument menuMedallas;
     Button botonAtras;
 
+    /// <summary>
+    /// Método que se ejecuta al habilitar el objeto.
+    /// </summary>
     void OnEnable()
     {
         menuMedallas = GetComponent<UIDocument>();
@@ -34,9 +40,14 @@ public class Menu_Medallas_Script : MonoBehaviour
         asignarColor(5, medallaMod5, modulosCompletados);
 
         botonAtras.clicked += OnBtnAtrasClick;
-
     }
 
+    /// <summary>
+    /// Método que asigna el color a una medalla según si el módulo ha sido completado o no.
+    /// </summary>
+    /// <param name="modulo">Número del módulo.</param>
+    /// <param name="medallaMod">Elemento visual de la medalla.</param>
+    /// <param name="modulosCompletados">Objeto que contiene los módulos completados.</param>
     void asignarColor(int modulo, VisualElement medallaMod, ProgresoGeneral modulosCompletados)
     {
         //checar si el modulo ha sido terminado, si ya fue terminado, no cambiar color
@@ -48,10 +59,12 @@ public class Menu_Medallas_Script : MonoBehaviour
         if(!modulosCompletados.getModulos().Contains(modulo)){
             medallaMod.style.unityBackgroundImageTintColor = nuevoColor;
             medallaMod.style.backgroundColor = nuevoColor;
-
         }
     }
 
+    /// <summary>
+    /// Método que se ejecuta al hacer clic en el botón de regresar.
+    /// </summary>
     void OnBtnAtrasClick(){
         SceneManager.LoadScene("MenuPrincipal");
     }

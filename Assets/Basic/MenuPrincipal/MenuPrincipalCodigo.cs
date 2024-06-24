@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Clase que representa el código del menú principal.
+/// </summary>
 public class MenuPrincipalCodigo : MonoBehaviour
 {
     UIDocument MenuPrincipalTemplate;

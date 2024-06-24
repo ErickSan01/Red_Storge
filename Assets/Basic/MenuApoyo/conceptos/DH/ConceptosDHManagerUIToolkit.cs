@@ -1,5 +1,8 @@
 using UnityEngine;
 using UnityEngine.UIElements;
+/// <summary>
+/// Gestiona el menú de conceptos de derechos humanos en una interfaz de usuario.
+/// </summary>
 public class ConceptosDHManagerUIToolkit : MonoBehaviour
 {
     public UIDocument uiDocument; // Referencia al UIDocument en la escena.
@@ -13,7 +16,7 @@ public class ConceptosDHManagerUIToolkit : MonoBehaviour
     {
         rootElement = uiDocument.rootVisualElement;
         dhMenu = uiDocument2.rootVisualElement;
-        // Encuentra el bot�n y el men� en el dise�o.
+        // Encuentra el botón y el menú en el diseño.
         dh = rootElement.Q<Button>("dh");
         volver = dhMenu.Q<Button>("volver");
         dhMenu = dhMenu.Q("dhMenu");
@@ -21,20 +24,21 @@ public class ConceptosDHManagerUIToolkit : MonoBehaviour
         volver.clicked += TogglePause;
     }
 
+    /// <summary>
+    /// Alterna la visibilidad del menú de conceptos de derechos humanos.
+    /// </summary>
     public void TogglePause()
     {
-        // Comprueba el estado actual del men� y c�mbialo.
+        // Comprueba el estado actual del menú y cambialo.
         if (dhMenu.resolvedStyle.display == DisplayStyle.None)
         {
             dhMenu.style.display = DisplayStyle.Flex;
             dh.style.display = DisplayStyle.None;
-
         }
         else
         {
             dhMenu.style.display = DisplayStyle.None;
             dh.style.display = DisplayStyle.Flex;
-
         }
     }
 }

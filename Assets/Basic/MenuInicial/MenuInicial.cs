@@ -2,6 +2,9 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Clase que representa el menú inicial del juego.
+/// </summary>
 public class MenuInicial : MonoBehaviour
 {
     UIDocument MenuInicialTemplate;

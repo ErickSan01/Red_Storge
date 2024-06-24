@@ -1,0 +1,33 @@
+{
+    "Clave": "M1P14",
+    "Modulo": 1,
+    "Fase": "",
+    "Planteamiento": "Reflexiono sobre cómo mis observaciones pueden influir en mi comunicación.",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Siempre",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Frecuentemente",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Algunas veces",
+            "Correcta": true
+        },
+        {
+            "Inciso": "D",
+            "OpcionTexto": "Raramente",
+            "Correcta": true
+        },
+        {
+            "Inciso": "E",
+            "OpcionTexto": "Nunca",
+            "Correcta": true
+        }
+    ]
+}

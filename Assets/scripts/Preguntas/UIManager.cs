@@ -58,48 +58,60 @@ public struct UIElements
 
 }
 
+/// <summary>
+/// Clase que gestiona la interfaz de usuario del juego.
+/// </summary>
 public class UIManager : MonoBehaviour
 {
-    public enum ResolutionScreenType {Correcto, Incorrecto, Finish}
-    [Header("References")]
+    /// <summary>
+    /// Enumeración que representa los diferentes tipos de pantalla de resolución.
+    /// </summary>
+    public enum ResolutionScreenType { Correcto, Incorrecto, Finish }
+
+    [Header("Referencias")]
     [SerializeField] GameEvents events;
-   
 
-    [Header("UI Elements (Prefabs)")]
-     [SerializeField] UIElements uIElements = new UIElements();
-    [SerializeField]  AnswerData answerPrefab;
+    [Header("Elementos de la interfaz de usuario (Prefabs)")]
+    [SerializeField] UIElements uIElements = new UIElements();
+    [SerializeField] AnswerData answerPrefab;
     [Space]
-    [SerializeField]    UIManagerParameters    parameters = new UIManagerParameters();
-    private    IEnumerator  IE_DisplayTimedResolution    = null;
+    [SerializeField] UIManagerParameters parameters = new UIManagerParameters();
+    private IEnumerator IE_DisplayTimedResolution = null;
 
-    private   List<AnswerData>  currentAnswers    = new List<AnswerData>();
-    private   int   resStateParaHash   = 0;
+    private List<AnswerData> currentAnswers = new List<AnswerData>();
+    private int resStateParaHash = 0;
+
     void OnEnable()
     {
-        events.UpdateQuestionUI         += UpdateQuestionUI;
-        events.DisplayResolutionScreen  += DisplayResolution;
-        
-    }
-    
-    void OnDisable()
-    {
-        events.UpdateQuestionUI         -= UpdateQuestionUI;
-        events.DisplayResolutionScreen  -= DisplayResolution;
-        
+        events.UpdateQuestionUI += UpdateQuestionUI;
+        events.DisplayResolutionScreen += DisplayResolution;
     }
 
-void Start()
+    void OnDisable()
     {
-        //UpdateScoreUI();
+        events.UpdateQuestionUI -= UpdateQuestionUI;
+        events.DisplayResolutionScreen -= DisplayResolution;
+    }
+
+    void Start()
+    {
         resStateParaHash = Animator.StringToHash("ScreenState");
     }
 
-
+    /// <summary>
+    /// Actualiza la interfaz de usuario con la pregunta actual.
+    /// </summary>
+    /// <param name="question">La pregunta actual.</param>
     void UpdateQuestionUI(Question question)
     {
         uIElements.QuestionInfoTextObject.text = question.Info;
         CreateAnswers(question);
     }
+
+    /// <summary>
+    /// Crea las respuestas en la interfaz de usuario.
+    /// </summary>
+    /// <param name="question">La pregunta actual.</param>
     void CreateAnswers(Question question)
     {
         EraseAnswers();
@@ -117,8 +129,12 @@ void Start()
 
             currentAnswers.Add(newAnswer);
         }
+    }
 
-        void EraseAnswers()
+    /// <summary>
+    /// Elimina las respuestas de la interfaz de usuario.
+    /// </summary>
+    void EraseAnswers()
     {
         foreach (var answer in currentAnswers)
         {
@@ -126,9 +142,13 @@ void Start()
         }
         currentAnswers.Clear();
     }
-    }
 
-void UpdateResUI(ResolutionScreenType type, int score)
+    /// <summary>
+    /// Actualiza la interfaz de usuario con la pantalla de resolución.
+    /// </summary>
+    /// <param name="type">El tipo de pantalla de resolución.</param>
+    /// <param name="score">La puntuación obtenida.</param>
+    void UpdateResUI(ResolutionScreenType type, int score)
     {
         var highscore = PlayerPrefs.GetInt(GameUtility.SavePrefKey);
 
@@ -136,24 +156,25 @@ void UpdateResUI(ResolutionScreenType type, int score)
         {
             case ResolutionScreenType.Correcto:
                 uIElements.ResolutionBG.color = parameters.CorrectBGColor;
-                uIElements.ResolutionStateInfoText.text = "CORRECT!";
-
+                uIElements.ResolutionStateInfoText.text = "¡CORRECTO!";
                 break;
             case ResolutionScreenType.Incorrecto:
                 uIElements.ResolutionBG.color = parameters.IncorrectBGColor;
-                uIElements.ResolutionStateInfoText.text = "WRONG!";
-
+                uIElements.ResolutionStateInfoText.text = "¡INCORRECTO!";
                 break;
             case ResolutionScreenType.Finish:
                 uIElements.ResolutionBG.color = parameters.FinalBGColor;
-
                 uIElements.FinishUIElements.gameObject.SetActive(true);
                 uIElements.HighScoreText.gameObject.SetActive(true);
-                uIElements.HighScoreText.text = ((highscore > events.StartupHighscore) ? "<color=yellow>new </color>" : string.Empty) + "Highscore: " + highscore;
+                uIElements.HighScoreText.text = ((highscore > events.StartupHighscore) ? "<color=yellow>nuevo </color>" : string.Empty) + "Puntuación más alta: " + highscore;
                 break;
         }
     }
 
+    /// <summary>
+    /// Calcula la puntuación de forma gradual.
+    /// </summary>
+    /// <returns>Un enumerador para la puntuación gradual.</returns>
     IEnumerator CalculateScore()
     {
         var scoreValue = 0;
@@ -161,17 +182,26 @@ void UpdateResUI(ResolutionScreenType type, int score)
         {
             scoreValue++;
             uIElements.ResolutionScoreText.text = scoreValue.ToString();
-
             yield return null;
         }
     }
 
+    /// <summary>
+    /// Muestra la pantalla de resolución durante un tiempo determinado.
+    /// </summary>
+    /// <returns>Un enumerador para mostrar la pantalla de resolución.</returns>
     IEnumerator DisplayTimedResolution()
     {
         yield return new WaitForSeconds(GameUtility.ResolutionDelayTime);
         uIElements.ResolutionScreenAnimator.SetInteger(resStateParaHash, 1);
         uIElements.MainCanvasGroup.blocksRaycasts = true;
     }
+
+    /// <summary>
+    /// Muestra la pantalla de resolución.
+    /// </summary>
+    /// <param name="type">El tipo de pantalla de resolución.</param>
+    /// <param name="score">La puntuación obtenida.</param>
     void DisplayResolution(ResolutionScreenType type, int score)
     {
         UpdateResUI(type, score);
@@ -188,5 +218,4 @@ void UpdateResUI(ResolutionScreenType type, int score)
             StartCoroutine(IE_DisplayTimedResolution);
         }
     }
-    
 }

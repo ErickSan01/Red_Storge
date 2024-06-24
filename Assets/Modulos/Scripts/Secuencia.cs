@@ -3,11 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Clase que contiene las secuencias de los módulos.
+/// </summary>
 namespace Scripts{
-
-
+    /// <summary>
+    /// Clase que contiene las secuencias de los módulos.
+    /// </summary>
     public class Secuencia{
-
+        /// <summary>
+        /// Método que devuelve la siguiente clave en la secuencia para el módulo especificado.
+        /// </summary>
+        /// <param name="clave">Clave actual en la secuencia.</param>
+        /// <param name="modulo">Número del módulo.</param>
+        /// <returns>La siguiente clave en la secuencia.</returns>
         public static string Secuencia1(string clave, int modulo){
             Dictionary<string, string> secuencia = new Dictionary<string, string>();
             if (modulo == 2){
@@ -18,6 +27,15 @@ namespace Scripts{
                 secuencia.Add("M2P23P","M2P28P");
                 secuencia.Add("M2P28P","FINAL");
             }
+            if (modulo == 3){
+                secuencia.Add("M3P1P","M3P8P");
+                secuencia.Add("M3P8P","M3P12P");
+                secuencia.Add("M3P12P","M3P18P");
+                secuencia.Add("M3P18P","M3P23P");
+                secuencia.Add("M3P23P","M3P28P");
+                secuencia.Add("M3P28P","M3P35P");
+                secuencia.Add("M3P35P","M3P38D");
+            }
             if (modulo == 4){
                 secuencia.Add("M4P1FP","M4P6FP");
                 secuencia.Add("M4P6FP","M4P11FP");
@@ -26,9 +44,17 @@ namespace Scripts{
                 secuencia.Add("M4P22FP","M4P27FP");
                 secuencia.Add("M4P27FP","FINAL");
 
-            }            
+            }  
+            if (modulo == 5){
+                secuencia.Add("M5P1P","M5P7P");
+                secuencia.Add("M5P7P","M5P12P");
+                secuencia.Add("M5P12P","M5P16P");
+                secuencia.Add("M5P16P","M5P20P");
+                secuencia.Add("M5P20P","M5P24P");
+                secuencia.Add("M5P24P","M5P28D");
+            }          
             
-
+            
             return secuencia[clave];
         }
 
@@ -72,6 +98,45 @@ namespace Scripts{
                      secuencia2.Add("M2P29E", "M2P30E");
                      secuencia2.Add("M2P30E", "FINAL");
                  }
+                if (modulo == 3){
+                    secuencia2.Add("M3P1P", "M3P2L");
+                    secuencia2.Add("M3P2L", "M3P3L");
+                    secuencia2.Add("M3P3L", "M3P4L");
+                    secuencia2.Add("M3P4L", "M3P5L");
+                    secuencia2.Add("M3P5L", "M3P6E");
+                    secuencia2.Add("M3P6E", "M3P7E");
+                    secuencia2.Add("M3P7E", "M3P8P");
+                    secuencia2.Add("M3P8P", "M3P9L");
+                    secuencia2.Add("M3P9L", "M3P10L");
+                    secuencia2.Add("M3P10L", "M3P11E");
+                    secuencia2.Add("M3P11E", "M3P12P");
+                    secuencia2.Add("M3P12P", "M3P13L");
+                    secuencia2.Add("M3P13L", "M3P14L");
+                    secuencia2.Add("M3P14L", "M3P15L");
+                    secuencia2.Add("M3P15L", "M3P16E");
+                    secuencia2.Add("M3P16E", "M3P17E");
+                    secuencia2.Add("M3P17E", "M3P18P");
+                    secuencia2.Add("M3P18P", "M3P19L");
+                    secuencia2.Add("M3P19L", "M3P20L");
+                    secuencia2.Add("M3P20L", "M3P21E");
+                    secuencia2.Add("M3P21E", "M3P22E");
+                    secuencia2.Add("M3P22E", "M3P23P");
+                    secuencia2.Add("M3P23P", "M3P24L");
+                    secuencia2.Add("M3P24L", "M3P25L");
+                    secuencia2.Add("M3P25L", "M3P26E");
+                    secuencia2.Add("M3P26E", "M3P27E");
+                    secuencia2.Add("M3P27E", "M3P28P");
+                    secuencia2.Add("M3P28P", "M3P29L");
+                    secuencia2.Add("M3P29L", "M3P30L");
+                    secuencia2.Add("M3P30L", "M3P31L");
+                    secuencia2.Add("M3P31L", "M3P32E");
+                    secuencia2.Add("M3P32E", "M3P33E");
+                    secuencia2.Add("M3P33E", "M3P34E");
+                    secuencia2.Add("M3P34E", "M3P35P");
+                    secuencia2.Add("M3P35P", "M3P36L");
+                    secuencia2.Add("M3P36L", "M3P37L");
+                    secuencia2.Add("M3P37L", "M3P38D");
+                }
 
                 if (modulo == 4){
                      secuencia2.Add("M4P1FP", "M4P2FL");
@@ -105,9 +170,39 @@ namespace Scripts{
                      secuencia2.Add("M4P29FE", "M4P30FE");
                      secuencia2.Add("M4P30FE", "M4P31FD");
                      secuencia2.Add("M4P31FD", "FINAL");
-                 }           
+                 }     
+
+
+                if (modulo == 5){
+                    secuencia2.Add("M5P1P", "M5P2L");
+                    secuencia2.Add("M5P2L", "M5P3L");
+                    secuencia2.Add("M5P3L", "M5P4L");
+                    secuencia2.Add("M5P4L", "M5P5E");
+                    secuencia2.Add("M5P5E", "M5P6E");
+                    secuencia2.Add("M5P6E", "M5P7P");
+                    secuencia2.Add("M5P7P", "M5P8L");
+                    secuencia2.Add("M5P8L", "M5P9L");
+                    secuencia2.Add("M5P9L", "M5P10E");
+                    secuencia2.Add("M5P10E", "M5P11E");
+                    secuencia2.Add("M5P11E", "M5P12P");
+                    secuencia2.Add("M5P12P", "M5P13L");
+                    secuencia2.Add("M5P13L", "M5P14E");
+                    secuencia2.Add("M5P14E", "M5P15E");
+                    secuencia2.Add("M5P15E", "M5P16P");
+                    secuencia2.Add("M5P16P", "M5P17L");
+                    secuencia2.Add("M5P17L", "M5P18L");
+                    secuencia2.Add("M5P18L", "M5P19E");
+                    secuencia2.Add("M5P19E", "M5P20P");
+                    secuencia2.Add("M5P20P", "M5P21L");
+                    secuencia2.Add("M5P21L", "M5P22E");
+                    secuencia2.Add("M5P22E", "M5P23E");
+                    secuencia2.Add("M5P23E", "M5P24P");
+                    secuencia2.Add("M5P24P", "M5P25L");
+                    secuencia2.Add("M5P25L", "M5P26E");
+                    secuencia2.Add("M5P26E", "M5P27E");
+                    secuencia2.Add("M5P27E", "M5P28D");
+                }  
                return secuencia2[clave];
             }
     }
-    
 }

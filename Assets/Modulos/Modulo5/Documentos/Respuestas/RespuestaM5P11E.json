@@ -1,0 +1,9 @@
+{
+    "IdEstudiante": 0,
+    "ClavePregunta": "M5P11E",
+    "Opcion": {
+        "Inciso": "A",
+        "OpcionTexto": "\"NO cumple con los 6 criterios para hacer peticiones \"",
+        "Correcta": false
+    }
+}

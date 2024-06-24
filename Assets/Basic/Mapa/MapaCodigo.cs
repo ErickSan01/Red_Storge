@@ -6,11 +6,16 @@ using UnityEngine.SceneManagement;
 using JsonUtils;
 using Scripts;
 using Models;
+/// <summary>
+/// Clase que representa el código del mapa.
+/// </summary>
 public class MapaCodigo : MonoBehaviour
 {
     UIDocument MapaTemplate;
     Button btn_modulo2;
+    Button btn_modulo3;
     Button btn_modulo4;
+    Button btn_modulo5;
     Button btn_jugar;
 
     // Start is called before the first frame update
@@ -19,12 +24,18 @@ public class MapaCodigo : MonoBehaviour
         MapaTemplate = GetComponent<UIDocument>();
         VisualElement root = MapaTemplate.rootVisualElement;
         btn_modulo2 = root.Q<Button>("btn_modulo2");
+        btn_modulo3 = root.Q<Button>("btn_modulo3");
         btn_modulo4 = root.Q<Button>("btn_modulo4");
+        btn_modulo5 = root.Q<Button>("btn_modulo5");
 
         // Agregar el evento de clic al botón "btn_modulo2"
         btn_modulo2.clicked += OnBtnModulo2Click;
+        // Agregar el evento de clic al botón "btn_modulo3"
+        btn_modulo3.clicked += OnBtnModulo3Click;
         // Agregar el evento de clic al botón "btn_modulo4"
         btn_modulo4.clicked += OnBtnModulo4Click;
+        // Agregar el evento de clic al botón "btn_modulo5"
+        btn_modulo5.clicked += OnBtnModulo5Click;
     }
 
     private void OnBtnModulo2Click()
@@ -37,7 +48,14 @@ public class MapaCodigo : MonoBehaviour
         SiguienteEscena.SiguienteEscenaRedireccion(clave);
     }
 
-    private void OnBtnModulo4Click()
+    private void OnBtnModulo3Click()
+    {
+        ProgresoGeneralJson.ActualizarProgreso(3);
+        // Cambiar de escena a "nivel3"
+        SceneManager.LoadScene("Modulo3Nivel");
+    }
+
+        private void OnBtnModulo4Click()
     {
         //Modificar progreso
         ProgresoGeneralJson.ActualizarProgreso(4);
@@ -45,6 +63,13 @@ public class MapaCodigo : MonoBehaviour
         ProgresoModulo progreso = ProgresoJson.CargarProgreso(4);
         string clave = progreso.pergaminoActual;
         SiguienteEscena.SiguienteEscenaRedireccion(clave);
+    }
+
+    private void OnBtnModulo5Click()
+    {
+        ProgresoGeneralJson.ActualizarProgreso(5);
+        // Cambiar de escena a "nivel5"
+        SceneManager.LoadScene("Modulo5Nivel");
     }
 
 

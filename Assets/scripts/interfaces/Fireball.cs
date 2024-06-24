@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Clase que representa una bola de fuego en el juego.
+/// </summary>
 public class Fireball : MonoBehaviour
 {
 
@@ -27,6 +30,10 @@ public class Fireball : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Método que se llama cuando el objeto colisiona con otro objeto.
+    /// </summary>
+    /// <param name="collision">El objeto con el que colisionó.</param>
     void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Jugador"))

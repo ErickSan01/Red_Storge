@@ -1,5 +1,8 @@
 using UnityEngine;
 using UnityEngine.UIElements;
+/// <summary>
+/// Gestiona el menú de conceptos CVR en la interfaz de usuario.
+/// </summary>
 public class ConceptosCVRManagerUIToolkit : MonoBehaviour
 {
     public UIDocument uiDocument; // Referencia al UIDocument en la escena.
@@ -13,7 +16,7 @@ public class ConceptosCVRManagerUIToolkit : MonoBehaviour
     {
         rootElement = uiDocument.rootVisualElement;
         cvrMenu = uiDocument2.rootVisualElement;
-        // Encuentra el bot�n y el men� en el dise�o.
+        // Encuentra el botón y el menú en el diseño.
         cvr = rootElement.Q<Button>("cvr");
         volver = cvrMenu.Q<Button>("volver");
         cvrMenu = cvrMenu.Q("cvrMenu");
@@ -21,20 +24,21 @@ public class ConceptosCVRManagerUIToolkit : MonoBehaviour
         volver.clicked += TogglePause;
     }
 
+    /// <summary>
+    /// Alterna la visibilidad del menú de pausa.
+    /// </summary>
     public void TogglePause()
     {
-        // Comprueba el estado actual del men� y c�mbialo.
+        // Comprueba el estado actual del menú y cambialo.
         if (cvrMenu.resolvedStyle.display == DisplayStyle.None)
         {
             cvrMenu.style.display = DisplayStyle.Flex;
             cvr.style.display = DisplayStyle.None;
-
         }
         else
         {
             cvrMenu.style.display = DisplayStyle.None;
             cvr.style.display = DisplayStyle.Flex;
-
         }
     }
 }

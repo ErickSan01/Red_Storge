@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controla la activación de una animación cuando el jugador se acerca a un objeto animado.
+/// </summary>
 public class AnimacionCercaDelJugador : MonoBehaviour
 {
     public Transform jugador;

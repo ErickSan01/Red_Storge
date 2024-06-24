@@ -3,45 +3,72 @@ using System.Collections.Generic;
 using UnityEngine;
 //para acceder a internet
 using UnityEngine.Networking;
-[CreateAssetMenu(fileName = "Servidor", menuName ="RedStorge/Servidor", order = 1)]
+/// <summary>
+/// Clase que representa un servidor para consumir servicios web.
+/// </summary>
+[CreateAssetMenu(fileName = "Servidor", menuName = "RedStorge/Servidor", order = 1)]
 public class Servidor : ScriptableObject
 {
-    //En esta propiedad se pone el url, en nuestro caso es http://localhost/redStorge/
+    /// <summary>
+    /// URL del servidor. Por ejemplo, "http://localhost/redStorge/".
+    /// </summary>
     public string server;
+
+    /// <summary>
+    /// Arreglo de servicios disponibles en el servidor.
+    /// </summary>
     public Servicio[] servicios;
-    //Para saber si se está consumiendo algun servicio;
+
+    /// <summary>
+    /// Indica si se está consumiendo algún servicio en el servidor.
+    /// </summary>
     public bool ocupado = false;
+
+    /// <summary>
+    /// Respuesta obtenida al consumir un servicio en el servidor.
+    /// </summary>
     public Respuesta respuesta;
-    // Se consumira un servicio en un hilo distinto al principal
-    //Que servicio se va a consumir y cuales datos
-    public IEnumerator consumirServicio(string nombre, string[] datos){
+
+    /// <summary>
+    /// Consumir un servicio en un hilo distinto al principal.
+    /// </summary>
+    /// <param name="nombre">Nombre del servicio a consumir.</param>
+    /// <param name="datos">Datos necesarios para consumir el servicio.</param>
+    /// <returns>Coroutine para consumir el servicio.</returns>
+    public IEnumerator consumirServicio(string nombre, string[] datos)
+    {
         ocupado = true;
         WWWForm formulario = new WWWForm();
         Servicio s = new Servicio();
-        for(int i = 0; i < servicios.Length; i++){
-            if(servicios[i].nombre.Equals(nombre)){
+        for (int i = 0; i < servicios.Length; i++)
+        {
+            if (servicios[i].nombre.Equals(nombre))
+            {
                 s = servicios[i];
             }
         }
-        for(int i = 0; i < s.parametros.Length; i++){
+        for (int i = 0; i < s.parametros.Length; i++)
+        {
             formulario.AddField(s.parametros[i], datos[i]);
             Debug.Log(s.parametros[i]);
         }
 
-        //En los PHP deben remplazar el GET por POST
-        //Aqui se contruye la URL con los parametros
-        UnityWebRequest www = UnityWebRequest.Post(server+"/"+s.URL, formulario);
-        Debug.Log(server+"/"+s.URL);
+        // En los PHP deben remplazar el GET por POST
+        // Aquí se construye la URL con los parámetros
+        UnityWebRequest www = UnityWebRequest.Post(server + "/" + s.URL, formulario);
+        Debug.Log(server + "/" + s.URL);
         yield return www.SendWebRequest();
-        //Comprobacion para saber si se llego la info
-        if(www.result != UnityWebRequest.Result.Success){
+        // Comprobación para saber si se llegó la información
+        if (www.result != UnityWebRequest.Result.Success)
+        {
             respuesta = new Respuesta();
-        }else{
+        }
+        else
+        {
             Debug.Log(www.downloadHandler.text);
             respuesta = JsonUtility.FromJson<Respuesta>(www.downloadHandler.text);
         }
         ocupado = false;
-
     }
 }
 [System.Serializable]

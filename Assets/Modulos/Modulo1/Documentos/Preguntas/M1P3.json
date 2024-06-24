@@ -1,0 +1,33 @@
+{
+    "Clave": "M1P3",
+    "Modulo": 1,
+    "Fase": "",
+    "Planteamiento": "¿Cuál es tu complexión física?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Tipo 1",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Tipo 2",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Tipo 3",
+            "Correcta": true
+        },
+        {
+            "Inciso": "D",
+            "OpcionTexto": "Tipo 4",
+            "Correcta": true
+        },
+        {
+            "Inciso": "E",
+            "OpcionTexto": "Tipo 5",
+            "Correcta": true
+        }
+    ]
+}

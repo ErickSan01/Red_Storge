@@ -8,8 +8,15 @@ using JsonUtils;
 Esta clase inicia al entrar a Nivel2, lee el json de progreso del modulo, busca y elimina los pergaminos los cuales este marcado como
 contestados para quitalos del camino del jugador. 
 */
+/// <summary>
+/// Gestiona la eliminación de pergaminos contestados en el juego.
+/// </summary>
 public class PergaminoManager : MonoBehaviour
 {
+    /// <summary>
+    /// Método que se llama al iniciar el juego.
+    /// Carga el progreso general y elimina los pergaminos contestados.
+    /// </summary>
     void Start()
     {
         ProgresoGeneral progresoGeneral = ProgresoGeneralJson.CargarProgreso();
@@ -31,7 +38,9 @@ public class PergaminoManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// Método que se llama en cada frame del juego.
+    /// </summary>
     void Update()
     {
         

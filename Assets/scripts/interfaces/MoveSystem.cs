@@ -5,6 +5,9 @@ using UnityEngine.EventSystems;
 using System.Linq;
 
 
+/// <summary>
+/// Clase que controla el movimiento de un objeto en la escena.
+/// </summary>
 public class MoveSystem : MonoBehaviour
 {
     public GameObject correctForm;

@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Clase que representa el script de introducción.
+/// </summary>
 public class introduccionScript : MonoBehaviour
 {
     UIDocument Introduccion;
@@ -15,16 +18,17 @@ public class introduccionScript : MonoBehaviour
         VisualElement root = Introduccion.rootVisualElement;
         btn_jugar = root.Q<Button>("Comenzar");
 
-        // Agregar el evento de clic al bot�n "btn_jugar"
+        // Agregar el evento de clic al botón "btn_jugar"
         btn_jugar.clicked += OnBtnJugarClick;
     }
 
-    // M�todo que se ejecutar� cuando se haga clic en el bot�n "btn_jugar"
+    /// <summary>
+    /// Método que se ejecutará cuando se haga clic en el botón "btn_jugar".
+    /// Cambia de escena a "nivel1".
+    /// </summary>
     private void OnBtnJugarClick()
     {
-        // Cambiar de escena a "nivel1"
         SceneManager.LoadScene("PergaminoMod2");
-
     }
 
     // Start is called before the first frame update

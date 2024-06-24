@@ -7,6 +7,9 @@ using System.Collections.Generic;
 
 using System.Collections;
 
+/// <summary>
+/// Clase que representa una base de datos SQLite en Unity.
+/// </summary>
 public class SQLiteDB : MonoBehaviour
 {
     public static SQLiteDB instance;

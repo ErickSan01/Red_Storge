@@ -1,0 +1,33 @@
+{
+    "Clave": "M1P11",
+    "Modulo": 1,
+    "Fase": "",
+    "Planteamiento": "Reconozco mis propios sentimientos en diferentes situaciones.",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Siempre",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Frecuentemente",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Algunas veces",
+            "Correcta": true
+        },
+        {
+            "Inciso": "D",
+            "OpcionTexto": "Raramente",
+            "Correcta": true
+        },
+        {
+            "Inciso": "E",
+            "OpcionTexto": "Nunca",
+            "Correcta": true
+        }
+    ]
+}
