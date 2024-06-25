@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 /// <summary>
-/// Clase que gestiona el menú de conceptos CEGO en la interfaz de usuario.
+/// Gestiona la funcionalidad del menú de conceptos del CEGO en la interfaz de usuario.
 /// </summary>
 public class ConceptosCEGOManagerUIToolkit : MonoBehaviour
 {
@@ -9,6 +9,7 @@ public class ConceptosCEGOManagerUIToolkit : MonoBehaviour
     public UIDocument uiDocument2;
     private VisualElement rootElement;
     private VisualElement cegoMenu;
+    private VisualElement generalMenu;
     private Button cego;
     private Button volver;
 
@@ -16,16 +17,19 @@ public class ConceptosCEGOManagerUIToolkit : MonoBehaviour
     {
         rootElement = uiDocument.rootVisualElement;
         cegoMenu = uiDocument2.rootVisualElement;
+        
         // Encuentra el botón y el menú en el diseño.
         cego = rootElement.Q<Button>("cego");
         volver = cegoMenu.Q<Button>("volver");
         cegoMenu = cegoMenu.Q("cegoMenu");
+        generalMenu = rootElement.Q("contenedor");
+
         cego.clicked += TogglePause;
         volver.clicked += TogglePause;
     }
 
     /// <summary>
-    /// Alterna la visibilidad del menú de conceptos CEGO.
+    /// Alterna la visualización del menú del CEGO y el menú general.
     /// </summary>
     public void TogglePause()
     {
@@ -33,12 +37,12 @@ public class ConceptosCEGOManagerUIToolkit : MonoBehaviour
         if (cegoMenu.resolvedStyle.display == DisplayStyle.None)
         {
             cegoMenu.style.display = DisplayStyle.Flex;
-            cego.style.display = DisplayStyle.None;
+            generalMenu.style.display = DisplayStyle.None;
         }
         else
         {
             cegoMenu.style.display = DisplayStyle.None;
-            cego.style.display = DisplayStyle.Flex;
+            generalMenu.style.display = DisplayStyle.Flex;
         }
     }
 }

@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menus/MenuPrincipal.unity
+    guid: af31b4ba2af9b02468eaf0bb32ef08b9
+  - enabled: 1
     path: Assets/Scenes/nivel1.unity
     guid: 7992554e734f27649b0e89f0ddae5021
   - enabled: 1
@@ -26,9 +29,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/InterfacePregunta/PergaminoMod2.unity
     guid: 5cd9faddc246af94e9ecbe17420a8c43
-  - enabled: 1
-    path: Assets/Scenes/Menus/MenuPrincipal.unity
-    guid: af31b4ba2af9b02468eaf0bb32ef08b9
   - enabled: 1
     path: Assets/Scenes/Menus/Mapa.unity
     guid: 0c1d7ec1922445d4aa90d390c844d07b
