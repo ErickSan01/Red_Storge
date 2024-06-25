@@ -1,0 +1,23 @@
+{
+    "Clave": "M5P10E",
+    "Modulo": 5,
+    "Fase": "Escalera",
+    "Planteamiento": "¿Cuál sería  la opción que representa la correcta expresión de petición  con acciones específicas en la fase \"déjame vivi mi vida!?\"",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "¡Me gustaría decidir por mí misma la ropa que voy a ponerme el sábado!",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "¡Me gustaría que dejaras de decirme que ponerme y que decir o hacer!",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "¡Me gustaría que no te metieras en donde no te llaman!",
+            "Correcta": false
+        }
+    ]
+}

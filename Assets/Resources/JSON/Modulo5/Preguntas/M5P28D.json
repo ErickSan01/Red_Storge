@@ -1,0 +1,23 @@
+{
+    "Clave": "M5P28D",
+    "Modulo": 5,
+    "Fase": "Dragón",
+    "Planteamiento": "Me dijeron que hablaste mal de mi, !te vas a arrepentir de meterte conmigo!",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "\"No me acuerdo, pero,   si dije algo de ti, seguro que no fue tan malo\n\n-Haz memoria y pídeme perdón, si no quieres que te prenda fuego!\"",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "\" Yo hablo lo que quiero, y no te te tengo miedo\n-Pues te voy a quitar las ganas de andar hablando para que aprendas a no meterte conmigo\n- Tú y cuantos más?\n\"",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "\"Te sientes ofendido, porque necesitas reconocimiento, respeto o lealtad de mi parte?\nSí, perdón, no debí agredirte. De hecho, reconozco tu perseverancia, has demostrado en tu respuesta, que estás aprendiendo, por ello, te entregaré la çuarta insignia de cosnciencia del nivel 4. !FELICIDADES! AHORA ERES UN CIUDADANO CON CULTURA DE PAZ\"",
+            "Correcta": true
+        }
+    ]
+}

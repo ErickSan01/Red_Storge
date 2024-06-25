@@ -1,0 +1,23 @@
+{
+    "Clave": "M5P18L",
+    "Modulo": 5,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Cuál es la impresición den la frase \"Me gustaría que nos viéramos más a menudo\" que impide una claridad en la petición?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Las palabras \"mas a menudo\" son ambiguas, no permiten presición, ya que no específican qué tan a menudo",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Las palabras \"me gustaría\" son ambiguas,  no permiten rescición ya que no estan diciendo concretamente: \"necesito verte\"",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Las palabras \"que nos vieramos\" son ambiguas, no permiten presición, ya que no dicen el cómo, presencial o físicamente, por ejemplo",
+            "Correcta": false
+        }
+    ]
+}

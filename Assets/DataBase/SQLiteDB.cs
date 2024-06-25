@@ -22,7 +22,7 @@ public class SQLiteDB : MonoBehaviour
     {
 
         CreateTables();
-        Debug.Log("Hola desde la BD");
+        //Debug.Log("Hola desde la BD");
         //Query("INSERT INTO modulo (nombre) VALUES ('Modulo 1');");
         //Query("Drop table pregunta;");
         //Query("Drop table opcion;");

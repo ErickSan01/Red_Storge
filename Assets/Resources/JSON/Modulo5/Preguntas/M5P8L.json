@@ -1,0 +1,23 @@
+{
+    "Clave": "M5P8L",
+    "Modulo": 5,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Cómo sería la manera correcta de pedir una acción específica en la frase \"Desearía que me escucharas\"",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Me gustaría que guardaras silencio mientras hablo",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "¿Podrías decirme con tus palabras lo que has entendido de lo que acabo de decirte?",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "¿Podrías hacer silencio, en tanto termino de expresar lo que necesito pedir?",
+            "Correcta": false
+        }
+    ]
+}

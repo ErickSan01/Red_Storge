@@ -1,0 +1,23 @@
+{
+    "Clave": "M5P26E",
+    "Modulo": 5,
+    "Fase": "Escalera",
+    "Planteamiento": "La empatía consiste en :",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Tratar de no juzgar lo que se escucha del otro",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Escuchar con profundidad lo que el otro  nos confía",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Una comprensión respetuosa de lo que los demás están experimentando",
+            "Correcta": true
+        }
+    ]
+}

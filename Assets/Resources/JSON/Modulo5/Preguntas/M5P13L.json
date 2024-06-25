@@ -1,0 +1,23 @@
+{
+    "Clave": "M5P13L",
+    "Modulo": 5,
+    "Fase": "Laberinto",
+    "Planteamiento": "¿Cómo sería la manera correcta de pedir una acción específica en la frase: \"Querría que respetes mi intimidad\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Te pido que no andes entrando sin saber si se puede pasar",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Querría que, antes de entrar en mi habitación, me avises llamando a la puerta",
+            "Correcta": true
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Querría que, no entres en los espacios que no son tuyos",
+            "Correcta": false
+        }
+    ]
+}

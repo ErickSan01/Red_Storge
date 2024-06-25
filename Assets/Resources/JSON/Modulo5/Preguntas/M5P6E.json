@@ -1,0 +1,23 @@
+{
+    "Clave": "M5P6E",
+    "Modulo": 5,
+    "Fase": "Escalera",
+    "Planteamiento": "¿Cuál es el error común entre las frases: \"quiero que me comprendas\" y \" me gustaría que confiaras más en ti misma\"?",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Que en ambas expresiones, se expresan acciones específicas de una petición, no se quedan en la generalidad,  sólo dicen el cómo.",
+            "Correcta": false
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Que en ambas expresiones, no se expresan acciones específicas de una petición,  quedan en la generalidad, no sólo dicen el cómo.",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Que en ambas expresiones, no se expresan acciones específicas de una petición, se quedan en la generalidad, no dicen el cómo.",
+            "Correcta": true
+        }
+    ]
+}

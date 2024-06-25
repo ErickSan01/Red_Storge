@@ -50,9 +50,12 @@ public class MapaCodigo : MonoBehaviour
 
     private void OnBtnModulo3Click()
     {
+        //Modificar progreso
         ProgresoGeneralJson.ActualizarProgreso(3);
-        // Cambiar de escena a "nivel3"
-        SceneManager.LoadScene("Modulo3Nivel");
+        //Redirección
+        ProgresoModulo progreso = ProgresoJson.CargarProgreso(3);
+        string clave = progreso.pergaminoActual;
+        SiguienteEscena.SiguienteEscenaRedireccion(clave);
     }
 
         private void OnBtnModulo4Click()
@@ -67,9 +70,12 @@ public class MapaCodigo : MonoBehaviour
 
     private void OnBtnModulo5Click()
     {
+       //Modificar progreso
         ProgresoGeneralJson.ActualizarProgreso(5);
-        // Cambiar de escena a "nivel5"
-        SceneManager.LoadScene("Modulo5Nivel");
+        //Redirección
+        ProgresoModulo progreso = ProgresoJson.CargarProgreso(5);
+        string clave = progreso.pergaminoActual;
+        SiguienteEscena.SiguienteEscenaRedireccion(clave);
     }
 
 

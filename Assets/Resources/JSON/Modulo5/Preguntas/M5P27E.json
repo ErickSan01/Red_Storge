@@ -1,0 +1,23 @@
+{
+    "Clave": "M5P27E",
+    "Modulo": 5,
+    "Fase": "Escalera",
+    "Planteamiento": "En nuestra relación con los demás la empatía sólo se produce cuando hemos sabido desprendernos de :",
+    "Opciones": [
+        {
+            "Inciso": "A",
+            "OpcionTexto": "Todas las ideas preconcebidas y todos los prejuicios",
+            "Correcta": true
+        },
+        {
+            "Inciso": "B",
+            "OpcionTexto": "Nuestra necesidad de ser atendidos en las propias necesidades",
+            "Correcta": false
+        },
+        {
+            "Inciso": "C",
+            "OpcionTexto": "Nuestra foma de expresar observaciones y sentimientos",
+            "Correcta": false
+        }
+    ]
+}

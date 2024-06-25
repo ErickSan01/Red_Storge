@@ -24,7 +24,11 @@ namespace JsonUtils{
         /// <param name="clave">La clave de la pregunta a cargar.</param>
         /// <returns>La pregunta cargada.</returns>
         public static Pregunta CargarPregunta(string clave){
+            
+            //TextAsset txtAsset = Resources.Load<TextAsset>("JSON/Modulo"+clave[1]+"/Preguntas/"+clave) as TextAsset;
             string json = File.ReadAllText(Application.dataPath+"/Modulos/Modulo"+clave[1]+"/Documentos/Preguntas/"+clave+".json");
+            //string json = txtAsset.text;
+            
             Pregunta pregunta = JsonUtility.FromJson<Pregunta>(json);
             return pregunta;
         }
