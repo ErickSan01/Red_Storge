@@ -1,17 +1,4 @@
 {
-    "pergaminoActual": "M5P16P",
-    "pergaminosContestados": [
-        "M5P1P",
-        "M5P2L",
-        "M5P3L",
-        "M5P7P",
-        "M5P8L",
-        "M5P9L",
-        "M5P10E",
-        "M5P11E",
-        "M5P12P",
-        "M5P13L",
-        "M5P14E",
-        "M5P15E"
-    ]
+    "pergaminoActual": "M5P1P",
+    "pergaminosContestados": []
 }

@@ -1,9 +1,0 @@
-{
-    "IdEstudiante": 0,
-    "ClavePregunta": "M5P3L",
-    "Opcion": {
-        "Inciso": "B",
-        "OpcionTexto": "Corresponde a una expresión clara de petición, pero no pide una acción específica",
-        "Correcta": false
-    }
-}

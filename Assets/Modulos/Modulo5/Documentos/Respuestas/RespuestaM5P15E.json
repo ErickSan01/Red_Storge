@@ -1,9 +1,0 @@
-{
-    "IdEstudiante": 0,
-    "ClavePregunta": "M5P15E",
-    "Opcion": {
-        "Inciso": "C",
-        "OpcionTexto": "\": «Quiero que me digas qué te parece lo que hice ayer, y si\nalgo no te gustó, que me digas cómo querrías que lo hiciera»\"",
-        "Correcta": false
-    }
-}

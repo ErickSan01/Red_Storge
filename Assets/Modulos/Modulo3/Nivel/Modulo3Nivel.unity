@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 127272761}
   - component: {fileID: 127272760}
   - component: {fileID: 127272759}
-  - component: {fileID: 127272758}
   - component: {fileID: 127272762}
   m_Layer: 7
   m_Name: M3P12P
@@ -143,20 +142,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &127272758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 127272757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e95cfead3ec3204681fd4706e00793e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nombreDelNivel: nivel3
-  textoDinamico: 
 --- !u!61 &127272759
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -342,7 +327,6 @@ GameObject:
   - component: {fileID: 310886139}
   - component: {fileID: 310886138}
   - component: {fileID: 310886137}
-  - component: {fileID: 310886136}
   - component: {fileID: 310886140}
   m_Layer: 7
   m_Name: M3P18P
@@ -351,20 +335,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &310886136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 310886135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e95cfead3ec3204681fd4706e00793e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nombreDelNivel: nivel3
-  textoDinamico: 
 --- !u!61 &310886137
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1413,7 +1383,6 @@ GameObject:
   - component: {fileID: 1073185043}
   - component: {fileID: 1073185042}
   - component: {fileID: 1073185041}
-  - component: {fileID: 1073185040}
   - component: {fileID: 1073185044}
   m_Layer: 7
   m_Name: M3P1P
@@ -1422,20 +1391,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1073185040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1073185039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e95cfead3ec3204681fd4706e00793e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nombreDelNivel: nivel3
-  textoDinamico: 
 --- !u!61 &1073185041
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1553,7 +1508,6 @@ GameObject:
   - component: {fileID: 1320784912}
   - component: {fileID: 1320784911}
   - component: {fileID: 1320784910}
-  - component: {fileID: 1320784909}
   - component: {fileID: 1320784913}
   m_Layer: 7
   m_Name: M3P28P
@@ -1562,20 +1516,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1320784909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1320784908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e95cfead3ec3204681fd4706e00793e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nombreDelNivel: nivel3
-  textoDinamico: 
 --- !u!61 &1320784910
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1862,7 +1802,6 @@ GameObject:
   - component: {fileID: 1612867789}
   - component: {fileID: 1612867788}
   - component: {fileID: 1612867787}
-  - component: {fileID: 1612867786}
   - component: {fileID: 1612867790}
   m_Layer: 7
   m_Name: M3P35P
@@ -1871,20 +1810,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1612867786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1612867785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e95cfead3ec3204681fd4706e00793e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nombreDelNivel: nivel3
-  textoDinamico: 
 --- !u!61 &1612867787
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2281,7 +2206,6 @@ GameObject:
   - component: {fileID: 1829523957}
   - component: {fileID: 1829523956}
   - component: {fileID: 1829523955}
-  - component: {fileID: 1829523954}
   - component: {fileID: 1829523958}
   m_Layer: 7
   m_Name: M3P23P
@@ -2290,20 +2214,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1829523954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829523953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e95cfead3ec3204681fd4706e00793e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nombreDelNivel: nivel3
-  textoDinamico: 
 --- !u!61 &1829523955
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2421,7 +2331,6 @@ GameObject:
   - component: {fileID: 2060433456}
   - component: {fileID: 2060433455}
   - component: {fileID: 2060433454}
-  - component: {fileID: 2060433453}
   - component: {fileID: 2060433457}
   m_Layer: 7
   m_Name: M3P8P
@@ -2430,20 +2339,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2060433453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2060433452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e95cfead3ec3204681fd4706e00793e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nombreDelNivel: nivel3
-  textoDinamico: 
 --- !u!61 &2060433454
 BoxCollider2D:
   m_ObjectHideFlags: 0

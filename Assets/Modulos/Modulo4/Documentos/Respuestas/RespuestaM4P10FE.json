@@ -2,8 +2,8 @@
     "IdEstudiante": 0,
     "ClavePregunta": "M4P10FE",
     "Opcion": {
-        "Inciso": "A",
-        "OpcionTexto": "La implicación de la otra persona como responsable de las necesidades personales",
-        "Correcta": true
+        "Inciso": "B",
+        "OpcionTexto": "La responsabilidad de explicar la necesidad asociada al sentimiento personal",
+        "Correcta": false
     }
 }

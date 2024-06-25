@@ -777,7 +777,6 @@ GameObject:
   - component: {fileID: 421316230}
   - component: {fileID: 421316229}
   - component: {fileID: 421316228}
-  - component: {fileID: 421316227}
   - component: {fileID: 421316226}
   m_Layer: 7
   m_Name: M5P16P
@@ -799,20 +798,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clavePergamino: M5P16P
---- !u!114 &421316227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 421316225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e95cfead3ec3204681fd4706e00793e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nombreDelNivel: nivel1
-  textoDinamico: 
 --- !u!61 &421316228
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -917,7 +902,6 @@ GameObject:
   - component: {fileID: 438114308}
   - component: {fileID: 438114307}
   - component: {fileID: 438114306}
-  - component: {fileID: 438114305}
   - component: {fileID: 438114309}
   m_Layer: 7
   m_Name: M5P1P
@@ -926,20 +910,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &438114305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438114304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e95cfead3ec3204681fd4706e00793e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nombreDelNivel: nivel1
-  textoDinamico: 
 --- !u!61 &438114306
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1057,7 +1027,6 @@ GameObject:
   - component: {fileID: 691907395}
   - component: {fileID: 691907394}
   - component: {fileID: 691907393}
-  - component: {fileID: 691907392}
   - component: {fileID: 691907391}
   m_Layer: 7
   m_Name: M5P7P
@@ -1079,20 +1048,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clavePergamino: M5P7P
---- !u!114 &691907392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 691907390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e95cfead3ec3204681fd4706e00793e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nombreDelNivel: nivel1
-  textoDinamico: 
 --- !u!61 &691907393
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1631,7 +1586,6 @@ GameObject:
   - component: {fileID: 1187175930}
   - component: {fileID: 1187175929}
   - component: {fileID: 1187175928}
-  - component: {fileID: 1187175927}
   - component: {fileID: 1187175926}
   m_Layer: 7
   m_Name: M5P24P
@@ -1653,20 +1607,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clavePergamino: M5P24P
---- !u!114 &1187175927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187175925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e95cfead3ec3204681fd4706e00793e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nombreDelNivel: nivel1
-  textoDinamico: 
 --- !u!61 &1187175928
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2097,7 +2037,6 @@ GameObject:
   - component: {fileID: 2022910595}
   - component: {fileID: 2022910594}
   - component: {fileID: 2022910593}
-  - component: {fileID: 2022910592}
   - component: {fileID: 2022910591}
   m_Layer: 7
   m_Name: M5P20P
@@ -2119,20 +2058,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clavePergamino: M5P20P
---- !u!114 &2022910592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2022910590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e95cfead3ec3204681fd4706e00793e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nombreDelNivel: nivel1
-  textoDinamico: 
 --- !u!61 &2022910593
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2237,7 +2162,6 @@ GameObject:
   - component: {fileID: 2034302107}
   - component: {fileID: 2034302106}
   - component: {fileID: 2034302105}
-  - component: {fileID: 2034302104}
   - component: {fileID: 2034302103}
   m_Layer: 7
   m_Name: M5P12P
@@ -2259,20 +2183,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clavePergamino: M5P12P
---- !u!114 &2034302104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2034302102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e95cfead3ec3204681fd4706e00793e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nombreDelNivel: nivel1
-  textoDinamico: 
 --- !u!61 &2034302105
 BoxCollider2D:
   m_ObjectHideFlags: 0
