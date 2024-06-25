@@ -17,6 +17,7 @@ public class MapaCodigo : MonoBehaviour
     Button btn_modulo4;
     Button btn_modulo5;
     Button btn_jugar;
+    Button volver;
 
     // Start is called before the first frame update
     void OnEnable()
@@ -27,6 +28,7 @@ public class MapaCodigo : MonoBehaviour
         btn_modulo3 = root.Q<Button>("btn_modulo3");
         btn_modulo4 = root.Q<Button>("btn_modulo4");
         btn_modulo5 = root.Q<Button>("btn_modulo5");
+        volver = root.Q<Button>("Jugar");
 
         // Agregar el evento de clic al botón "btn_modulo2"
         btn_modulo2.clicked += OnBtnModulo2Click;
@@ -36,6 +38,7 @@ public class MapaCodigo : MonoBehaviour
         btn_modulo4.clicked += OnBtnModulo4Click;
         // Agregar el evento de clic al botón "btn_modulo5"
         btn_modulo5.clicked += OnBtnModulo5Click;
+        volver.clicked += volverClick;
     }
 
     private void OnBtnModulo2Click()
@@ -76,6 +79,12 @@ public class MapaCodigo : MonoBehaviour
         ProgresoModulo progreso = ProgresoJson.CargarProgreso(5);
         string clave = progreso.pergaminoActual;
         SiguienteEscena.SiguienteEscenaRedireccion(clave);
+    }
+
+    private void volverClick()
+    {
+        // Cambiar de escena a "MenuPrincipal"
+        SceneManager.LoadScene("MenuPrincipal");
     }
 
 

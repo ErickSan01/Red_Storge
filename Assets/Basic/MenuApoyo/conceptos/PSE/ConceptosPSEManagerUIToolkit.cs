@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 /// <summary>
-/// Clase que gestiona la interfaz de usuario para los conceptos de PSE.
+/// Clase que gestiona la interfaz de usuario para el menú de conceptos de PSE.
 /// </summary>
 public class ConceptosPSEManagerUIToolkit : MonoBehaviour
 {
@@ -25,20 +25,18 @@ public class ConceptosPSEManagerUIToolkit : MonoBehaviour
     }
 
     /// <summary>
-    /// Alterna la pausa del menú.
+    /// Alterna la visualización del menú de PSE.
     /// </summary>
     public void TogglePause()
     {
-        // Comprueba el estado actual del menú y lo cambia.
+        // Comprueba el estado actual del menú y cambialo.
         if (pseMenu.resolvedStyle.display == DisplayStyle.None)
         {
             pseMenu.style.display = DisplayStyle.Flex;
-            pse.style.display = DisplayStyle.None;
         }
         else
         {
             pseMenu.style.display = DisplayStyle.None;
-            pse.style.display = DisplayStyle.Flex;
         }
     }
 }

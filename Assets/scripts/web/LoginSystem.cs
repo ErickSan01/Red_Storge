@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 
-
 /// <summary>
 /// Clase que maneja el sistema de inicio de sesión y registro de usuarios.
 /// </summary>
