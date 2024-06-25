@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UIElements;
-
+using UnityEngine.SceneManagement;
 /// <summary>
 /// Gestiona las opciones del menú de pausa utilizando el UIToolkit de Unity.
 /// </summary>
@@ -15,6 +15,7 @@ public class OpcionesManagerUIToolkit : MonoBehaviour
     private VisualElement apoMenu;
     private Button opcionesButton;
     private Button salirButtom;
+    private Button menuPrincipalButton;
     private Button jugarButtom;
     private Button apoyoButton;
     private SliderInt volumen;
@@ -27,6 +28,7 @@ public class OpcionesManagerUIToolkit : MonoBehaviour
         // Encuentra el botón y el menú en el diseño.
         opcionesButton = rootElement.Q<Button>("opcionesButton");
         salirButtom = confMenu.Q<Button>("salirButtom");
+        menuPrincipalButton = rootElement.Q<Button>("menuPrincipalButton");
         apoyoButton = rootElement.Q<Button>("apoyoButton");        
         jugarButtom = apoMenu.Q<Button>("Jugar");
 
@@ -43,6 +45,7 @@ public class OpcionesManagerUIToolkit : MonoBehaviour
 
         opcionesButton.clicked += TogglePause;
         salirButtom.clicked += TogglePause;
+        menuPrincipalButton.clicked += SalirScene;
         apoyoButton.clicked += TogglePause2;
         jugarButtom.clicked += TogglePause2;
     }
@@ -87,5 +90,10 @@ public class OpcionesManagerUIToolkit : MonoBehaviour
             apoMenu.style.display = DisplayStyle.None;
             rootElement.style.display = DisplayStyle.Flex;
         }
+    }
+
+    public void SalirScene()
+    {
+        SceneManager.LoadScene("MenuInicial");
     }
 }

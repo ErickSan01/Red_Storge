@@ -5,6 +5,6 @@
         <ui:Button text="Continuar" display-tooltip-when-elided="true" enable-rich-text="false" name="continueButton" class="botonesMenu" style="color: rgb(255, 255, 255); font-size: 32px; align-items: auto; left: 20%; top: 25px; display: flex;" />
         <ui:Button text="Opciones" display-tooltip-when-elided="true" enable-rich-text="false" name="opcionesButton" class="botonesMenu" style="color: rgb(255, 255, 255); font-size: 32px; align-items: auto; left: 20%; top: 25px;" />
         <ui:Button text="Menú de apoyo" display-tooltip-when-elided="true" enable-rich-text="false" name="apoyoButton" class="botonesMenu" style="color: rgb(255, 255, 255); font-size: 32px; align-items: auto; left: 20%; top: 25px;" />
-        <ui:Button text="Salir" display-tooltip-when-elided="true" enable-rich-text="false" class="botonesMenu" style="color: rgb(255, 255, 255); font-size: 32px; align-items: auto; left: 20%; top: 25px;" />
+        <ui:Button text="Salir" display-tooltip-when-elided="true" enable-rich-text="false" name="menuPrincipalButton" class="botonesMenu" style="color: rgb(255, 255, 255); font-size: 32px; align-items: auto; left: 20%; top: 25px; display: flex;" />
     </ui:VisualElement>
 </ui:UXML>
